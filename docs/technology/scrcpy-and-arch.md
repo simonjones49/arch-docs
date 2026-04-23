@@ -17,7 +17,7 @@ media_order: 'arch.png,android.png'
 Having a different wireless port on every start I had to find a way to track this down before starting scrcpy. After several attempts nmap to the rescue. 
 
 Here is the complete script which reads the ip from a file or entered on the command line. 
-<pre>
+```
 #!/bin/bash
 
 # A script to scan common Wi-Fi ADB ports for a specific device and connect
@@ -96,4 +96,4 @@ adb disconnect
 adb kill-server
 
 
-</pre>
+```
