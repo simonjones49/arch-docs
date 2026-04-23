@@ -1,0 +1,6 @@
+site_name: Simon's Arch Wiki
+theme:
+  name: material
+  palette:
+    scheme: slate  # Dark mode, because... Arch.
+    primary: blue grey
