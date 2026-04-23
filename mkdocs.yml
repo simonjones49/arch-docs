@@ -1,6 +1,9 @@
 site_name: Simon's Arch Wiki
 theme:
   name: material
+  features:
+    - content.code.copy
+    - navigation.sections
   palette:
     scheme: slate
     primary: blue grey
@@ -20,3 +23,10 @@ markdown_extensions:
 
 extra_css:
  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.details

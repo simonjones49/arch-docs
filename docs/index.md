@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+# Welcome to Simon's Wiki
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Hi! I'm Simon. This is my personal digital garden where I document my journey with Arch Linux and keep track of my favorite recipes.
 
-## Commands
+---
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### [💻 Technology](./technology/index.md)
+My Arch Linux setup guides, AUR package notes, and system configuration fixes. This is my "external brain" for keeping my machine running perfectly.
 
-## Project layout
+### [🍳 Recipes](./recipes/index.md)
+A collection of tried-and-tested meals. From quick weeknight stir-fries to slow-cooked favorites.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## 🚀 My Tracks 
+My cycling records and real-time stats from the **Fiido C21**.
+
+* [View Cycling Stats](https://simonj.42web.io/tracks.php){:target="_blank"}
+
+---
+*Last updated: April 2026*
