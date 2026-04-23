@@ -298,6 +298,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contact Information
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2577,6 +2588,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contact Information
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2606,6 +2628,24 @@
 <ul>
 <li><a href="https://simonj.42web.io/tracks.php" target="_blank">View Cycling Stats</a></li>
 </ul>
+<h2 id="contact-information">Contact Information</h2>
+<p>Email me at : <span id="email-placeholder" style="font-weight: bold; color: #555;">[Hidden for privacy]</span></p>
+<p><button onclick="revealEmail()" style="cursor: pointer; padding: 5px 10px; border-radius: 4px; border: 1px solid #ccc; background: #f9f9f9;">
+  Show Email Address
+</button></p>
+<script>
+function revealEmail() {
+    const user = "simon_jones49";
+    const domain = "gmx.com";
+    const email = user + '@' + domain;
+    const placeholder = document.getElementById("email-placeholder");
+
+    placeholder.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+    // Optional: Hide the button after clicking
+    event.target.style.display = 'none';
+}
+</script>
+
 <hr />
 <p><em>Last updated: April 2026</em></p>
 
