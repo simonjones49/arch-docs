@@ -2479,9 +2479,8 @@
   <h1>scrcpy and wireless ADB on Arch</h1>
 
 <p>Having a different wireless port on every start I had to find a way to track this down before starting scrcpy. After several attempts nmap to the rescue. </p>
-<p>Here is the complete script which reads the ip from a file or entered on the command line. </p>
-<pre>
-#!/bin/bash
+<p>Here is the complete script which reads the ip from a file or entered on the command line. 
+<pre class="highlight"><code>#!/bin/bash
 
 # A script to scan common Wi-Fi ADB ports for a specific device and connect
 # to the first one it finds. This version uses 'nmap' for faster scanning.
@@ -2497,7 +2496,7 @@ adbRanges="5555 5585
 # It first looks for a file, then falls back to a command-line argument.
 IP_FILE="$HOME/.termux_ip"
 
-if [ -f "$IP_FILE" ] && [ -s "$IP_FILE" ]; then
+if [ -f "$IP_FILE" ] &amp;&amp; [ -s "$IP_FILE" ]; then
     # Read the IP address from the file if it exists and is not empty.
     DEVICE_IP=$(cat "$IP_FILE")
     echo "Found IP address in $IP_FILE: $DEVICE_IP"
@@ -2506,7 +2505,7 @@ elif [ -n "$1" ]; then
     DEVICE_IP="$1"
 else
     # If no IP address is found, print usage and exit.
-    echo "Usage: $0 [<IP_ADDRESS>]"
+    echo "Usage: $0 [&lt;IP_ADDRESS&gt;]"
     echo "Or place the IP address in a file at $IP_FILE"
     echo "Example: $0 192.168.0.247"
     exit 1
@@ -2534,7 +2533,7 @@ while read -r start_port end_port; do
         echo "Attempting to connect to $DEVICE_IP:$open_port..."
 
         # Connect to the device using the discovered open port.
-        adb connect "$DEVICE_IP:$open_port" &> /dev/null
+        adb connect "$DEVICE_IP:$open_port" &amp;&gt; /dev/null
 
         # Verify the connection was successful.
         if adb devices | grep -q "$DEVICE_IP:$open_port"; then
@@ -2553,13 +2552,12 @@ while read -r start_port end_port; do
             echo "FAILED to connect on this port, attempting next..."
         fi
     fi
-done <<< "$adbRanges"
+done &lt;&lt;&lt; "$adbRanges"
 
 adb disconnect
 adb kill-server
 
-
-</pre>
+</code></pre></p>
 
 
 
