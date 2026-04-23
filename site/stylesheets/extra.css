@@ -1,0 +1,14 @@
+/* Adjust the sidebar width */
+:root {
+  --md-sidebar-width: 20rem; /* Default is usually around 12.1rem */
+}
+
+/* Optional: If you want the main content area to stay centered and balanced */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 20rem;
+  }
+  .md-container {
+    display: flex;
+  }
+}

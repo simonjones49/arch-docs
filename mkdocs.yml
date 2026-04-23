@@ -2,5 +2,21 @@ site_name: Simon's Arch Wiki
 theme:
   name: material
   palette:
-    scheme: slate  # Dark mode, because... Arch.
+    scheme: slate
     primary: blue grey
+    accent: blue
+  features:
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+
+extra_css:
+ - stylesheets/extra.css
