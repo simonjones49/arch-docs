@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#pam-10" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -485,8 +480,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2439,8 +2432,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -2456,6 +2447,8 @@
                   
 
 
+
+  <h1>Authenticating Linux (LUKS) Full-Disk Encryption and System Access with USB Stick</h1>
 
 <p>The end result will look like this: if a certain USB stick is plugged into the computer, </p>
 <p>(a) LUKS Full Disk Encryption will unlock without prompting for a password on boot, </p>
@@ -2475,7 +2468,6 @@ Next, mount the USB stick, ensuring it is formatted with some filesystem that ca
 <pre class="highlight"><code>NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
 sda                      8:0    1  29.3G  0 disk  
 └─sda1                   8:1    1  29.3G  0 part  /run/media/simon/USBKEY
-...
  ```
  The drive is mounted to /run/media/simon/USBKEY
 
@@ -2484,7 +2476,8 @@ $ sudo cp luks_keyfile.bin /run/media/simon/USBKEY/
 <pre class="highlight"><code>Then, take a note of the UUID of the USB stick partition, we'll need it in order to tell LUKS how to identify the device:</code></pre>
 $ sudo blkid | grep sda1
 /dev/sda1: UUID="F7B7-F9E8" BLOCK_SIZE="512" TYPE="exfat" PARTUUID="333a96b6-01"
- <code>With the keyfile on the stick and the key added to the partition, we can move on to tell LUKS about it during boot.
+ ```                 <br />
+With the keyfile on the stick and the key added to the partition, we can move on to tell LUKS about it during boot.
 Loading the Keyfile during Boot
 We'll need to modify the cmdline of the Linux kernel used by your system, and for this, you need to know the bootloader that executes it. Common choices include bootloaders like GRUB, systemd-boot, or booting Linux directly using your Mainboard's EFI implementation.
 This works because the Linux Kernel can double as an EFI compliant executable, see EFISTUB
@@ -2494,10 +2487,9 @@ title Arch Linux
 linux /vmlinuz-linux
 initrd /amd-ucode.img
 initrd /initramfs-linux.img
-options cryptdevice=UUID=c6804a74-1ba3-4a0f-8865-1db2ad9885ab:root root=/dev/mapper/root rw
-           ```         
-Here we see that the cryptdevice directive is used to inform LUKS to take the encrypted partition corresponding to the supplied UUID c6804a74-1ba3-4a0f-8865-1db2ad9885ab and map it to the name root. Modify the command line with the cryptkey directive.</code></pre>
-options cryptdevice=UUID=c6804a74-1ba3-4a0f-8865-1db2ad9885ab:root cryptkey=UUID=F7B7-F9E8:exfat:/luks_keyfile.bin root=/dev/mapper/root rw</code>
+options cryptdevice=UUID=c6804a74-1ba3-4a0f-8865-1db2ad9885ab:root root=/dev/mapper/root rw</code></pre>
+Here we see that the cryptdevice directive is used to inform LUKS to take the encrypted partition corresponding to the supplied UUID c6804a74-1ba3-4a0f-8865-1db2ad9885ab and map it to the name root. Modify the command line with the cryptkey directive.
+<pre class="highlight"><code>options cryptdevice=UUID=c6804a74-1ba3-4a0f-8865-1db2ad9885ab:root cryptkey=UUID=F7B7-F9E8:exfat:/luks_keyfile.bin root=/dev/mapper/root rw</code></pre>
 The UUID corresponds to the UUID of the USB drive partition you identified using blkid above. exfat informs LUKS of the file system, and after the final colon, the path to the keyfile is expected. </p>
 <p>The last step is to add the exfat module in /etc/mkinitcpio.conf
 <pre class="highlight"><code># sudo nano /etc/mkinitcpio.conf</code></pre>
@@ -2518,14 +2510,12 @@ The tool will prompt to select the device. Afterwards, add the user for which th
 Finally, we configure PAM and tell it the authentication provided by the pam_usb module will be sufficient to authenticate the user. In /etc/pam.d/system-auth, add the line:
 <pre class="highlight"><code>auth       sufficient                  pam_usb.so</code></pre>
 This line should appear after pam_faillock.so, if present, as this module takes care of locking the user account in case of too many invalid password attempts. Putting pam_usb.so before this module would circumvent this security measure, which would probably be (minor) security issue. Finally, the line should come before pam_unix.so, which is the standard unix authentication module. My file begins like this:
-```</p>
-<h1 id="pam-10">%PAM-1.0</h1>
-<p>auth       required                    pam_faillock.so      preauth
-auth       sufficient                  pam_usb.so</p>
-<p>-auth      [success=2 default=ignore]  pam_systemd_home.so
-auth       [success=1 default=bad]     pam_unix.so          nullok
-...
- ```                 <br />
+<pre class="highlight"><code>#%PAM-1.0
+auth       required                    pam_faillock.so      preauth
+auth       sufficient                  pam_usb.so
+
+-auth      [success=2 default=ignore]  pam_systemd_home.so
+auth       [success=1 default=bad]     pam_unix.so          nullok</code></pre>
 And that should be all there is to it! This does with with LightDM but I could not get SDDM to use PAM and it simply failed to work. I did not try other options. </p>
 <p>Security Implications
 An important security implication is that the key is not only stored on the USB device, but that anyone can retrieve it. </p>
