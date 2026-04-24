@@ -17,7 +17,9 @@ After many years of using Debian I find that Arch is so much easier. I used to c
 Today I needed to edit a PDF file and evince failed to do it. I recalled I used Master PDF editor in Debian and sure enough I kept the deb file.
 
 Thinking it would be a long shot I, I search with yay, and found 
-```aur/masterpdfeditor-free 4.3.89-1 (+64 2.46) ```
+```
+aur/masterpdfeditor-free 4.3.89-1 (+64 2.46) 
+```
 
 A quick install later and I could edit the file and email it right back, in seconds I had achieved what I needed and no local files needed.
 

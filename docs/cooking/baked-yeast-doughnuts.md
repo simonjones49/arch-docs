@@ -12,19 +12,29 @@ metadata:
 ---
 
 BAKED YEAST DOUGHNUTS
+
 Yield : 10 doughnuts
 
 2 Cups all purpose flour
+
 50g melted butter
+
 1.5 tsp instant yeast
+
 1/2 Cup evaporated milk
+
 1/4 Cup hot water
+
 1 tablespoon sugar
+
 1/2 tsp salt
 
 COATING
+
 1/4 Cup melted butter
+
 1/4 Cup sugar
+
 1 tsp cinnamon
 
 ![donut005pix640](../assets/images/donut005pix640.jpg "donut005pix640")

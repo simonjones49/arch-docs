@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -1438,8 +1433,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2439,8 +2432,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -2457,17 +2448,19 @@
 
 
 
+  <h1>Removing LightDM</h1>
+
 <p>For my Chromebook I don't need a login box, I can manage with a tty and auto start X after logging in.</p>
 <p>I remove LightDM and then add this to the login script.</p>
 <p>Add or edit .bash_profile</p>
-<p>```</p>
-<h1 id="_1"></h1>
-<h1 id="bash_profile">~/.bash_profile</h1>
-<h1 id="_2"></h1>
-<p>[[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc
+<pre class="highlight"><code>#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc
 if [[ ! $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]]; then
   exec startxfce4
-fi```</p>
+fi</code></pre>
 
 
 

@@ -7,27 +7,45 @@ media_order: cashwechicken.jpg
 INGREDIENTS
 
 To marinate the chicken
+
 * 1 lb (454 grams) of chicken breast
+
 * 1/3 tsp of salt
+
 * 1/3 tsp of baking soda
+
 * White pepper to taste 
+
 * 2.5 tsp of cornstarch
+
 * 1.5 tbsp of Chinese cooking wine
 
 For the sauce
+
 * 1.5 tbsp of soy sauce 
+
 * ~~1 tbsp of oyster sauce ~~
+
 * 1 tbsp of hoisin sauce
+
 * 1 tbsp of ketchup
+
 * 2 tbsp of water
 
 To stir fry
+
 * 2-3 tbsp of vegetable oil
+
 * ~~3 cloves of garlic, sliced thinly
+
 * 1/2 inch of ginger, sliced thinly~~
+
 * 1/2 of bell pepper, cut into bite-size
+
 * 2 stalks of celery, cut into bite-size
+
 * 2 tbsp of scallion, diced
+
 * 1/2 cup of cashew, toasted
 
 ![cashew-chicken](../assets/images/cashwechicken.jpg "Cashew Chicken")

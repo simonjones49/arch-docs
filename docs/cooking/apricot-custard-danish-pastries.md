@@ -5,14 +5,21 @@ media_order: apricotcdp.png
 ---
 
 Ingredients
+
 * 2/3 cup Vanilla Custard
+
 * 410 g can Apricot, halves in syrup
+
 * 2/3 cup Almond Meal
+
 * 3 sheets Frozen Puff Pastry, just thawed
+
 * 1 Egg, lightly beaten
 
 Icing
+
 * 1 cup Pure Icing Sugar, sifted
+
 * 1 1/3 tbsp Boiling Water
 
 ![apricotcdp](../assets/images/apricotcdp.png "apricotcdp")
