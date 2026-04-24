@@ -2453,7 +2453,7 @@
 <p>On starting the machine a network with vpn was causing the network connection to stall, I am not sure why and may dig into this more in the future, for now I have added a line to start script to bring the vpn up after the network has connected.
 <pre class="highlight"><code>nmcli con up "man-006" passwd-file ~/.ssh/vpn-pass</code></pre></p>
 <p>The vpn exists with user and password in network maanger but is not required by any network. The password file in ~/.ssh/pass looks like this
-<pre class="highlight"><code>vpn.secrets.password:&amp;lt;password&amp;gt;</code></pre>
+<pre class="highlight"><code>vpn.secrets.password:&lt;password&gt;</code></pre>
 Change to the actual password used, yes it is stored in clear text but it is only for the vpn</p>
 <p>In addition after suspending the machine I added a systemd unit to fire after newtork manager has connected. This resides at /etc/systemd/system/vpn-up.service
 and contains this

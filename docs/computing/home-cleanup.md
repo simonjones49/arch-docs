@@ -15,12 +15,19 @@ You can check your .config and .local directories for old application directorie
 
 I have found [rmlint](https://github.com/sahib/rmlint) fills this void, it is simple and easy to use and yet incredibly powerful.
 
-It is in the AUR and installed with ```sudo pacman -S rmlint```
+It is in the AUR and installed with 
+```
+sudo pacman -S rmlint
+```
 
 To run it, without making changes you point it at your home directory.
-```rmlint /home/simon/```
+```
+rmlint /home/simon/
+```
 This will scan all your files and create a new file called rmlint.sh in your home directory. This contains a list of all the things it is going to remove, and clearly shows why. At this point you can remove anything you do not agree with, and then proceed with 
-```sh -c rmlint.sh```
+```
+sh -c rmlint.sh
+```
 This will perform the actions you just viewed and then generate a report rmlint.json, again in your home directory.
 
 Initially I thought some of the actions were wrong but on inspection is showed where I had misnamed something or used a picture twice with different names.

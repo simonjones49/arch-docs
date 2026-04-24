@@ -21,7 +21,9 @@ So I flashed the Arch ISO directly to the USB drive and it started perfectly.
 The actual installation completed without issues, even the bootloader worked without any modifications.
 
 I did however only have a Dummy Output for a sound card, a quick check of the [Arch Wiki](https://wiki.archlinux.org) showed I needed to install two packages, so I did.
-```pacman -S alsa-ucm-conf sof-firmware```
+```
+pacman -S alsa-ucm-conf sof-firmware
+```
 Reboot and the sound works.
 
 I then set up yay and installed the rest of the programs I need and it's all working. 

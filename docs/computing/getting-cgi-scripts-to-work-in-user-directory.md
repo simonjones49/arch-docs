@@ -15,7 +15,7 @@ media_order: apache-server-logo.png
 a2enmod cgi
 sudo apt-get install libmime-lite-perl
 sudo apt-get install libcgi-session-perl
- ```
+```
 
 userdir.conf
 ```

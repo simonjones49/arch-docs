@@ -41,7 +41,6 @@ $ lsblk
 NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
 sda                      8:0    1  29.3G  0 disk  
 └─sda1                   8:1    1  29.3G  0 part  /run/media/simon/USBKEY
-...
  ```
  The drive is mounted to /run/media/simon/USBKEY
  
@@ -66,11 +65,11 @@ linux /vmlinuz-linux
 initrd /amd-ucode.img
 initrd /initramfs-linux.img
 options cryptdevice=UUID=c6804a74-1ba3-4a0f-8865-1db2ad9885ab:root root=/dev/mapper/root rw
-           ```         
+```
 Here we see that the cryptdevice directive is used to inform LUKS to take the encrypted partition corresponding to the supplied UUID c6804a74-1ba3-4a0f-8865-1db2ad9885ab and map it to the name root. Modify the command line with the cryptkey directive.
 ```
 options cryptdevice=UUID=c6804a74-1ba3-4a0f-8865-1db2ad9885ab:root cryptkey=UUID=F7B7-F9E8:exfat:/luks_keyfile.bin root=/dev/mapper/root rw
-                    ```
+```
 The UUID corresponds to the UUID of the USB drive partition you identified using blkid above. exfat informs LUKS of the file system, and after the final colon, the path to the keyfile is expected. 
 
 The last step is to add the exfat module in /etc/mkinitcpio.conf
@@ -112,8 +111,7 @@ auth       sufficient                  pam_usb.so
 
 -auth      [success=2 default=ignore]  pam_systemd_home.so
 auth       [success=1 default=bad]     pam_unix.so          nullok
-...
- ```                   
+```
 And that should be all there is to it! This does with with LightDM but I could not get SDDM to use PAM and it simply failed to work. I did not try other options. 
 
 Security Implications

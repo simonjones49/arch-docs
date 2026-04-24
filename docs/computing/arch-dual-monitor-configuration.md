@@ -31,7 +31,8 @@ case $1/$2 in
     ;;
 esac
 ```
-The script must be executable so ```
+The script must be executable so 
+```
 sudo chmod +x /usr/lib/systemd/system-sleep/monitor.sh
 ```
 The sleep part is needed to wait until both displays are awake, otherwise the command fails. 

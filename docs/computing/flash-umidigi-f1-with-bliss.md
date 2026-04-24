@@ -12,13 +12,16 @@ media_order: adb.jpeg
 date: '02-06-2021 14:24'
 ---
 
-```adb reboot fastboot
+```
+adb reboot fastboot
 fastboot flashing unlock
 fastboot flash recovery ./TWRP/TWRP_Lineageos.img
-fastboot oem reboot-recovery```
+fastboot oem reboot-recovery
+```
 In TWRP I formatted data to make it writeable
 ```
 adb reboot fastboot
 fastboot flashing unlock
 fastboot flash system Bliss-2019-04-11-arm64-ab-stock.img
-fastboot oem reboot-recovery```
+fastboot oem reboot-recovery
+```

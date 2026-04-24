@@ -2455,9 +2455,9 @@
 <p>My fix is to add a quirks line to the command line and it works perfectly.</p>
 <p>Here are the instructions.</p>
 <p>Unplug the adapter and type
-<code>sudo dmesg -C</code>
+<pre class="highlight"><code>sudo dmesg -C</code></pre>
 Then plug the adaptor in and type
-<code>sudo dmesg</code>
+<pre class="highlight"><code>sudo dmesg</code></pre>
 You are looking for the new device, mine looks like this
 <pre class="highlight"><code>[  634.812254] usb 9-1: new SuperSpeed USB device number 8 using xhci_hcd
 [  634.829849] usb 9-1: New USB device found, idVendor=0080, idProduct=a001, bcdDevice= 2.03
@@ -2467,20 +2467,20 @@ You are looking for the new device, mine looks like this
 [  634.829873] usb 9-1: SerialNumber: 2015033100064</code></pre>
 You need to remember the idVendor and the idProduct codes.
 Then add a line to your grub default command line.
-<code>sudo nano /etc/default/grub</code>
+<pre class="highlight"><code>sudo nano /etc/default/grub</code></pre>
 and add this
-<code>usb-storage.quirks=0080:a001:u</code>
+<pre class="highlight"><code>usb-storage.quirks=0080:a001:u</code></pre>
 You should change the id's to match yours. The idVendor goes first then the idProduct.
 Then run the update script.
-<code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code>
+<pre class="highlight"><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
 Unplug the USB device and reboot.
 After a reboot, plug the USB device back in and type
-<code>sudo dmesg | grep usb-storage</code>
+<pre class="highlight"><code>sudo dmesg | grep usb-storage</code></pre>
 and you should see something like this
-<code>[  634.831353] usb 9-1: UAS is ignored for this device, using usb-storage instead
+<pre class="highlight"><code>[  634.831353] usb 9-1: UAS is ignored for this device, using usb-storage instead
 [  634.831359] usb-storage 9-1:1.0: USB Mass Storage device detected
 [  634.831674] usb-storage 9-1:1.0: Quirks match for vid 0080 pid a001: 800000
-[  634.831758] scsi host8: usb-storage 9-1:1.0</code>
+[  634.831758] scsi host8: usb-storage 9-1:1.0</code></pre>
 This shows the quirks is working, you should also now have a drive that works properly.</p>
 
 

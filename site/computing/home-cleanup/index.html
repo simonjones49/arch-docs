@@ -2453,11 +2453,12 @@
 <p>The advantage of a rolling release is the lack of re-installation, the disadvantage is the build up of old and duplicate files.</p>
 <p>You can check your .config and .local directories for old application directories but chasing down duplicate files is always hard.</p>
 <p>I have found <a href="https://github.com/sahib/rmlint">rmlint</a> fills this void, it is simple and easy to use and yet incredibly powerful.</p>
-<p>It is in the AUR and installed with <code>sudo pacman -S rmlint</code></p>
+<p>It is in the AUR and installed with 
+<pre class="highlight"><code>sudo pacman -S rmlint</code></pre></p>
 <p>To run it, without making changes you point it at your home directory.
-<code>rmlint /home/simon/</code>
+<pre class="highlight"><code>rmlint /home/simon/</code></pre>
 This will scan all your files and create a new file called rmlint.sh in your home directory. This contains a list of all the things it is going to remove, and clearly shows why. At this point you can remove anything you do not agree with, and then proceed with 
-<code>sh -c rmlint.sh</code>
+<pre class="highlight"><code>sh -c rmlint.sh</code></pre>
 This will perform the actions you just viewed and then generate a report rmlint.json, again in your home directory.</p>
 <p>Initially I thought some of the actions were wrong but on inspection is showed where I had misnamed something or used a picture twice with different names.</p>
 <p>It is very simple to use but if this seems too much there is a GUI add-on called <a href="https://rmlint.readthedocs.io/en/latest/">shredder</a> but I found it much easier reading in my text editor and do not need the GUI.</p>

@@ -16,15 +16,27 @@ Yay is an AUR helper and pacman wrapper. It is a popular tool for managing packa
 To install Yay on Arch Linux:
 
 Update your system:
-```sudo pacman -Syu```
+```
+sudo pacman -Syu
+```
 Install Git:
-```sudo pacman -S git```
+```
+sudo pacman -S git
+```
 Change to Downloads directory
-```cd Downloads```
+```
+cd Downloads
+```
 Clone the repository:
-```git clone https://aur.archlinux.org/yay.git```
+```
+git clone https://aur.archlinux.org/yay.git
+```
 Change to the new directory:
-```cd yay```
+```
+cd yay
+```
 Build it:
-```makepkg -si```
+```
+makepkg -si
+```
 That's it, now you can manage packages with yay or pacman and install from the wonderful world of AUR. :)

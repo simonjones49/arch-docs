@@ -21,9 +21,13 @@ My fix is to add a quirks line to the command line and it works perfectly.
 Here are the instructions.
 
 Unplug the adapter and type
-```sudo dmesg -C```
+```
+sudo dmesg -C
+```
 Then plug the adaptor in and type
-```sudo dmesg```
+```
+sudo dmesg
+```
 You are looking for the new device, mine looks like this
 ```
 [  634.812254] usb 9-1: new SuperSpeed USB device number 8 using xhci_hcd
@@ -35,17 +39,26 @@ You are looking for the new device, mine looks like this
 ```
 You need to remember the idVendor and the idProduct codes.
 Then add a line to your grub default command line.
-```sudo nano /etc/default/grub```
+```
+sudo nano /etc/default/grub
+```
 and add this
-```usb-storage.quirks=0080:a001:u```
+```
+usb-storage.quirks=0080:a001:u
+```
 You should change the id's to match yours. The idVendor goes first then the idProduct.
 Then run the update script.
-```sudo grub-mkconfig -o /boot/grub/grub.cfg```
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 Unplug the USB device and reboot.
 After a reboot, plug the USB device back in and type
-```sudo dmesg | grep usb-storage```
+```
+sudo dmesg | grep usb-storage
+```
 and you should see something like this
-```[  634.831353] usb 9-1: UAS is ignored for this device, using usb-storage instead
+```
+[  634.831353] usb 9-1: UAS is ignored for this device, using usb-storage instead
 [  634.831359] usb-storage 9-1:1.0: USB Mass Storage device detected
 [  634.831674] usb-storage 9-1:1.0: Quirks match for vid 0080 pid a001: 800000
 [  634.831758] scsi host8: usb-storage 9-1:1.0

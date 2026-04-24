@@ -2454,11 +2454,10 @@
 <p>I then booted this on the Chromebook and the install worked until installing bootloader failed.
 <img alt="2021-02-22_13-36-50" src="../../assets/images/2021-02-22_13-36-50.jpg" title="2021-02-22_13-36-50" />
 The solution is to open a terminal and enter
-<pre class="highlight"><code>chroot /tmp/calamares-root&lt;numbers&gt;```
-Hint: use tab to complete the numbers after root
-
-Then retype the failed command and add</code></pre>
---no-nvram --removable```
+<pre class="highlight"><code>chroot /tmp/calamares-root&lt;numbers&gt;</code></pre>
+Hint: use tab to complete the numbers after root</p>
+<p>Then retype the failed command and add
+<pre class="highlight"><code>--no-nvram --removable</code></pre>
 Hint : If you leave the installer error visible you can copy and paste into the terminal (CTRL+SHIFT+V)</p>
 <p>This works without error.</p>
 <p>Then type 

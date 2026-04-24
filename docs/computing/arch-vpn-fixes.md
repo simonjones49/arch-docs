@@ -17,7 +17,7 @@ nmcli con up "man-006" passwd-file ~/.ssh/vpn-pass
 
 The vpn exists with user and password in network maanger but is not required by any network. The password file in ~/.ssh/pass looks like this
 ```
-vpn.secrets.password:&lt;password&gt;
+vpn.secrets.password:<password>
 ```
 Change to the actual password used, yes it is stored in clear text but it is only for the vpn
 
