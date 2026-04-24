@@ -4,10 +4,10 @@ Hi! I'm Simon. This is my personal digital garden where I document my journey wi
 
 ---
 
-### :computer: [Computing](./computing/index.md)
+### :computer: Computing
 My Arch Linux setup guides, AUR package notes, and system configuration fixes. This is my "external brain" for keeping my machine running perfectly.
 
-### :cooking: [Cooking](./cooking/index.md)
+### :cooking: Cooking
 A collection of tried-and-tested meals. From quick weeknight stir-fries to slow-cooked favorites.
 
 ## :bicyclist: My Tracks 

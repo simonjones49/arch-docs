@@ -18,7 +18,7 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
@@ -240,15 +240,20 @@
     
     
     
+      
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -276,34 +281,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Computing Central
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1970,8 +1947,13 @@
     
     
     
+      
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1980,7 +1962,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -2008,34 +1990,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cooking/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cooking
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -2624,28 +2578,28 @@
 
 
 
-<h1 id="wiki-project-log-migration-deployment">Wiki Project Log: Migration &amp; Deployment</h1>
+<h1 id="wiki-project-log-migration-deployment">Wiki Project Log: Migration &amp; Deployment<a class="headerlink" href="#wiki-project-log-migration-deployment" title="Permanent link">&para;</a></h1>
 <p>This document records the setup of this documentation suite on <strong>Silex</strong>. It serves as a technical reference for the December move and future maintenance.</p>
-<h2 id="tech-stack">🛠 Tech Stack</h2>
+<h2 id="tech-stack">🛠 Tech Stack<a class="headerlink" href="#tech-stack" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>System:</strong> Arch Linux</li>
 <li><strong>SSG:</strong> <a href="https://www.mkdocs.org/">MkDocs</a> with <a href="https://squidfunk.github.io/mkdocs-material/">Material Theme</a></li>
 <li><strong>Hosting:</strong> GitHub Pages (Managed via <code>gh-pages</code> branch)</li>
 <li><strong>Auth:</strong> SSH ed25519 Keys</li>
 </ul>
-<h2 id="dependencies-arch-specific">📦 Dependencies (Arch Specific)</h2>
+<h2 id="dependencies-arch-specific">📦 Dependencies (Arch Specific)<a class="headerlink" href="#dependencies-arch-specific" title="Permanent link">&para;</a></h2>
 <p>Prefer <code>pacman</code> for stability. In case of a fresh install, run:
 <pre class="highlight"><code class="language-bash"># Core extensions and tools via pacman/AUR
 sudo pacman -S python-pymdown-extensions python-pip</code></pre></p>
-<h2 id="project-structure">📂 Project Structure</h2>
+<h2 id="project-structure">📂 Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>/docs</code>: The source Markdown files.</li>
 <li><code>/docs/recipes</code>: Culinary database.</li>
 <li><code>/docs/technology</code>: Technical guides and this log.</li>
 <li><code>mkdocs.yml</code>: The brain of the site (extensions, theme, and nav).</li>
 </ul>
-<h2 id="operations-manual">🚀 Operations Manual</h2>
-<h3 id="local-preview">Local Preview</h3>
+<h2 id="operations-manual">🚀 Operations Manual<a class="headerlink" href="#operations-manual" title="Permanent link">&para;</a></h2>
+<h3 id="local-preview">Local Preview<a class="headerlink" href="#local-preview" title="Permanent link">&para;</a></h3>
 <p>To see changes in real-time before pushing:
 ```bash
 mkdocs serve</p>
@@ -2725,7 +2679,7 @@ Cycling Stats: https://simonj.42web.io/tracks.php
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
