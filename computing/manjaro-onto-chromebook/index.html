@@ -2454,12 +2454,12 @@
 <p>I then booted this on the Chromebook and the install worked until installing bootloader failed.
 <img alt="2021-02-22_13-36-50" src="../../assets/images/2021-02-22_13-36-50.jpg" title="2021-02-22_13-36-50" />
 The solution is to open a terminal and enter </p>
-<p><code>manjaro-chroot -a</code></p>
+<pre class="highlight"><code>manjaro-chroot -a</code></pre>
 <p>Then retype the failed command and add </p>
-<p><code>--no-nvram --removable</code></p>
+<pre class="highlight"><code>--no-nvram --removable</code></pre>
 <p>This works without error.</p>
 <p>Then type </p>
-<p><code>update-grub</code></p>
+<pre class="highlight"><code>update-grub</code></pre>
 <p>and exit.</p>
 <p>The system works very well and it is quicker than with KDE on, I tested that first. </p>
 
