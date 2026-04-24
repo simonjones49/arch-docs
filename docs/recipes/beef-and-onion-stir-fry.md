@@ -55,4 +55,4 @@ When sauce thickens add black pepper to taste.
 Add green onion and regular onion.
 
 Stir well to mix everything together. Enjoy!!
-![Screenshot_2023-12-20_00-34-39](images/Screenshot_2023-12-20_00-34-39.png "Screenshot_2023-12-20_00-34-39")
+![beefonionsf](images/beefonionsf.png "Beef and Onion Stirfry")

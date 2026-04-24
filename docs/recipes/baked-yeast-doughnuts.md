@@ -27,6 +27,8 @@ COATING
 1/4 Cup sugar
 1 tsp cinnamon
 
+![donut005pix640](images/donut005pix640.jpg "donut005pix640")
+
 METHOD
 
 Combine melted butter, milk and hot water in a small bowl.
@@ -50,5 +52,3 @@ Bake 10-15 minutes until golden brown.
 Remove from the oven, brush with melted butter and roll in cinnamon sugar.
 
 Cool on rack.
-
-![donut005pix640](images/donut005pix640.jpg "donut005pix640")

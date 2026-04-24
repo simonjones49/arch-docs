@@ -27,4 +27,4 @@ Add to the heated roasting tin and place in the oven for one and a half hours ap
 
 Good luck!
 
-[center]![breadpudding](images/breadpudding.jpg "breadpudding")[/center]
+![breadpudding](images/breadpudding.jpg "breadpudding")

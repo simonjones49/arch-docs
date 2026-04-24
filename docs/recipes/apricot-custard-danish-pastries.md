@@ -15,6 +15,8 @@ Icing
 * 1 cup Pure Icing Sugar, sifted
 * 1 1/3 tbsp Boiling Water
 
+![apricotcdp](images/apricotcdp.png "apricotcdp")
+
 Method
 Preheat the oven to 200 degrees Celsius. Drain apricots well and place 12 cut side down on kitchen paper (you will have
 a few apricots left over). Place custard and almond meal in a bowl and stir to combine.
@@ -31,4 +33,3 @@ golden. Transfer to a wire rack to cool.
 Make icing. Place sifted icing sugar into a small bowl. Gradually add enough water to form a thick, pourable icing. Use a
 teaspoon to drizzle icing over pastries.
 
-[center]![apricotcdp](images/apricotcdp.png "apricotcdp")[/center]

@@ -8,6 +8,7 @@ taxonomy:
 media_order: harina.png
 date: '21-01-2021 07:45'
 ---
+![harina](images/harina.png "Harina")
 
 INGREDIENTES
 * 350g de harina

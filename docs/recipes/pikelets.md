@@ -38,5 +38,5 @@ bubbles start to brown, slightly.
 
 7 Re-grease, increase the heat and repeat.
 
-There you are easier than pan cakes.
+There you are, easier than pancakes.
 ![pikelets-recipe-nz-328487437](images/pikelets-recipe-nz-328487437.jpg "pikelets-recipe-nz-328487437")

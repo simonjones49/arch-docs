@@ -40,6 +40,8 @@ sea salt & black pepper
 
 chopped chives for garnish
 
+![no-mayo](images/no-mayo.png "No Mayo")
+
 ## Instructions
 Cut the potatoes (peeled) into small bite-sized pieces that are 3/4 inch (2 cm) thick, then add them into a stock pot, fill with water just enough to cover the potatoes, season generously with salt, and heat with a high heat
 

@@ -47,6 +47,8 @@ Juice of ½ a lemon
 
 Icing sugar, to serve
 
+![mm](images/mm.jpg "Melting Moments")
+
 Method
 
 Preparation: 30 minutes

@@ -48,6 +48,8 @@ Ingredients
 
 Salt and pepper to taste
 
+!fettucini](images/fc.png "Fettuccine Carbonara")
+
 
 Method
 

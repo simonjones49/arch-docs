@@ -40,6 +40,9 @@ Champagne soaking syrup
 
 Baby basil, to serve
 
+![champagne-savarin](images/champagne-savarin.jpg "Champagne Savarin")
+
+
 Method
 
 Savarin

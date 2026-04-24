@@ -30,6 +30,9 @@ To stir fry
 * 2 tbsp of scallion, diced
 * 1/2 cup of cashew, toasted
 
+![cashew-chicken](images/cashwechicken.jpg "Cashew Chicken")
+
+
 INSTRUCTIONS
 Cut 1 lb of chicken breast into bite-size pieces. You can also use chicken thigh if you want.
 

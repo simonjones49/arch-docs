@@ -60,3 +60,5 @@ taxonomy:
 ## Oven:
 To 200°C (180°C fan) / 400°F.
 uncovered for 35–40 minutes, until chicken is cooked through (75°C / 165°F internal temp) and sauce is bubbling.
+
+![tuscan-chicken](images/tuscan-chicken.png "Tuscan Chicken")

@@ -29,5 +29,5 @@ Method
 2.  Put the mangetout, beansprouts, red pepper strips, sliced spring onions and the noodles into a bowl.
 3.  Pour the dressing over them and mix thoroughly to coat everything well.
 4.  Sprinkle with the sesame seeds and chopped coriander and pack up as needed.
-[center]
-![sesamepeanutnoodles](images/sesamepeanutnoodles.jpg "sesamepeanutnoodles")[/center]
+
+![sesamepeanutnoodles](images/sesamepeanutnoodles.jpg "sesamepeanutnoodles")
