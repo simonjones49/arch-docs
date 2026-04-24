@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2482,15 +2482,12 @@
 <p>I then booted this on the Chromebook and the install worked until installing bootloader failed.
 <img alt="2021-02-22_13-36-50" src="../images/2021-02-22_13-36-50.jpg" title="2021-02-22_13-36-50" />
 The solution is to open a terminal and enter </p>
-<pre> manjaro-chroot -a</pre>
-
+<p><code>manjaro-chroot -a</code></p>
 <p>Then retype the failed command and add </p>
-<pre> --no-nvram --removable</pre>
-
+<p><code>--no-nvram --removable</code></p>
 <p>This works without error.</p>
 <p>Then type </p>
-<pre> update-grub</pre>
-
+<p><code>update-grub</code></p>
 <p>and exit.</p>
 <p>The system works very well and it is quicker than with KDE on, I tested that first. </p>
 

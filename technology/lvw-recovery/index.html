@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2482,17 +2482,15 @@
 <p>The asnwer is to chroot into the root partition and fix the broken packages. </p>
 <p>My issue then is sometimes the LVM does not open and you get an error instead of mounting the root partition.</p>
 <p>Here is my fix.</p>
-<pre>
-vgdisplay
-</pre>
-<p>Now you can see the UUID for the volume and rename the volume group, appending a 1</p>
-<pre>vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup1</pre>
-<p>Then remove the 1 again</p>
-<pre>vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup</pre>
-<p>Now the volumegroup will mount as normal and then you can chroot into it and fix the issue. </p>
-<pre>modprobe dm-mod</pre>
-<pre>vgchange -ay</pre>
-<pre>cryptsetup open --type luks /dev/nvme0n1p3 volumegroup</pre>
+<p><pre class="highlight"><code>vgdisplay</code></pre>
+Now you can see the UUID for the volume and rename the volume group, appending a 1
+<code>vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup1</code>
+Then remove the 1 again
+<code>vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup</code>
+Now the volumegroup will mount as normal and then you can chroot into it and fix the issue. 
+<code>modprobe dm-mod</code>
+<code>vgchange -ay</code>
+<code>cryptsetup open --type luks /dev/nvme0n1p3 volumegroup</code></p>
 
 
 

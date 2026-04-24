@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2482,18 +2482,15 @@
 <p>When you’re booted into Windows 11 and see the installation screen, press Shift+F10 to launch a command prompt.</p>
 <p>Then open regedit</p>
 <p>When the Registry Editor opens, go to HKEY_LOCAL_MACHINE\SYSTEM\Setup, right-click on Setup and select New &gt; Key. Name the new key LabConfig.</p>
-<p>Right-click on LabConfig and select New &gt; DWORD (32-bit) value and create 3 new values:</p>
-<pre>
-BypassTPMCheck
+<p>Right-click on LabConfig and select New &gt; DWORD (32-bit) value and create 3 new values:
+<pre class="highlight"><code>BypassTPMCheck
 BypassRAMCheck
-BypassSecureBootCheck
-</pre>
-<p>Double click on each of the values you’ve created and set their data to 1.</p>
+BypassSecureBootCheck</code></pre>
+Double click on each of the values you’ve created and set their data to 1.</p>
 <p>You can now install without issue, until you get to the account section. Here use the Shift + F10 again to open Command Prompt.
-Type the following command to release the current network configuration and press Enter</p>
-<pre>oobe\bypassnro
-</pre>
-<p>note: The command is a single phrase without spaces.
+Type the following command to release the current network configuration and press Enter
+<code>oobe\bypassnro</code>
+note: The command is a single phrase without spaces.
 Disable the network before the welcome screen comes back and the installer will reboot then offer an offline account option.</p>
 
 

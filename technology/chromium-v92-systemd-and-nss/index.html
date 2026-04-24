@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2480,15 +2480,10 @@
 
 <p>Updating chromium this morning causes it to hang on start, the error message points to a network connectivity problem.</p>
 <p>It appears to actually relate to a systemd and nss update which is now not compatible with chromium.</p>
-<p>A quick fix is to edit the order in /etc/nsswitch.conf to </p>
-<pre>
-hosts: files mymachines dns myhostname resolve [!UNAVAIL=return] 
-</pre>
-<p>and then restart the service</p>
-<pre>
-systemctl restart systemd-resolved.service
-</pre>
-
+<p>A quick fix is to edit the order in /etc/nsswitch.conf to 
+<pre class="highlight"><code>hosts: files mymachines dns myhostname resolve [!UNAVAIL=return] </code></pre>
+and then restart the service
+<pre class="highlight"><code>systemctl restart systemd-resolved.service</code></pre></p>
 <p>This is only a work round until chromium catch up with the systemd changes but it works and keeps the web browser fully up to date.</p>
 
 

@@ -865,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,17 +2479,14 @@
 <p>Many years ago I set up xplanet and used it for the desktop wallpaper, I thought I would have a go again in 2023 and see how easy it was. In short, it is not. </p>
 <p>The basic xplanet script works perfectly but the cloud data is no longer free, but after setting up an account at <a href="https://www.xericdesign.com/xplanet.php">Xeric Design</a> (22€/year) all is working well and looks great as the desktop background.</p>
 <p><img alt="xplanet" src="../images/xplanet.png" title="xplanet" /></p>
-<p>To start the xplanet script </p>
-<pre>
-xplanet -output ~/.cache/xplanet.png -geometry 2800x1280 --wait 60 -latitude 3 -latitude 40 -radius 50 &
-</pre>
-<p>This is overly zoomed to make my location more visible, and the script called hourly to update the clouds is </p>
-<pre>
-#!/bin/bash
+<p>To start the xplanet script 
+<pre class="highlight"><code>xplanet -output ~/.cache/xplanet.png -geometry 2800x1280 --wait 60 -latitude 3 -latitude 40 -radius 50 &amp;</code></pre>
+This is overly zoomed to make my location more visible, and the script called hourly to update the clouds is 
+<pre class="highlight"><code>#!/bin/bash
 
 # Your username (license key) and password
-user=&lt;username&gt;
-pass=&lt;password&gt;
+user=&amp;lt;username&amp;gt;
+pass=&amp;lt;password&amp;gt;
 
 # Size of the map to download
 pixels=2048
@@ -2515,9 +2512,8 @@ curlOpts="-u ${user}:${pass} -R -L -o ${cloudFile}"
 # whether to download the new one
 if [ -f ${cloudFile} ]; then
 curlOpts="-z ${cloudFile} ${curlOpts}"
-fi
-</pre>
-<p>The xfce4 settings to use the wallpaper are:<img alt="xfce4-wallpaper-settings" src="../images/xfce4-wallpaper-settings.png" title="xfce4-wallpaper-settings" /></p>
+fi</code></pre>
+The xfce4 settings to use the wallpaper are:<img alt="xfce4-wallpaper-settings" src="../images/xfce4-wallpaper-settings.png" title="xfce4-wallpaper-settings" /></p>
 
 
 

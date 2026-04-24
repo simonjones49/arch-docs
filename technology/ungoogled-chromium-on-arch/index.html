@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,21 +2479,11 @@
   <h1>Ungoogled Chromium on Arch Key Refresh</h1>
 
 <p>If you update the keys on Arch and lose the ungoogled chromium key, here is how to update the key.</p>
-<pre>
-key=$(curl -fsSL https://download.opensuse.org/repositories/home:justkidding:arch/Arch/$(uname -m)/home_justkidding_arch_Arch.key)
-</pre>
-<pre>
-fingerprint=$(gpg --quiet --with-colons --import-options show-only --import --fingerprint &lt;&lt;&lt; "${key}" | awk -F: '$1 == "fpr" { print $10 }')
-</pre>
-<pre>
-sudo pacman-key --init
-</pre>
-<pre>
-sudo pacman-key --add - &lt;&lt;&lt; "${key}"
-</pre>
-<pre>
-sudo pacman-key --lsign-key "${fingerprint}"
-</pre>
+<p><pre class="highlight"><code>key=$(curl -fsSL https://download.opensuse.org/repositories/home:justkidding:arch/Arch/$(uname -m)/home_justkidding_arch_Arch.key)</code></pre>
+<pre class="highlight"><code>fingerprint=$(gpg --quiet --with-colons --import-options show-only --import --fingerprint &amp;lt;&amp;lt;&amp;lt; "${key}" | awk -F: '$1 == "fpr" { print $10 }')</code></pre>
+<pre class="highlight"><code>sudo pacman-key --init</code></pre>
+<pre class="highlight"><code>sudo pacman-key --add - &amp;lt;&amp;lt;&amp;lt; "${key}"</code></pre>
+<pre class="highlight"><code>sudo pacman-key --lsign-key "${fingerprint}"</code></pre></p>
 
 
 

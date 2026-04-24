@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2481,24 +2481,20 @@
 <p>I have two monitors and only ever use one at a time, I have a script and keyboard shortcut to switch between them but at the moment 99% of my time is at one monitor.</p>
 <p>When I login I have script switch the other monitor off but after putting the machine to sleep they both wake up. I can manually run the script to turn the unneeded one off but because I cannot see it I often forget.</p>
 <p>So here is my solution. </p>
-<p>I created a file </p>
-<pre>/usr/lib/systemd/system-sleep/monitor.sh</pre>
-<p>and in it has </p>
-<pre>
-#!/bin/sh
+<p>I created a file 
+<code>/usr/lib/systemd/system-sleep/monitor.sh</code>
+and in it has 
+<pre class="highlight"><code>#!/bin/sh
 case $1/$2 in
   pre/*)
     ;;
   post/*)
     sleep 5
     export DISPLAY=:0
-    sudo -u simon xrandr --output HDMI-0 --off > /tmp/randr.dbg 2>&1
+    sudo -u simon xrandr --output HDMI-0 --off &gt; /tmp/randr.dbg 2&gt;&amp;1
     ;;
-esac
-</pre>
-<p>The script must be executable so <pre>
-sudo chmod +x /usr/lib/systemd/system-sleep/monitor.sh
-</pre>
+esac</code></pre>
+The script must be executable so <code>sudo chmod +x /usr/lib/systemd/system-sleep/monitor.sh</code>
 The sleep part is needed to wait until both displays are awake, otherwise the command fails. </p>
 <p>The sudo to my user is the extra piece that took some finding, a special thanks to <a href="https://bbs.archlinux.org/viewtopic.php?target=arch&amp;pid=1960895#p1960895">this</a> thread for pointing out a solution. </p>
 <p>If you need a different option you can use any xrandr command and it will work.</p>

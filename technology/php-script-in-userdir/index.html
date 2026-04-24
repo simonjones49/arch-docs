@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,21 +2479,17 @@
   <h1>PHP script in userdir</h1>
 
 <p>Following on from getting cgi scripts working the next hurdle is PHP scripts.</p>
-<p>This is easier, once you know what to do.</p>
-<pre>
-sudo nano /etc/apache2/mods-enabled/php*.conf
-</pre>
-<p>Change </p>
+<p>This is easier, once you know what to do.
+<pre class="highlight"><code>sudo nano /etc/apache2/mods-enabled/php*.conf</code></pre>
+Change </p>
 <pre><code>   php_admin_flag engine Off
 </code></pre>
 <p>to</p>
 <pre><code>    php_admin_flag engine On
 </code></pre>
-<p>save.</p>
-<pre>
- sudo service apache2 restart
-</pre>
-<p>to make the change active.</p>
+<p>save.
+<pre class="highlight"><code> sudo service apache2 restart</code></pre>
+to make the change active.</p>
 
 
 

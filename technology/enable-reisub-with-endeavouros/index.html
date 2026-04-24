@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,11 +2479,9 @@
   <h1>Enable REISUB with Endeavouros</h1>
 
 <p>If you edit config files and restart servers you will eventually break something, often something gets stuck and you can't escape having to reboot, rather than holding the power button you can use the REISUB keys, but not if they are disabled.
-To enable them before you need them, type this</p>
-<pre>
-echo 'kernel.sysrq=1' | sudo tee /etc/sysctl.d/99-reisub.conf
-</pre>
-<p>and reboot.</p>
+To enable them before you need them, type this
+<pre class="highlight"><code>echo 'kernel.sysrq=1' | sudo tee /etc/sysctl.d/99-reisub.conf</code></pre>
+and reboot.</p>
 <p>While this is a security risk, needing access to the actual keyboard means it is a low risk.</p>
 <p>More info <a href="https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html?target=_busier">here</a></p>
 

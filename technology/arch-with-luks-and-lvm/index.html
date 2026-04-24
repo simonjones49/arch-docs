@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2480,206 +2480,131 @@
 
 <p>Disk setup
 Check your drives:</p>
-<pre>
-fdisk -l
-</pre>
-<p>We’ll be installing Arch on the SSD /dev/mmcblk1 by creating two 500 MB partitions (for EFI and /boot), and another ext4 partition for the logical volume.</p>
-<pre>
-fdisk /dev/mmcblk1
-</pre>
-
-<p>let's start with listing the partitions</p>
-<pre>
-:  p
-</pre>
-<p>let's create a new 500 MB partition for EFI</p>
-<pre>
-:  n, enter, enter, +500M
-</pre>
-<p>and let's set the type to EFI</p>
-<pre>
-:  t, 1
-</pre>
-<p>then create the /boot partition</p>
-<pre>
-:  n, enter, enter, +500M
-</pre>
-<p>set its type to 'Linux Filesystem'</p>
-<pre>
-:  t, 20
-</pre>
-<p>finally, create the LVM partition</p>
-<pre>
-:  n, enter, enter, enter
-</pre>
-<p>set the type to 'Linux LVM'</p>
-<pre>
-:  t, 30
-</pre>
-<p>check everything is fine</p>
-<pre>
-:  p
-</pre>
-<p>write changes and exit</p>
-<pre>
-:  w
-</pre>
-<p>Our partitions are ready and we can start creating the LVM and files systems. At this point we have three partitions:</p>
+<p><pre class="highlight"><code>fdisk -l</code></pre>
+We’ll be installing Arch on the SSD /dev/mmcblk1 by creating two 500 MB partitions (for EFI and /boot), and another ext4 partition for the logical volume.</p>
+<pre class="highlight"><code>fdisk /dev/mmcblk1</code></pre>
+<p>let's start with listing the partitions
+<pre class="highlight"><code>:  p</code></pre>
+let's create a new 500 MB partition for EFI
+<pre class="highlight"><code>:  n, enter, enter, +500M</code></pre>
+and let's set the type to EFI
+<pre class="highlight"><code>:  t, 1</code></pre>
+then create the /boot partition
+<pre class="highlight"><code>:  n, enter, enter, +500M</code></pre>
+set its type to 'Linux Filesystem'
+<pre class="highlight"><code>:  t, 20</code></pre>
+finally, create the LVM partition
+<pre class="highlight"><code>:  n, enter, enter, enter</code></pre>
+set the type to 'Linux LVM'
+<pre class="highlight"><code>:  t, 30</code></pre>
+check everything is fine
+<pre class="highlight"><code>:  p</code></pre>
+write changes and exit
+<pre class="highlight"><code>:  w</code></pre>
+Our partitions are ready and we can start creating the LVM and files systems. At this point we have three partitions:</p>
 <p>/dev/mmcblk1p1 for EFI. We’ll format it with FAT.
 /dev/mmcblk1p2 for /boot. We’ll format it with EXT4.
 /dev/mmcblk1p3 for LVM. We’ll set up LUKS in this disk.
 So, let’s create the file systems:</p>
-<pre>
-mkfs.fat -F32 /dev/mmcblk1p1
-mkfs.ext4 /dev/mmcblk1p2
-</pre>
-<p>LUKS encryption on LVM partition
+<p><pre class="highlight"><code>mkfs.fat -F32 /dev/mmcblk1p1
+mkfs.ext4 /dev/mmcblk1p2</code></pre>
+LUKS encryption on LVM partition
 Now we need to set up encryption in the third disk.</p>
-<pre>
-cryptsetup luksFormat /dev/mmcblk1p3
-</pre>
-<p>After that, you will need to type YES in capital letters and then enter your passphrase. Do not forget it ;) Next, we need to open the encrypted device.</p>
-<pre>
-cryptsetup open --type luks /dev/mmcblk1p3 myvolume
-</pre>
-<p>You can give it any name (myvolume in my case), but remember it. Enter your passphrase.</p>
+<p><pre class="highlight"><code>cryptsetup luksFormat /dev/mmcblk1p3</code></pre>
+After that, you will need to type YES in capital letters and then enter your passphrase. Do not forget it ;) Next, we need to open the encrypted device.</p>
+<p><pre class="highlight"><code>cryptsetup open --type luks /dev/mmcblk1p3 myvolume</code></pre>
+You can give it any name (myvolume in my case), but remember it. Enter your passphrase.</p>
 <p>Next, we need to configure LVM and create two partitions for the system and home. Let’s first create the physical volume.</p>
-<pre>
-pvcreate --dataalignment 1m /dev/mapper/myvolume
-</pre>
-<p>Switch myvolume with whatever name you chose. Now, on to the volume group creation. I called my volume group volumegroup. </p>
-<pre>
-vgcreate volumegroup /dev/mapper/myvolume
-</pre>
-<p>And finally, we are ready to create the logical volumes.</p>
-<p>create the system partition -</p>
-<pre>
-lvcreate -l 100%FREE volumegroup -n root
-</pre>
-
+<p><pre class="highlight"><code>pvcreate --dataalignment 1m /dev/mapper/myvolume</code></pre>
+Switch myvolume with whatever name you chose. Now, on to the volume group creation. I called my volume group volumegroup. </p>
+<p><pre class="highlight"><code>vgcreate volumegroup /dev/mapper/myvolume</code></pre>
+And finally, we are ready to create the logical volumes.</p>
+<p>create the system partition -
+<pre class="highlight"><code>lvcreate -l 100%FREE volumegroup -n root</code></pre></p>
 <p>And now, let’s create the file systems.</p>
-<pre>
-mkfs.ext4 /dev/volumegroup/root
-</pre>
-<p>And mount it, along with the /boot partition.</p>
-<pre>
-mount /dev/volumegroup/root /mnt
+<p><pre class="highlight"><code>mkfs.ext4 /dev/volumegroup/root</code></pre>
+And mount it, along with the /boot partition.</p>
+<p><pre class="highlight"><code>mount /dev/volumegroup/root /mnt
 mkdir /mnt/home
 mkdir /mnt/boot
 mount /dev/mmcblk1p2 /mnt/boot
-mkdir /mnt/etc
-</pre>
-<p>Starting actual Arch installation
+mkdir /mnt/etc</code></pre>
+Starting actual Arch installation
 Now our disk and partitions are set up an mounted, so let’s generate the fstab file.</p>
-<pre>
-genfstab -U /mnt >> /mnt/etc/fstab
-</pre>
-<p>Now we are ready to actually starting the regular installation of Arch. First use pacstrap to install the base package, the linux kernel and firmware. Then, chroot into the newly installed system.</p>
-<pre>
-pacstrap -i /mnt base linux linux-firmware
-</pre>
-<p>switch to the installation disk</p>
-<pre>
-arch-chroot /mnt
-</pre>
-<p>We are now already operating from our installed system. We need to install some additionaly goodies. I’ve listed here some essentials. Particularly, you need the lvm2 package.</p>
-<pre>
-pacman -S linux-headers intel-ucode base-devel nano networkmanager wpa_supplicant sudo  netctl dialog lvm2
-</pre>
-
-<pre>
-systemctl enable NetworkManager
-</pre>
-<p>Edit your hostname.</p>
-<p>/etc/hostname # contains a single line with the host name.</p>
-<pre>
-c300
-</pre>
-<p>And create the etc/hosts file with the following contents.</p>
-<p>/etc/hosts</p>
-<pre>
-127.0.0.1   localhost
+<p><pre class="highlight"><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code></pre>
+Now we are ready to actually starting the regular installation of Arch. First use pacstrap to install the base package, the linux kernel and firmware. Then, chroot into the newly installed system.</p>
+<p><pre class="highlight"><code>pacstrap -i /mnt base linux linux-firmware</code></pre>
+switch to the installation disk
+<pre class="highlight"><code>arch-chroot /mnt</code></pre>
+We are now already operating from our installed system. We need to install some additionaly goodies. I’ve listed here some essentials. Particularly, you need the lvm2 package.</p>
+<pre class="highlight"><code>pacman -S linux-headers intel-ucode base-devel nano networkmanager wpa_supplicant sudo  netctl dialog lvm2</code></pre>
+<p><pre class="highlight"><code>systemctl enable NetworkManager</code></pre>
+Edit your hostname.</p>
+<p>/etc/hostname # contains a single line with the host name.
+<pre class="highlight"><code>c300</code></pre>
+And create the etc/hosts file with the following contents.</p>
+<p>/etc/hosts
+<pre class="highlight"><code>127.0.0.1   localhost
 ::1         localhost
-127.0.1.1   c300.lan    c300
-</pre>
-<p>Remember to modify substitute c300 with your host name.</p>
+127.0.1.1   c300.lan    c300</code></pre>
+Remember to modify substitute c300 with your host name.</p>
 <p>This step is important. We need to enable encryption in the hooks of mkinitcpio.conf. To do so, edit the line which starts with HOOKS= in /etc/mkinitcpio.conf and add encrypt and lvm2. It should look like this:</p>
-<p>/etc/mkinitcpio.conf</p>
-<pre>
-[...]
+<p>/etc/mkinitcpio.conf
+<pre class="highlight"><code>[...]
 HOOKS=(base udev autodetect modconf block encrypt lvm2 filesystems keyboard fsck)
-[...]
-</pre>
-<p>And then run mkinitcpio.</p>
-<pre>
-mkinitcpio -p linux
-</pre>
-
+[...]</code></pre>
+And then run mkinitcpio.</p>
+<pre class="highlight"><code>mkinitcpio -p linux</code></pre>
 <p>Now, uncomment your locale (remove the leading #) and generate it.</p>
-<p>/etc/locale.gen</p>
-<pre>
-[...]
+<p>/etc/locale.gen
+<pre class="highlight"><code>[...]
 en_GB.UTF-8
-[...]
-</pre>
-<pre>
-locale-gen
-</pre>
-<p>User management
+[...]</code></pre>
+<pre class="highlight"><code>locale-gen</code></pre>
+User management
 Now, we set up the root password and create a user with superuser permissions. To do so, we add it to the wheel group, which we will add as superusers.</p>
-<p>change root password</p>
-<pre>
-passwd
-</pre>
-<p>add user 'username'</p>
-<pre>useradd -m -g users -G wheel username</pre>
-<p>change 'username' password</p>
-<pre>passwd username</pre>
-<p>Now, make users in the wheel group superusers by uncommenting the %wheel line</p>
-<pre>EDITOR=nano visudo</pre>
-<p>visudo</p>
-<pre>
-[...]
+<p>change root password
+<pre class="highlight"><code>passwd</code></pre>
+add user 'username'
+<code>useradd -m -g users -G wheel username</code>
+change 'username' password
+<code>passwd username</code>
+Now, make users in the wheel group superusers by uncommenting the %wheel line
+<code>EDITOR=nano visudo</code>
+visudo
+<pre class="highlight"><code>[...]
 %wheel ALL=(ALL) ALL
-[...]
-</pre>
-<p>Bootloader configuration
+[...]</code></pre>
+Bootloader configuration
 First install GRUB2 and some utilities</p>
-<pre>
-pacman -S grub efibootmgr dosfstools mtools</pre>
-<p>And edit /etc/default/grub and edit it so that the following lines are present.</p>
-<p>/etc/default/grub</p>
-<pre>
+<p><pre class="highlight"><code>pacman -S grub efibootmgr dosfstools mtools```
+And edit /etc/default/grub and edit it so that the following lines are present.
+
+/etc/default/grub</code></pre>
 [...]
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 cryptdevice=/dev/mmcblk1p3:volumegroup:allow-discards quiet"
 [...]
 GRUB_ENABLE_CRYPTODISK=y
 [...]
-</pre>
-<p>Make sure that the name of the volume group is correct, as well as the partition it is located. Mount the first partition we created as the EFI partition.</p>
-<pre>
+<pre class="highlight"><code>Make sure that the name of the volume group is correct, as well as the partition it is located. Mount the first partition we created as the EFI partition.
+</code></pre>
 mkdir /boot/EFI
 mount /dev/mmcblk1p1 /boot/EFI
-</pre>
-<p>And finally, install grub.</p>
-<pre>
+<pre class="highlight"><code>And finally, install grub.
+</code></pre>
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --force --no-nvram --removable
-</pre>
-<p>Set up grub locale and generate the grub configuration file.</p>
-<pre>
+<pre class="highlight"><code>Set up grub locale and generate the grub configuration file.
+</code></pre>
 mkdir /boot/grub/locale
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 grub-mkconfig -o /boot/grub/grub.cfg
-</pre>
-<p>Swap file creation
-This is optional, but I usually like to use a swap file. To create and activate a swap file of 8 GB, run the following. Use, of course, whatever size suits your system.</p>
-<pre>
+<pre class="highlight"><code>Swap file creation
+This is optional, but I usually like to use a swap file. To create and activate a swap file of 8 GB, run the following. Use, of course, whatever size suits your system.</code></pre>
 dd if=/dev/zero of=/myswap bs=1M count=8192 status=progress
 chmod 600 /myswap
 mkswap /myswap
 echo '/myswap none swap defaults 0 0' | tee -a /etc/fstab
-</pre>
-
+```</p>
 <p>The bulk of this was inspired by <a href="https://tonisagrista.com/blog/2020/arch-encryption/">this</a>, I have changed it to work with my disks and modified to work with a chromebook. I also wanted a copy in case it got deleted!</p>
 
 

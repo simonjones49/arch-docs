@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2481,26 +2481,20 @@
 <p>Having tried Manjaro I decided to give Endeavouros a go and the same problem, with a similar fix.</p>
 <p>I then booted this on the Chromebook and the install worked until installing bootloader failed.
 <img alt="2021-02-22_13-36-50" src="../images/2021-02-22_13-36-50.jpg" title="2021-02-22_13-36-50" />
-The solution is to open a terminal and enter</p>
-<pre>
-chroot /tmp/calamares-root<numbers></pre>
-<p>Hint: use tab to complete the numbers after root</p>
-<p>Then retype the failed command and add</p>
-<pre>
---no-nvram --removable</pre>
-<p>Hint : If you leave the installer error visible you can copy and paste into the terminal (CTRL+SHIFT+V)</p>
-<p>This works without error.</p>
-<p>Then type </p>
-<pre>
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-</pre>
-<p>Then run the cleanup script</p>
-<pre>
-chrooted_cleaner_script.sh
-</pre>
-<p>and then </p>
-<pre>exit</pre>
+The solution is to open a terminal and enter
+<pre class="highlight"><code>chroot /tmp/calamares-root&lt;numbers&gt;```
+Hint: use tab to complete the numbers after root
 
+Then retype the failed command and add</code></pre>
+--no-nvram --removable```
+Hint : If you leave the installer error visible you can copy and paste into the terminal (CTRL+SHIFT+V)</p>
+<p>This works without error.</p>
+<p>Then type 
+<pre class="highlight"><code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
+Then run the cleanup script
+<pre class="highlight"><code>chrooted_cleaner_script.sh</code></pre>
+and then 
+<code>exit</code></p>
 <p>Reboot and all should be good.</p>
 
 

@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2481,28 +2481,19 @@
 <p>Let’s start by running the RCLONE configuration tool:</p>
 <p>rclone config
 Then use the following options:</p>
-<pre>n) New remote
+<p>```n) New remote</p>
+<p>name = nextcloud</p>
+<p>type = webdav</p>
+<p>url = https://<your nextcloud server url>/remote.php/webdav/</p>
+<p>vendor = nextcloud</p>
+<p>user = &lt;your nextcloud username&gt;</p>
+<p>pass = &lt;your nextcloud user password&gt;</p>
+<p>bearer_token = Remote config
+<pre class="highlight"><code>This sets the configuration, in rclone, then we need to mount it on login.
 
-name = nextcloud
-
-type = webdav
-
-url = https://<your nextcloud server url>/remote.php/webdav/
-
-vendor = nextcloud
-
-user = &lt;your nextcloud username&gt;
-
-pass = &lt;your nextcloud user password&gt;
-
-bearer_token = Remote config
-</pre>
-<p>This sets the configuration, in rclone, then we need to mount it on login.</p>
-<p>Here we add this as a startup option or to your startup script</p>
-<pre>
-rclone mount nextcloud: ~/Nextcloud --daemon --vfs-cache-mode writes &
-</pre>
-
+Here we add this as a startup option or to your startup script</code></pre>
+rclone mount nextcloud: ~/Nextcloud --daemon --vfs-cache-mode writes &amp;
+```</p>
 <p>The directory ~/Nextcloud must exist and be empty.</p>
 <p>It is then shown as a remote filesystem in your filemanager</p>
 <p><img alt="rs" src="../images/rs.png" title="rs" /></p>

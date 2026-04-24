@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2478,13 +2478,10 @@
 
   <h1>Arch turn off wifi when ethernet is connected</h1>
 
-<p>I have had some wifi issues and have now got a cable plugged in which solves these, however when I move the laptop I have to manually turn on wifi and then back off when I plug the cable back in. I wanted an automatic way to do this, here is the resulting script.</p>
-<pre>
-sudo nano /etc/NetworkManager/dispatcher.d/70-wifi-wired-exclusive.sh
-</pre>
-<p>This file contains </p>
-<pre>
-#!/bin/sh
+<p>I have had some wifi issues and have now got a cable plugged in which solves these, however when I move the laptop I have to manually turn on wifi and then back off when I plug the cable back in. I wanted an automatic way to do this, here is the resulting script.
+<pre class="highlight"><code>sudo nano /etc/NetworkManager/dispatcher.d/70-wifi-wired-exclusive.sh</code></pre>
+This file contains 
+<pre class="highlight"><code>#!/bin/sh
 
 name_tag="wifi-wired-exclusive"
 syslog_tag="$name_tag"
@@ -2511,17 +2508,14 @@ disable_wifi() {
     nmcli radio wifi off
 }
 
-if [ "$iface_type" = "ethernet" ] && [ "$iface_mode" = "down" ]; then
+if [ "$iface_type" = "ethernet" ] &amp;&amp; [ "$iface_mode" = "down" ]; then
     enable_wifi
-elif [ "$iface_type" = "ethernet" ] && [ "$iface_mode" = "up"  ] && [ "$iface_state" = "connected" ]; then
+elif [ "$iface_type" = "ethernet" ] &amp;&amp; [ "$iface_mode" = "up"  ] &amp;&amp; [ "$iface_state" = "connected" ]; then
     disable_wifi
-fi
-</pre>
-<p>Make it executable with </p>
-<pre>
-sudo chmod +x /etc/NetworkManager/dispatcher.d/70-wifi-wired-exclusive.sh
-</pre>
-<p>That's it, we're done. </p>
+fi</code></pre>
+Make it executable with 
+<pre class="highlight"><code>sudo chmod +x /etc/NetworkManager/dispatcher.d/70-wifi-wired-exclusive.sh</code></pre>
+That's it, we're done. </p>
 
 
 

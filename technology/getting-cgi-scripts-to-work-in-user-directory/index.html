@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vim-syntaxapache-ts4-sw4-sts4-sr-noet" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -867,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -1376,6 +1381,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2460,6 +2467,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2476,35 +2485,30 @@
 
 
 
-  <h1>Getting cgi scripts to work in user directory</h1>
-
-<pre>
-a2enmod cgi
+<p><pre class="highlight"><code>a2enmod cgi
 sudo apt-get install libmime-lite-perl
 sudo apt-get install libcgi-session-perl
- </pre>
+ ```
 
-<p>userdir.conf</p>
-<pre>
+userdir.conf</code></pre>
 <IfModule mod_userdir.c>
     UserDir public_html
-    UserDir disabled root
-
-    <Directory /home/*/public_html>
-        AllowOverride FileInfo AuthConfig Limit Indexes
-        Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
-        Require method GET POST OPTIONS
-    </Directory>
-            <Directory "/home/*/public_html/cgi-bin">
-            AddHandler cgi-script .cgi .pl
-            AllowOverride None
-            Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
-            Require all granted
-        </Directory>
-</IfModule>
-
-# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
-</pre>
+    UserDir disabled root</p>
+<pre><code>&lt;Directory /home/*/public_html&gt;
+    AllowOverride FileInfo AuthConfig Limit Indexes
+    Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+    Require method GET POST OPTIONS
+&lt;/Directory&gt;
+        &lt;Directory "/home/*/public_html/cgi-bin"&gt;
+        AddHandler cgi-script .cgi .pl
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Require all granted
+    &lt;/Directory&gt;
+</code></pre>
+<p></IfModule></p>
+<h1 id="vim-syntaxapache-ts4-sw4-sts4-sr-noet">vim: syntax=apache ts=4 sw=4 sts=4 sr noet</h1>
+<p>```</p>
 
 
 

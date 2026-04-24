@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -867,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2021,6 +2026,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2460,6 +2467,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2476,20 +2485,17 @@
 
 
 
-  <h1>Removing LightDM</h1>
-
 <p>For my Chromebook I don't need a login box, I can manage with a tty and auto start X after logging in.</p>
 <p>I remove LightDM and then add this to the login script.</p>
 <p>Add or edit .bash_profile</p>
-<pre>
-#
-# ~/.bash_profile
-#
-
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+<p>```</p>
+<h1 id="_1"></h1>
+<h1 id="bash_profile">~/.bash_profile</h1>
+<h1 id="_2"></h1>
+<p>[[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc
+if [[ ! $DISPLAY &amp;&amp; $XDG_VTNR -eq 1 ]]; then
   exec startxfce4
-fi</pre>
+fi```</p>
 
 
 

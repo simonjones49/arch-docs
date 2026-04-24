@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2484,42 +2484,28 @@
 <p>So, to get this running on Arch Linux. I am not a Wine guru, so I installed WineGUI from the AUR.</p>
 <p>I chose Windows 7 (seems a good fit) and of course 32 bit. These are the settings I used
 <img alt="WineGUI" src="../images/WineGUI.png" title="WineGUI" /></p>
-<p>I decided to create an ISO image, in case I needed it to run the game all the time. To get the info to do this I ran</p>
-<pre>
-isoinfo -d -i /dev/cdrom | grep -i -E 'block size|volume size'
-</pre>
-<p>This gives the values needed to create the ISO with</p>
-<pre>
-dd if=/dev/cdrom of=NFSC.iso bs=2048 count=1878560
-</pre>
-<p>I then put the disc away and copied the game key into Keepass for easy reference. </p>
-<p>I mounted the ISO to /mnt</p>
-<pre>
-sudo mkdir /mnt/NFS
-sudo mount -o loop NFSC.iso /mnt/NFS/
-</pre>
-<p>This shows up in WineGUI as drive d:</p>
+<p>I decided to create an ISO image, in case I needed it to run the game all the time. To get the info to do this I ran
+<pre class="highlight"><code>isoinfo -d -i /dev/cdrom | grep -i -E 'block size|volume size'</code></pre>
+This gives the values needed to create the ISO with
+<pre class="highlight"><code>dd if=/dev/cdrom of=NFSC.iso bs=2048 count=1878560</code></pre>
+I then put the disc away and copied the game key into Keepass for easy reference. </p>
+<p>I mounted the ISO to /mnt
+<pre class="highlight"><code>sudo mkdir /mnt/NFS
+sudo mount -o loop NFSC.iso /mnt/NFS/</code></pre>
+This shows up in WineGUI as drive d:</p>
 <p>I completed the install as though in Windows, skipping the registration as the EA server is no longer there.</p>
 <p>I did copy a no CD application so I would not need the ISO mounted all the time.
-I removed the mount with </p>
-<pre>
-sudo umount /mnt/NFS 
-sudo rmdir /mnt/NFS/
-</pre>
-<p>Then to create a launcher.
-Name</p>
-<pre>
-Need for Speed™ Carbon
-</pre>
-<p>Command</p>
-<pre>
-env WINEPREFIX="/home/simon/.local/share/winegui/prefixes/NFS Carbon" wine "/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon/NFSC.exe"
-</pre>
-<p>Working Directory</p>
-<pre>
-/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon
-</pre>
-<p>You will need to change these to suit your setup, but you get the idea.
+I removed the mount with 
+<pre class="highlight"><code>sudo umount /mnt/NFS 
+sudo rmdir /mnt/NFS/</code></pre>
+Then to create a launcher.
+Name
+<pre class="highlight"><code>Need for Speed™ Carbon</code></pre>
+Command
+<pre class="highlight"><code>env WINEPREFIX="/home/simon/.local/share/winegui/prefixes/NFS Carbon" wine "/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon/NFSC.exe"</code></pre>
+Working Directory
+<pre class="highlight"><code>/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon</code></pre>
+You will need to change these to suit your setup, but you get the idea.
 Add the icon as shown</p>
 <p><img alt="Screenshot_2024-07-03_12-12-15" src="../images/Screenshot_2024-07-03_12-12-15.png" title="Screenshot_2024-07-03_12-12-15" /></p>
 <p>Mark the launcher executable, and off we go! All movies work, sound works and most importantly the USB controller works!</p>

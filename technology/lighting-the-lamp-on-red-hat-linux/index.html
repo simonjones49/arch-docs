@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,37 +2479,22 @@
   <h1>Lighting the LAMP on Red Hat Linux</h1>
 
 <p>To get the basics started you can follow these commands :
-Ensure the system is up to date.</p>
-<pre>
-dnf -y update
-</pre>
-<p>Install Apache</p>
-<pre>
-dnf -y install httpd
-</pre>
-<p>Enable and start the service</p>
-<pre>
-systemctl enable --now httpd
-</pre>
-<p>Allow access to port 80 through the firewall</p>
-<pre>
-firewall-cmd --zone=public --add-port=80/tcp --permanent
-</pre>
-<p>Reload the firewall with the new rule</p>
-<pre>
-firewall-cmd --reload
-</pre>
-<p>Install mysql</p>
-<pre>
-dnf -y install mysql-server mysql
-</pre>
-<p>Enable and start it</p>
-<pre>
-systemctl enable --now mysqld
-</pre>
-<p>then type this command and follow the prompts to secure the installation.</p>
-<pre>
-mysql_secure_installation
+Ensure the system is up to date.
+<pre class="highlight"><code>dnf -y update</code></pre>
+Install Apache
+<pre class="highlight"><code>dnf -y install httpd</code></pre>
+Enable and start the service
+<pre class="highlight"><code>systemctl enable --now httpd</code></pre>
+Allow access to port 80 through the firewall
+<pre class="highlight"><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code></pre>
+Reload the firewall with the new rule
+<pre class="highlight"><code>firewall-cmd --reload</code></pre>
+Install mysql
+<pre class="highlight"><code>dnf -y install mysql-server mysql</code></pre>
+Enable and start it
+<pre class="highlight"><code>systemctl enable --now mysqld</code></pre>
+then type this command and follow the prompts to secure the installation.
+<pre class="highlight"><code>mysql_secure_installation
 
 By default, a MySQL installation has an anonymous user,
 allowing anyone to log into MySQL without having to have
@@ -2548,32 +2533,20 @@ made so far will take effect immediately.
 Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
 Success.
 
-All done! 
-</pre>
-<p>Now install PHP</p>
-<pre>
-dnf -y install php php-mysqlnd php-cli
-</pre>
-<p>and restart apache to enable it</p>
-<pre>
-systemctl restart httpd.service
-</pre>
-<p>Create a test php file</p>
-<pre>
-nano /var/www/html/test.php
-</pre>
-<p>And put this in it, and save the file.</p>
-<pre>
-&lt;?php
+All done! </code></pre>
+Now install PHP
+<pre class="highlight"><code>dnf -y install php php-mysqlnd php-cli</code></pre>
+and restart apache to enable it
+<pre class="highlight"><code>systemctl restart httpd.service</code></pre>
+Create a test php file</p>
+<p><pre class="highlight"><code>nano /var/www/html/test.php</code></pre>
+And put this in it, and save the file.
+<pre class="highlight"><code>&amp;lt;?php
 phpinfo();
-?&gt;
-</pre>
-
+?&amp;gt;</code></pre></p>
 <p>No go to your server IP address /test.php</p>
-<pre>
-http://192.168.0.252/test.php
-</pre>
-<p>And you should see this</p>
+<p><pre class="highlight"><code>http://192.168.0.252/test.php</code></pre>
+And you should see this</p>
 <p><img alt="Screenshot_2021-07-30_21-34-11" src="../images/Screenshot_2021-07-30_21-34-11.jpg" title="Screenshot_2021-07-30_21-34-11" /></p>
 
 

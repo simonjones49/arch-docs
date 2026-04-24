@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,26 +2479,20 @@
   <h1>Auto Login from tty</h1>
 
 <p>If you want to login directly from the tty without a display manager, this is a working method for Arch Linux</p>
-<p>As root</p>
-<pre>
-systemctl edit getty@tty1
-</pre>
-<p>Add this to the top, read the comment about changes. Change simon to your username!</p>
-<pre>
-[Service]
+<p>As root
+<pre class="highlight"><code>systemctl edit getty@tty1</code></pre>
+Add this to the top, read the comment about changes. Change simon to your username!
+<pre class="highlight"><code>[Service]
 ExecStart=
 ExecStart=/usr/bin/agetty --autologin simon --noclear %I 38400 linux
-Type=simple
-</pre>
-<p>This will write to /etc/systemd/system/getty@tty1.service.d/override.conf</p>
+Type=simple</code></pre>
+This will write to /etc/systemd/system/getty@tty1.service.d/override.conf</p>
 <p>https://bbs.archlinux.org/viewtopic.php?id=222762</p>
-<p>Then add </p>
-<pre>
-if [ "$(tty)" = "/dev/tty1"  ] ; then
+<p>Then add 
+<pre class="highlight"><code>if [ "$(tty)" = "/dev/tty1"  ] ; then
 startxfce4
-fi
-</pre>
-<p>to the end of  ~/.bash_profile</p>
+fi</code></pre>
+to the end of  ~/.bash_profile</p>
 <p>Reboot and you will be logged in and XFCE4 started for you. </p>
 <p>The only issue so far is logout will drop you to tty1 and if you exit that, you will be logged in and XFCE4 started again.</p>
 <p>I was looking into this for an encrypted machine where the password is entered to boot.</p>

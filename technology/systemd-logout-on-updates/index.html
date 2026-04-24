@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2480,20 +2480,16 @@
 
 <p>A recent change in the Arch system meant after some pacman upgrades I was being logged out. I could log straight back in without issue but any work was being lost and it was annoying. 
 The culprit is the file /usr/share/libalpm/scripts/systemd-hook
-Editing this I commented out two lines</p>
-<pre>
-  udev-reload)
+Editing this I commented out two lines
+<pre class="highlight"><code>  udev-reload)
     udevd_live
     /usr/bin/udevadm control --reload
 #    /usr/bin/udevadm trigger
-#    /usr/bin/udevadm settle
-</pre>
-<p>This solved the problem however any new systemd upgrade would wipe this file with the packaged one.
-So I used chattr to stop this</p>
-<pre>
-sudo chattr +i /usr/share/libalpm/scripts/systemd-hook
-</pre>
-<p>Problem solved, I just need to make sure any new systemd upgrade is compatible with this file and from time to time check if the issue remains without the edit.</p>
+#    /usr/bin/udevadm settle</code></pre>
+This solved the problem however any new systemd upgrade would wipe this file with the packaged one.
+So I used chattr to stop this
+<pre class="highlight"><code>sudo chattr +i /usr/share/libalpm/scripts/systemd-hook</code></pre>
+Problem solved, I just need to make sure any new systemd upgrade is compatible with this file and from time to time check if the issue remains without the edit.</p>
 
 
 

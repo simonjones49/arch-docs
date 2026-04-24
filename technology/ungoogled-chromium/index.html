@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2480,18 +2480,13 @@
 
 <p>Continuing the setup of the Chromebook I find that even Chromium is slow to load some pages, maybe I am a little impatient.</p>
 <p>So here are the instructions to install ungoogled-chromium.</p>
-<p>First of all you need to add the <a href="https://www.opensuse.org/">Opensuse</a> repository to your pacman configuration file. Yes OpenSuse have an Arch repository!</p>
-<pre>
-echo '                            
+<p>First of all you need to add the <a href="https://www.opensuse.org/">Opensuse</a> repository to your pacman configuration file. Yes OpenSuse have an Arch repository!
+<pre class="highlight"><code>echo '                            
 [home_ungoogled_chromium_Arch]
 SigLevel = Required TrustAll
-Server = https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/$arch' | sudo tee --append /etc/pacman.conf
-</pre>
-<p>Then you need to update the repository information and install the package</p>
-<pre>
-sudo pacman -Sy ungoogled-chromium
-</pre>
-
+Server = https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/$arch' | sudo tee --append /etc/pacman.conf</code></pre>
+Then you need to update the repository information and install the package
+<pre class="highlight"><code>sudo pacman -Sy ungoogled-chromium</code></pre></p>
 <p>If you currently have Chromium installed it will prompt you to uninstall it due to a conflict, it will have No as the default answer you so must type Y/y to confirm.</p>
 <p>There does seem to be a performance improvement and overall I am happy with the result. The only real problem is you cannot install extensions, so set Chromium up first with all the add-ons you need and then switch to the ungoogled version.</p>
 

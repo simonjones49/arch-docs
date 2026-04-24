@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2480,17 +2480,13 @@
 
 <p>Having had issues with Chromium earlier today I then find that Evolution is opening Midori instead of Chromium.</p>
 <p>On the XFCE desktop there is a default browser option in Default Programs but that is already set to Chromium.</p>
-<p>Evolution has no such setting, so it requires a setting using xdg-mine instead.</p>
-<pre>
-xdg-mime default chromium.desktop x-scheme-handler/http
-xdg-mime default chromium.desktop x-scheme-handler/https
-</pre>
-<p>If you use vivaldi, then this is the command for you</p>
-<pre>
-xdg-mime default vivaldi-stable.desktop x-scheme-handler/http
-xdg-mime default vivaldi-stable.desktop x-scheme-handler/https
-</pre>
-<p>Close and open Evolution and it's all set. Very simple once you know what is causing it.</p>
+<p>Evolution has no such setting, so it requires a setting using xdg-mine instead.
+<pre class="highlight"><code>xdg-mime default chromium.desktop x-scheme-handler/http
+xdg-mime default chromium.desktop x-scheme-handler/https</code></pre>
+If you use vivaldi, then this is the command for you
+<pre class="highlight"><code>xdg-mime default vivaldi-stable.desktop x-scheme-handler/http
+xdg-mime default vivaldi-stable.desktop x-scheme-handler/https</code></pre>
+Close and open Evolution and it's all set. Very simple once you know what is causing it.</p>
 
 
 

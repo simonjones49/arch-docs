@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,19 +2479,14 @@
   <h1>LightDM auto login on Arch Linux</h1>
 
 <p>Using a graphical login offers some benefits, one being easy login for less technical users. </p>
-<p>To setup the auto login on Arch Linux, there is the usual step of editing /etc/lightdm/lightdm.conf and uncommenting or adding </p>
-<pre>
-autologin-guest=false
+<p>To setup the auto login on Arch Linux, there is the usual step of editing /etc/lightdm/lightdm.conf and uncommenting or adding 
+<pre class="highlight"><code>autologin-guest=false
 autologin-user=simon
-autologin-user-timeout=0
-</pre>
-
-<p>and for Arch specifically you need to add a user group and add yourself to it.</p>
-<pre>
-sudo groupadd -r autologin
-sudo gpasswd -a simon autologin
-</pre>
-<p>Change simon to your username. </p>
+autologin-user-timeout=0</code></pre></p>
+<p>and for Arch specifically you need to add a user group and add yourself to it.
+<pre class="highlight"><code>sudo groupadd -r autologin
+sudo gpasswd -a simon autologin</code></pre>
+Change simon to your username. </p>
 
 
 

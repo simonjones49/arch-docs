@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,13 +2479,10 @@
   <h1>Closing the lid with XFCE4</h1>
 
 <p>After setting up a new laptop and find the lid switch is not recognized by logind or xfce4 power manager I found the state of the lid is reported </p>
-<pre>
-while :; do echo -n "$(date) -- "; cat /proc/acpi/button/lid/LID0/state ; sleep 1 ; done
-</pre>
-<p>So adding a script to watch for this at startup makes the machine suspend when the lid is closed. 
-I created lidcheck.sh in $HOME/bin/ </p>
-<pre>
-
+<p><pre class="highlight"><code>while :; do echo -n "$(date) -- "; cat /proc/acpi/button/lid/LID0/state ; sleep 1 ; done</code></pre>
+So adding a script to watch for this at startup makes the machine suspend when the lid is closed. 
+I created lidcheck.sh in $HOME/bin/ 
+<pre class="highlight"><code>
 #!/bin/bash
 while :; do
 grep -q closed /proc/acpi/button/lid/LID0/state
@@ -2496,8 +2493,7 @@ fi
 sleep 5;
 done
 
-
-</pre>
+</code></pre></p>
 
 
 

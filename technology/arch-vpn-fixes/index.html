@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2478,20 +2478,14 @@
 
   <h1>Arch VPN fixes</h1>
 
-<p>On starting the machine a network with vpn was causing the network connection to stall, I am not sure why and may dig into this more in the future, for now I have added a line to start script to bring the vpn up after the network has connected.</p>
-<pre>
-nmcli con up "man-006" passwd-file ~/.ssh/vpn-pass
-</pre>
-
-<p>The vpn exists with user and password in network maanger but is not required by any network. The password file in ~/.ssh/pass looks like this</p>
-<pre>
-vpn.secrets.password:&lt;password&gt;
-</pre>
-<p>Change to the actual password used, yes it is stored in clear text but it is only for the vpn</p>
+<p>On starting the machine a network with vpn was causing the network connection to stall, I am not sure why and may dig into this more in the future, for now I have added a line to start script to bring the vpn up after the network has connected.
+<pre class="highlight"><code>nmcli con up "man-006" passwd-file ~/.ssh/vpn-pass</code></pre></p>
+<p>The vpn exists with user and password in network maanger but is not required by any network. The password file in ~/.ssh/pass looks like this
+<pre class="highlight"><code>vpn.secrets.password:&amp;lt;password&amp;gt;</code></pre>
+Change to the actual password used, yes it is stored in clear text but it is only for the vpn</p>
 <p>In addition after suspending the machine I added a systemd unit to fire after newtork manager has connected. This resides at /etc/systemd/system/vpn-up.service
-and contains this</p>
-<pre>
-[Unit]
+and contains this
+<pre class="highlight"><code>[Unit]
 Description=Openvpn resume action
 Requires=network-online.target
 After=network-online.target
@@ -2509,13 +2503,10 @@ RestartSec=10
 WantedBy=suspend.target
 WantedBy=hibernate.target
 WantedBy=hybrid-sleep.target
-
-</pre>
-
+</code></pre></p>
 <p>Then enable and start this service.</p>
-<p>One final tweak was a desktop launcher which can toggle the vpn state, the script for that is :</p>
-<pre>
-#!/bin/bash
+<p>One final tweak was a desktop launcher which can toggle the vpn state, the script for that is :
+<pre class="highlight"><code>#!/bin/bash
 
 
 
@@ -2544,8 +2535,7 @@ nmcli con down "man-006"
 esac
 
 exit
-
-</pre>
+</code></pre></p>
 
 
 

@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2483,16 +2483,14 @@
 <p>My first issue was Ventoy would not boot in UEFI mode even though it is in GPT mode.</p>
 <p>So I flashed the Arch ISO directly to the USB drive and it started perfectly.</p>
 <p>The actual installation completed without issues, even the bootloader worked without any modifications.</p>
-<p>I did however only have a Dummy Output for a sound card, a quick check of the <a href="https://wiki.archlinux.org">Arch Wiki</a> showed I needed to install two packages, so I did.</p>
-<pre>pacman -S alsa-ucm-conf sof-firmware</pre>
-<p>Reboot and the sound works.</p>
+<p>I did however only have a Dummy Output for a sound card, a quick check of the <a href="https://wiki.archlinux.org">Arch Wiki</a> showed I needed to install two packages, so I did.
+<code>pacman -S alsa-ucm-conf sof-firmware</code>
+Reboot and the sound works.</p>
 <p>I then set up yay and installed the rest of the programs I need and it's all working. </p>
 <p>In actual fact the Arch install was easier than Manjaro and Endeavouros so never let it be said <a href="https://archlinux.org/">Arch Linux</a> is hard.</p>
-<p>Update: later a sound problem showed up where the sound would stop and a beep would start for all types of video. This is fixed by adding this</p>
-<pre>
-snd_sof.sof_debug=1
-</pre>
-<p>to the default command line in grub.</p>
+<p>Update: later a sound problem showed up where the sound would stop and a beep would start for all types of video. This is fixed by adding this
+<pre class="highlight"><code>snd_sof.sof_debug=1</code></pre>
+to the default command line in grub.</p>
 
 
 

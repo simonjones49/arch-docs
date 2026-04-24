@@ -867,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../activating-windows-11/" class="md-nav__link">
+      <a href="../_activating-windows-11/" class="md-nav__link">
         
   
   
@@ -2479,18 +2479,11 @@
   <h1>Fix Evolution print</h1>
 
 <p>Currently Evolution is unable to print, it has been an issue since at least v3.38. This is a workround, not a fix but it will do until it is fixed.</p>
-<pre>
-cp /usr/share/applications/org.gnome.Evolution.desktop ~/.local/share/applications/
-</pre>
-<pre>
-sed -i 's/Exec=evolution/Exec=env WEBKIT_FORCE_SANDBOX=0 evolution/g' ~/.local/share/applications/org.gnome.Evolution.desktop
-</pre>
-<pre>
-grep -i "exec" ~/.local/share/applications/org.gnome.Evolution.desktop
-</pre>
-<p>The above should produce something like this</p>
-<pre>
-Exec=env WEBKIT_FORCE_SANDBOX=0 evolution %U
+<p><pre class="highlight"><code>cp /usr/share/applications/org.gnome.Evolution.desktop ~/.local/share/applications/</code></pre>
+<pre class="highlight"><code>sed -i 's/Exec=evolution/Exec=env WEBKIT_FORCE_SANDBOX=0 evolution/g' ~/.local/share/applications/org.gnome.Evolution.desktop</code></pre>
+<pre class="highlight"><code>grep -i "exec" ~/.local/share/applications/org.gnome.Evolution.desktop</code></pre>
+The above should produce something like this
+<pre class="highlight"><code>Exec=env WEBKIT_FORCE_SANDBOX=0 evolution %U
 Exec=env WEBKIT_FORCE_SANDBOX=0 evolution -c current
 Exec=env WEBKIT_FORCE_SANDBOX=0 evolution mailto:
 Exec=env WEBKIT_FORCE_SANDBOX=0 evolution -c contacts
@@ -2498,11 +2491,10 @@ Exec=env WEBKIT_FORCE_SANDBOX=0 evolution -c calendar
 Exec=env WEBKIT_FORCE_SANDBOX=0 evolution -c mail
 Exec=env WEBKIT_FORCE_SANDBOX=0 evolution -c memos
 Exec=env WEBKIT_FORCE_SANDBOX=0 evolution -c tasks
- </pre>
+ ```
 
-<p>If you have the xfce4-mailwatch-plugin you need to change the command to </p>
-<pre>
-env WEBKIT_FORCE_SANDBOX=0 evolution</pre>
+If you have the xfce4-mailwatch-plugin you need to change the command to </code></pre>
+env WEBKIT_FORCE_SANDBOX=0 evolution```</p>
 
 
 
