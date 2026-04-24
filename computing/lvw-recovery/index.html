@@ -2456,10 +2456,9 @@
 <p>Here is my fix.</p>
 <p><pre class="highlight"><code>vgdisplay</code></pre>
 Now you can see the UUID for the volume and rename the volume group, appending a 1
-<pre class="highlight"><code>vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup1```
+<pre class="highlight"><code>vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup1</code></pre>
 Then remove the 1 again
-``
-`vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup```
+<pre class="highlight"><code>vgrename qOjkZM-ebYH-1kKI-bH6o-7fnj-Ejn3-fa0qyG volumegroup```
 Now the volumegroup will mount as normal and then you can chroot into it and fix the issue. </code></pre>
 modprobe dm-mod
 <pre class="highlight"><code></code></pre>
