@@ -2452,11 +2452,11 @@
 
 <p>Due to issues with pacman updates and the system freezing, logging out etc. it has become necessary to recover from this more than once.</p>
 <p>The critical stages are
-<code>sudo rm /var/lib/pacman/db.lck</code>
+<pre class="highlight"><code>sudo rm /var/lib/pacman/db.lck</code></pre>
 Then find what is not complete
-<code>LC_ALL=C pacman -Qkk 2&gt;&amp;1 | grep -v ', 0 altered files' | grep mtree</code>
+<pre class="highlight"><code>LC_ALL=C pacman -Qkk 2&gt;&amp;1 | grep -v ', 0 altered files' | grep mtree</code></pre>
 Then reinstall packages returned from the above with
-<code>sudo pacman -Syu &amp;lt;package&amp;gt; --overwrite '*'</code>
+<pre class="highlight"><code>sudo pacman -Syu &lt;package&gt; --overwrite '*'</code></pre>
 The last command may prompt removal of an incorrect package in the cache, so delete it and run it again to download a new complete package.</p>
 <p>After all the errors are gone you can move on and hope this is fixed soon. </p>
 
