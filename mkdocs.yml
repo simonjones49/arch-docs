@@ -38,6 +38,8 @@ extra:
       link: https://github.com/simonjones49
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@SimonJones49
+    - icon: material/bike
+      link: https://simonj.42web.io/tracks.php
 markdown_extensions:
   - admonition
   - tables
