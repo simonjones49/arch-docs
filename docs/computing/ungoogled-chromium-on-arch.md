@@ -6,13 +6,13 @@ If you update the keys on Arch and lose the ungoogled chromium key, here is how 
 key=$(curl -fsSL https://download.opensuse.org/repositories/home:justkidding:arch/Arch/$(uname -m)/home_justkidding_arch_Arch.key)
 ```
 ```
-fingerprint=$(gpg --quiet --with-colons --import-options show-only --import --fingerprint &lt;&lt;&lt; "${key}" | awk -F: '$1 == "fpr" { print $10 }')
+fingerprint=$(gpg --quiet --with-colons --import-options show-only --import --fingerprint <<< "${key}" | awk -F: '$1 == "fpr" { print $10 }')
 ```
 ```
 sudo pacman-key --init
 ```
 ```
-sudo pacman-key --add - &lt;&lt;&lt; "${key}"
+sudo pacman-key --add - <<< "${key}"
 ```
 ```
 sudo pacman-key --lsign-key "${fingerprint}"
