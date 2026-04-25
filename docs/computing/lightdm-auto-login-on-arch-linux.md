@@ -1,15 +1,4 @@
----
-title: 'LightDM auto login on Arch Linux'
-date: '17:21 24-08-2021'
-media_order: arch.png
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - linux
-        - lightdm
----
+# LightDM auto login on Arch Linux
 
 Using a graphical login offers some benefits, one being easy login for less technical users. 
 

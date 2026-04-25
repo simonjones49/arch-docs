@@ -1,22 +1,4 @@
----
-title: 'Need for Speed™ Carbon on Arch using WineGUI'
-date: '12:48 03-07-2024'
-sitemap:
-    lastmod: '03-07-2024 12:48'
-show_breadcrumbs: false
-media_order: 'winegui.png,WineGUI.png,arch.png,nfscrunning.png,Screenshot_2024-07-03_12-12-15.png'
-taxonomy:
-    category:
-        - games
-        - arch
-        - linux
-        - winegui
-    tag:
-        - arch
-        - linux
-        - winegui
-        - 'NFS Carbon'
----
+# Need for Speed™ Carbon on Arch using WineGUI
 
 It's 2024 and I still like Need for Speed™ Carbon.
 

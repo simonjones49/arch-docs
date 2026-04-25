@@ -1,15 +1,4 @@
----
-title: 'Quick Tray Links FIX'
-date: '13:20 01-01-2023'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - grav
-        - plugin
-media_order: grav.png
-published: false
----
+# Quick Tray Links FIX
 
 An update arrived and after completing the whole site it stuck due to an error.
 

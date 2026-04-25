@@ -1,14 +1,4 @@
----
-title: 'Arch Dual Monitor configuration'
-date: '08:31 03-07-2021'
-media_order: arch.png
-taxonomy:
-    tag:
-        - arch
-        - xrandr
-        - resume
-        - linux
----
+
 # Arch Dual Monitor configuration
 
 I have two monitors and only ever use one at a time, I have a script and keyboard shortcut to switch between them but at the moment 99% of my time is at one monitor.

@@ -1,11 +1,4 @@
----
-title: 'Windows 11'
-media_order: 'VirtualBox_Windows 11_29_06_2021_18_20_21.png,VirtualBox_Windows 11_29_06_2021_18_00_27.png,VirtualBox_Windows 11_29_06_2021_18_01_00.png,VirtualBox_Windows 11_29_06_2021_18_01_22.png,VirtualBox_Windows 11_29_06_2021_18_02_01.png,VirtualBox_Windows 11_29_06_2021_18_02_46.png,VirtualBox_Windows 11_29_06_2021_18_03_15.png,VirtualBox_Windows 11_29_06_2021_18_03_19.png,VirtualBox_Windows 11_29_06_2021_18_03_25.png,VirtualBox_Windows 11_29_06_2021_18_03_31.png,VirtualBox_Windows 11_29_06_2021_18_03_36.png,VirtualBox_Windows 11_29_06_2021_18_03_41.png,VirtualBox_Windows 11_29_06_2021_18_14_53.png,VirtualBox_Windows 11_29_06_2021_18_22_25.png'
-date: '29-06-2021 10:29'
-taxonomy:
-    tag:
-        - windows
----
+# Windows 11
 
 As you may imagine, I have installed Windows 11 to see what has changed rather than getting excited about the new release. 
 

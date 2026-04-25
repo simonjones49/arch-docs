@@ -1,15 +1,4 @@
----
-title: 'GUI pacdiff'
-media_order: 'arch.png,Pacman_HD.png'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - pacman
-        - meld
-date: '17-06-2021 07:35'
----
+# GUI pacdiff
 
 As much as I like using the terminal when making changes to the system I like a GUI application.
 

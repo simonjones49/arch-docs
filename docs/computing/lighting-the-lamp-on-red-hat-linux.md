@@ -1,14 +1,4 @@
----
-title: 'Lighting the LAMP on Red Hat Linux'
-date: '19:19 30-07-2021'
-media_order: 'redhat.jpeg,Screenshot_2021-07-30_21-34-11.jpg'
-taxonomy:
-    tag:
-        - apache
-        - redhat
-        - mysql
-        - php
----
+# Lighting the LAMP on Red Hat Linux
 
 To get the basics started you can follow these commands :
 Ensure the system is up to date.

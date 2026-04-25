@@ -1,14 +1,4 @@
----
-title: 'Evolution Default Browser'
-date: '20:02 21-07-2021'
-media_order: evolution.png
-taxonomy:
-    category:
-        - blog
-    tags:
-        - xfce4
-        - evolution
----
+# Evolution Default Browser
 
 Having had issues with Chromium earlier today I then find that Evolution is opening Midori instead of Chromium.
 

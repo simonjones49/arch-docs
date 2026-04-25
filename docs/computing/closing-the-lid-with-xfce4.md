@@ -1,14 +1,4 @@
----
-title: 'Closing the lid with XFCE4'
-date: '10:06 22-10-2022'
-media_order: arch.png
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - suspend
----
+# Closing the lid fix
 
 After setting up a new laptop and find the lid switch is not recognized by logind or xfce4 power manager I found the state of the lid is reported 
 

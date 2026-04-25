@@ -1,16 +1,4 @@
----
-title: 'Nextcloud Web Calendars Not Refreshing [FIX]'
-date: '09:17 08-09-2022'
-media_order: 'Screenshot_2022-09-08_11-24-51.png,Screenshot_2022-09-08_11-21-33.png,Screenshot_2022-09-08_11-22-20.png'
-taxonomy:
-    category:
-        - blog
-        - nextcloud
-    tag:
-        - nextcloud
-        - phpmyadmin
-        - webcalendars
----
+# Nextcloud Web Calendars Not Refreshing [FIX]
 
 The default fix for setting a manual refresh time is using the terminal on the server. Having set up an instance of Nextcloud without terminal access I needed to find an alternate way to achieve this. It turns out the official method is simply a way to edit the fields in the database, I can do this in PHPMyAdmin directly.
 

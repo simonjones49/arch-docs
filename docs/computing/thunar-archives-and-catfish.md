@@ -1,14 +1,4 @@
----
-title: 'Thunar Archives and Catfish'
-date: '18:26 15-07-2021'
-media_order: 'xfce4.png,thunar.jpg'
-taxonomy:
-    tag:
-        - linux
-        - xfce4
-        - thunar
-        - catfish
----
+# Thunar Archives and Catfish
 
 If I extract an archive with Archiver and then click Show Files, I was being presented with a catfish window instead of the thunar window expected.
 

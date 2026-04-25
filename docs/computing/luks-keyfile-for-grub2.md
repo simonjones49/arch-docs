@@ -1,14 +1,4 @@
----
-title: 'LUKS keyfile for GRUB2'
-date: '13:49 30-09-2022'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - luks
-media_order: arch.png
----
+# LUKS keyfile for GRUB2
 
 Having setup a LVM disk with LUKS encryption on my main machine, I used the guide I made for the Chromebook with some minor changes. I now wanted to add a USB drive with the key file to save entering the password all the time.
 

@@ -1,12 +1,4 @@
----
-title: 'Authenticating Linux (LUKS) Full-Disk Encryption and System Access with USB Stick'
-date: '15:38 07-09-2025'
-sitemap:
-    lastmod: '07-09-2025 15:38'
-autoseo:
-    enabled: true
-media_order: arch.png
----
+# Authenticating LUKS and system with USB
 
 The end result will look like this: if a certain USB stick is plugged into the computer, 
 

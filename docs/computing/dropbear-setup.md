@@ -1,20 +1,4 @@
----
-title: 'Dropbear setup'
-date: '08:48 23-08-2021'
-media_order: Screenshot_2021-08-23_11-00-49.jpg
-taxonomy:
-    category:
-        - blog
-    tag:
-        - android
-        - linux
-        - ssh
-external_links:
-    process: false
-    title: true
-    no_follow: false
-    mode: passive
----
+# Dropbear setup
 
 Using dropbear is a simple way to access other file systems, whether on Linux or Android.
 

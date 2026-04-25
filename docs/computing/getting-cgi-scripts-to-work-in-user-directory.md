@@ -1,15 +1,4 @@
----
-title: 'Getting cgi scripts to work in user directory'
-date: '28-08-2020 18:18'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - apache
-        - ssh
-media_order: apache-server-logo.png
----
+# Getting cgi scripts to work in user directory
 
 ```
 a2enmod cgi

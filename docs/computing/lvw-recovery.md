@@ -1,11 +1,4 @@
----
-title: 'LVM recovery'
-date: '18:19 29-06-2024'
-sitemap:
-    lastmod: '29-06-2024 18:19'
-show_breadcrumbs: false
-media_order: arch.png
----
+# LVM recovery
 
 I have been having issues with systemd crashing during updates.
 

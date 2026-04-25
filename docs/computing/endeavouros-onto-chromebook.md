@@ -1,15 +1,4 @@
----
-title: 'Endeavouros onto Chromebook'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - chromebook
-        - endeavouros
-media_order: 2021-02-22_13-36-50.jpg
-date: '05-05-2021 07:36'
----
+# Endeavouros onto Chromebook
 
 Having tried Manjaro I decided to give Endeavouros a go and the same problem, with a similar fix.
 

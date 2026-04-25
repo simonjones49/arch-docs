@@ -1,14 +1,4 @@
----
-title: 'Auto Login from tty'
-date: '12:00 24-08-2021'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - linux
-media_order: arch.png
----
+# Auto login from tty
 
 If you want to login directly from the tty without a display manager, this is a working method for Arch Linux
 

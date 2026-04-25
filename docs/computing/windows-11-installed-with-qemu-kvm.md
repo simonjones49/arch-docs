@@ -1,8 +1,4 @@
----
-title: 'Windows 11 installed with qemu kvm'
-date: '09:27 26-10-2022'
-media_order: windows11.jpeg
----
+# Windows 11 installed with qemu kvm
 
 For the most part this is fairly simple, but Windows needs a little tweaking to work without the TPM chip and an online account.
 

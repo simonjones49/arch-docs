@@ -1,14 +1,4 @@
----
-title: 'Xplanet in 2023!'
-date: '15:16 13-01-2023'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - xplanet
-media_order: 'xplanet.png,xfce4-wallpaper-settings.png'
----
+# Xplanet in 2023!
 
 Many years ago I set up xplanet and used it for the desktop wallpaper, I thought I would have a go again in 2023 and see how easy it was. In short, it is not. 
 

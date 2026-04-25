@@ -1,15 +1,4 @@
----
-title: 'How to Install Yay on Arch Linux'
-date: '10:15 09-07-2021'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - linux
-        - yay
-media_order: arch.png
----
+# How to Install Yay on Arch Linux
 
 Yay is an AUR helper and pacman wrapper. It is a popular tool for managing packages on Arch Linux. It provides a extra functions including searching, tab-completion, and dependency installation. You will notice the commands are similar to pacman but also allow many more options.
 

@@ -1,15 +1,4 @@
----
-title: 'Linux and mysql'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - mysql
-        - phpmyadmin
-media_order: linux_fix.jpg
-date: '02-06-2021 07:34'
----
+# Linux and mysql
 
 The current mysql has root disabled (good) but new ways to set up users (consfusing).
 

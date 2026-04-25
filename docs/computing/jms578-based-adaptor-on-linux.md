@@ -1,16 +1,4 @@
----
-title: 'JMS578 based Adaptor on Linux'
-date: '11:39 01-09-2021'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - drivers
-        - jms578
-        - usb3.0
-media_order: 41BWR2LgjnL.jpg
----
+# JMS578 based Adaptor on Linux
 
 If you have a USB3.0 adapter that is not working, or not working properly this might help you.
 

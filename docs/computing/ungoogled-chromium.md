@@ -1,17 +1,4 @@
----
-title: 'Ungoogled Chromium'
-date: '09:49 28-08-2021'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - chromebook
-        - chromium
-        - google
-media_order: ungoogled.png
-published: true
----
+# Ungoogled Chromium on a Chromebook
 
 Continuing the setup of the Chromebook I find that even Chromium is slow to load some pages, maybe I am a little impatient.
 

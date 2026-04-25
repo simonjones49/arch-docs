@@ -1,15 +1,4 @@
----
-title: 'Chromium v92, systemd and nss'
-date: '08:09 21-07-2021'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - systemd
-        - chromium
-media_order: linux_fix.jpg
----
+# Chromium v92 hangs on start 
 
 Updating chromium this morning causes it to hang on start, the error message points to a network connectivity problem.
 

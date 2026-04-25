@@ -1,9 +1,4 @@
----
-title: 'Pacman Recovery'
-date: '11:57 21-05-2024'
-show_breadcrumbs: false
-media_order: arch.png
----
+# Pacman Recovery
 
 Due to issues with pacman updates and the system freezing, logging out etc. it has become necessary to recover from this more than once.
 

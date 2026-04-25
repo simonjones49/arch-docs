@@ -1,16 +1,4 @@
----
-title: 'Android $ADB_VENDOR_KEYS is not set '
-date: '09:49 28-08-2021'
-media_order: android.png
-taxonomy:
-    category:
-        - blog
-    tag:
-        - android
-        - adb
-        - vendor
-        - keys
----
+# Android USB vendor key error
 
 Today I installed a new ROM and in setting it all up I came across what seemed to be a simple problem.
 

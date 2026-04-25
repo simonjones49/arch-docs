@@ -1,15 +1,4 @@
----
-title: 'PHP script in userdir'
-taxonomy:
-    category:
-        - blog
-        - php
-        - apache
-    tag:
-        - linux
-media_order: linux_fix.jpg
-date: '30-05-2021 07:33'
----
+# PHP script in userdir
 
 Following on from getting cgi scripts working the next hurdle is PHP scripts.
 

@@ -1,12 +1,4 @@
----
-title: 'Systemd logout on updates'
-date: '08:46 01-09-2023'
-taxonomy:
-    tag:
-        - arch
-        - systemd
-media_order: arch.png
----
+# Systemd logout on updates
 
 A recent change in the Arch system meant after some pacman upgrades I was being logged out. I could log straight back in without issue but any work was being lost and it was annoying. 
 The culprit is the file /usr/share/libalpm/scripts/systemd-hook

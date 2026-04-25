@@ -1,20 +1,9 @@
----
-title: 'Rclone and Nextcloud'
-date: '12:15 03-11-2022'
-media_order: '031fbce2f73b1f68e62fdc868c956821a4390557-screenshot2022-09-0811-24-51.png,rs.png'
-taxonomy:
-    category:
-        - blog
-        - nextcloud
-        - rclone
-    tag:
-        - nextcloud
-        - rclone
----
+# Rclone and Nextcloud
 
 Let’s start by running the RCLONE configuration tool:
-
+```
 rclone config
+```
 Then use the following options:
 
 ```n) New remote

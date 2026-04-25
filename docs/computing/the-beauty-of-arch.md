@@ -1,16 +1,4 @@
----
-title: 'The beauty of Arch'
-media_order: arch.png
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - arch
-        - aur
-        - yay
-date: '02-06-2021 14:53'
----
+# The beauty of Arch
 
 After many years of using Debian I find that Arch is so much easier. I used to collect scarce debs so I could reuse them if I installed another distro or another machine. None of that seems necessary now with the wonder of the Arch User Repository (AUR).
 

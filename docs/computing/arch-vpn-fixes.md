@@ -1,14 +1,4 @@
----
-title: 'Arch VPN fixes'
-date: '15:01 13-01-2023'
-media_order: 'original.jpg,arch.png'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - openvpn
----
+# Arch VPN fixes
 
 On starting the machine a network with vpn was causing the network connection to stall, I am not sure why and may dig into this more in the future, for now I have added a line to start script to bring the vpn up after the network has connected.
 ```

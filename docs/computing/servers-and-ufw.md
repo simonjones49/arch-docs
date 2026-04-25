@@ -1,14 +1,4 @@
----
-title: 'Servers and UFW'
-date: '27-08-2020 18:16'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - ufw
-media_order: linux_fix.jpg
----
+# Servers and UFW
 
 While setting up the firewall I want to record the local setting for SSH and Apache.
 

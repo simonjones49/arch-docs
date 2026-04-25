@@ -1,14 +1,4 @@
----
-title: 'Installing Arch on a Chromebook'
-date: '09:44 10-07-2021'
-media_order: arch.png
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - chromebook
----
+# Installing Arch on a Chromebook
 
 Having already tried Manjaro and Endeavouros I have moved my main machine to [Arch Linux](https://archlinux.org).
 

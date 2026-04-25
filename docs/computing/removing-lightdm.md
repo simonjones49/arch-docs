@@ -1,14 +1,4 @@
----
-title: 'Removing LightDM'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - chromebook
-media_order: linux_fix.jpg
-date: '04-05-2021 07:33'
----
+# Removing LightDM
 
 For my Chromebook I don't need a login box, I can manage with a tty and auto start X after logging in.
 

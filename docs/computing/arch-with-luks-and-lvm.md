@@ -1,17 +1,4 @@
----
-title: 'Arch with luks and LVM on a Chromebook'
-date: '10:57 25-08-2021'
-media_order: arch.png
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-        - linux
-        - chromebook
-        - luks
-        - lvm2
----
+# Arch with LUKS and LVM
 
 Disk setup
 Check your drives:

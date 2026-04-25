@@ -1,12 +1,4 @@
----
-title: 'GRAVITY Hub Mini Arch Network'
-date: '14:03 06-05-2025'
-sitemap:
-    lastmod: '06-05-2025 14:03'
-autoseo:
-    enabled: true
-media_order: '51bwviaLouL._AC_SL1500_.jpg,arch.png'
----
+# GRAVITY Hub Mini Arch Network
 
 I bought this hub for the USB ports and it is plug and play in Arch. No issues at all, until I plugged an Ethernet cable in to connect a wired network and nothing. 
 ![51bwviaLouL._AC_SL1500_](../assets/images/51bwviaLouL._AC_SL1500_.jpg "51bwviaLouL._AC_SL1500_")

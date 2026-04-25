@@ -1,15 +1,4 @@
----
-title: 'Fix Evolution print'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - xfce4
-        - evolution
-media_order: evolution.png
-date: '01-06-2021 07:35'
----
+# Fix Evolution print
 
 Currently Evolution is unable to print, it has been an issue since at least v3.38. This is a workround, not a fix but it will do until it is fixed.
 

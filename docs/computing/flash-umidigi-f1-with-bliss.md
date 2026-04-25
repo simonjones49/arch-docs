@@ -1,16 +1,4 @@
----
-title: 'Flash Umidigi F1 with Bliss'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - android
-        - umidigi
-        - f1
-        - flash
-media_order: adb.jpeg
-date: '02-06-2021 14:24'
----
+# Flash Umidigi F1 with Bliss
 
 ```
 adb reboot fastboot

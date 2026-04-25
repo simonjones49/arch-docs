@@ -1,13 +1,4 @@
----
-title: 'Naev Cheat Codes'
-date: '15:50 24-11-2022'
-media_order: download.jpeg
-taxonomy:
-    tag:
-        - linux
-        - naev
-        - games
----
+# Naev Cheat Codes
 
 F2 to enter codes
 

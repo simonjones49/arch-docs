@@ -1,17 +1,4 @@
----
-title: 'Arch turn off wifi when ethernet is connected'
-date: '16:05 12-03-2025'
-sitemap:
-    lastmod: '12-03-2025 16:05'
-autoseo:
-    enabled: true
-taxonomy:
-    category:
-        - arch
-    tag:
-        - arch
-media_order: arch.png
----
+# Arch network switching
 
 I have had some wifi issues and have now got a cable plugged in which solves these, however when I move the laptop I have to manually turn on wifi and then back off when I plug the cable back in. I wanted an automatic way to do this, here is the resulting script.
 ```

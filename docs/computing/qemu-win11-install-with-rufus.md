@@ -1,11 +1,4 @@
----
-title: 'Qemu Win11 install with Rufus'
-date: '19:42 02-08-2024'
-sitemap:
-    lastmod: '02-08-2024 19:42'
-show_breadcrumbs: false
-media_order: 'arch.png,Screenshot_2024-08-02_18-44-36.png,Screenshot_2024-08-02_18-45-31.png,Screenshot_2024-08-02_18-46-27.png,Screenshot_2024-08-02_18-47-06.png,Screenshot_2024-08-02_18-47-22.png,Screenshot_2024-08-02_18-47-43.png,Screenshot_2024-08-02_18-49-15.png,Screenshot_2024-08-02_18-50-26.png,Screenshot_2024-08-02_19-05-15.png,Screenshot_2024-08-02_19-06-36.png,Screenshot_2024-08-02_19-09-55.png,Screenshot_2024-08-02_19-17-56.png,Screenshot_2024-08-02_19-18-43.png,Screenshot_2024-08-02_19-22-36.png,Screenshot_2024-08-02_19-36-20.png,Screenshot_2024-08-02_19-43-01.png,Screenshot_2024-08-02_18-51-09.png,Screenshot_2024-08-03_04-49-12.png'
----
+# Qemu Win11 install with Rufus
 
 I have installed Windows 11 before but there were registry edits to make the install work. Rufus negates the need for these. 
 

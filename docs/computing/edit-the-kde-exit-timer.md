@@ -1,14 +1,4 @@
----
-title: 'Edit the KDE exit timer'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - kde
-media_order: linux_fix.jpg
-date: '01-06-2021 07:36'
----
+# Edit the KDE exit timer
 
 To change the number of seconds on the KDE exit timer you need to edit 
 ```

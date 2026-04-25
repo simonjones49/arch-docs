@@ -1,15 +1,4 @@
----
-title: 'Manjaro onto Chromebook'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - chromebook
-        - manjaro
-media_order: 2021-02-22_13-36-50.jpg
-date: '31-05-2021 07:34'
----
+# Manjaro onto Chromebook
 
 I downloaded manjaro-xfce-20.2.1-minimal-210103-linux59.iso and put it on a USB stick using Mint stick which is in AUR.
 

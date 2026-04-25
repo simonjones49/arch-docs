@@ -1,14 +1,4 @@
----
-title: 'XFCE Menu'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - xfce4
-media_order: Screenshot_2021-06-23_13-25-09.jpg
-date: '23-06-2021 07:31'
----
+# XFCE Menu
 
 Having used XFCE for many years, back to 1998 and Mandrake Linux, today I found the menu is resizable simply by grabbing the corner and dragging it.
 

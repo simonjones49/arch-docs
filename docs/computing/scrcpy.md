@@ -1,13 +1,4 @@
----
-title: 'Scrcpy on Arch'
-media_order: 'android.png,arch.png,Screenshot_2021-06-21_13-20-52.jpg'
-taxonomy:
-    tag:
-        - arch
-        - linux
-        - android
-date: '25-02-2023 12:10'
----
+# Scrcpy on Arch
 
 We don't get very good phone reception at home and many things are moving to SMS codes to confirm logins. 
 

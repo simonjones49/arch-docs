@@ -1,18 +1,4 @@
----
-title: 'scrcpy and wireless ADB on Arch'
-date: '12:59 21-08-2025'
-taxonomy:
-    category:
-        - android
-        - arch
-    tag:
-        - arch
-sitemap:
-    lastmod: '21-08-2025 12:59'
-autoseo:
-    enabled: true
-media_order: 'arch.png,android.png'
----
+# scrcpy and wireless ADB on Arch
 
 Having a different wireless port on every start I had to find a way to track this down before starting scrcpy. After several attempts nmap to the rescue. 
 

@@ -1,14 +1,5 @@
----
-title: 'Arch Home cleanup'
-date: '11:17 06-07-2021'
-media_order: arch.png
-taxonomy:
-    tag:
-        - arch
-        - linux
-        - cleaning
----
 
+# Home Cleanup on Arch
 The advantage of a rolling release is the lack of re-installation, the disadvantage is the build up of old and duplicate files.
 
 You can check your .config and .local directories for old application directories but chasing down duplicate files is always hard.

@@ -1,15 +1,4 @@
----
-title: 'KDE connect and UFW'
-date: '27-08-2020 18:15'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - linux
-        - kde
-        - ufw
-media_order: kde.png
----
+# KDE connect and UFW
 
 I like using KDE connect and I like being behind a firewall. 
 

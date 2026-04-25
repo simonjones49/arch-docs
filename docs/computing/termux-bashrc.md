@@ -1,15 +1,4 @@
----
-title: 'Termux bashrc'
-date: '20:05 26-05-2023'
-taxonomy:
-    category:
-        - android
-    tag:
-        - android
-        - vnc
-        - ssh
-media_order: Untitled.png
----
+# Termux bashrc
 
 This took some working out but this checks if the SSH server and VNC are running, it starts the ssh server if needed and gives the option to kill the vnc server(s).
 ```

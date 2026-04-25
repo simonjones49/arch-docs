@@ -1,15 +1,4 @@
----
-title: 'Ungoogled Chromium on Arch Key Refresh'
-date: '09:17 26-02-2022'
-body_classes: item
-published: true
-taxonomy:
-    category:
-        - blog
-    tag:
-        - arch
-media_order: arch.png
----
+# Ungoogled Chromium on Arch Key Refresh
 
 If you update the keys on Arch and lose the ungoogled chromium key, here is how to update the key.
 
