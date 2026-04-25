@@ -23,3 +23,9 @@ diffprog=${DIFFPROG:-'meld'}
 ```
 
 Save and run the script as normal with ```sudo pacdiff``` :)
+
+---
+
+!!! note inline "Posted" 
+
+    17-06-2021 07:35

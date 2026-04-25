@@ -21,3 +21,9 @@ Picture in case my description is unclear.
 ![Screenshot_2021-06-23_13-25-09](../assets/images/Screenshot_2021-06-23_13-25-09.jpg "Screenshot_2021-06-23_13-25-09")
 
 Just grab the bottom left (in my case) corner with the mouse and drag to the size you want. Easy! 
+
+---
+
+!!! note inline "Posted" 
+
+    23-06-2021 07:31

@@ -120,3 +120,9 @@ An important security implication is that the key is not only stored on the USB 
 These ensure that the key never leaves the device, and authenticate themselves not by transmitting the key, but proving ownership of the key by means of some challenge-response mechanism. The implication is that if you leave the usb stick sitting on your desk, an attacker could simply copy the key and gain access to your system. 
 
 If you ever lose the USB stick, or think that the key is compromised, you can simply remove the key using cryptsetup luksKillSlot.
+
+---
+
+!!! note inline "Posted" 
+
+    15:38 07-09-2025

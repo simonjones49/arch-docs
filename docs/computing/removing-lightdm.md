@@ -27,3 +27,9 @@ if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startxfce4
 fi
 ```
+
+---
+
+!!! note inline "Posted" 
+
+    04-05-2021 07:33

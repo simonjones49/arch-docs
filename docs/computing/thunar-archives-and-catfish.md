@@ -21,3 +21,9 @@ I right clicked and said "open with" and chose thunar, and now archiver opens wi
 It's a simple fix but only if you know where to look. I am glad I found it, I hope it helps someone else.
 
 It survived a reboot so I am guessing it is fixed, for now. :)
+
+---
+
+!!! note inline "Posted" 
+
+    18:26 15-07-2021

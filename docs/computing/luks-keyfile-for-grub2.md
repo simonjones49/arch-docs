@@ -33,3 +33,8 @@ To create the password file
 echo -n '&lt;your luks password&gt;' /run/media/simon/USBDRIVE/&lt;filename&gt;
 ```
 
+---
+
+!!! note inline "Posted" 
+
+    13:49 30-09-2022

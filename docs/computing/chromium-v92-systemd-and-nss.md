@@ -25,3 +25,9 @@ systemctl restart systemd-resolved.service
 ```
 
 This is only a work round until chromium catch up with the systemd changes but it works and keeps the web browser fully up to date.
+
+---
+
+!!! note inline "Posted" 
+
+    08:09 21-07-2021

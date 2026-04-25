@@ -28,3 +28,9 @@ if (isset($link['external']) and $link['external'] == true) {
 ```
 
 Save and done.
+
+---
+
+!!! note inline "Posted" 
+
+    13:20 01-01-2023

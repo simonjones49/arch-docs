@@ -110,3 +110,9 @@ http://192.168.0.252/test.php
 And you should see this
  
  ![Screenshot_2021-07-30_21-34-11](../assets/images/Screenshot_2021-07-30_21-34-11.jpg "Screenshot_2021-07-30_21-34-11")
+ 
+ ---
+
+!!! note inline "Posted" 
+
+    19:19 30-07-2021

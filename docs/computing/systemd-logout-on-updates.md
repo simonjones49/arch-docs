@@ -24,3 +24,9 @@ So I used chattr to stop this
 sudo chattr +i /usr/share/libalpm/scripts/systemd-hook
 ```
 Problem solved, I just need to make sure any new systemd upgrade is compatible with this file and from time to time check if the issue remains without the edit.
+
+---
+
+!!! note inline "Posted" 
+
+    08:46 01-09-2023

@@ -23,3 +23,9 @@ ran
 modprobe r8152-dkms
 ```
 and plugged the cable in and it worked instantly.
+
+---
+
+!!! note inline "Posted" 
+
+    14:03 06-05-2025

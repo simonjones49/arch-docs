@@ -207,7 +207,8 @@ Bootloader configuration
 First install GRUB2 and some utilities
 
 ```
-pacman -S grub efibootmgr dosfstools mtools```
+pacman -S grub efibootmgr dosfstools mtools
+```
 And edit /etc/default/grub and edit it so that the following lines are present.
 
 /etc/default/grub
@@ -246,3 +247,9 @@ echo '/myswap none swap defaults 0 0' | tee -a /etc/fstab
 ```
 
 The bulk of this was inspired by [this](https://tonisagrista.com/blog/2020/arch-encryption/), I have changed it to work with my disks and modified to work with a chromebook. I also wanted a copy in case it got deleted!
+
+---
+
+!!! note inline "Posted" 
+
+    10:57 25-08-2021

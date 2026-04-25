@@ -25,3 +25,8 @@ fastboot flashing unlock
 fastboot flash system Bliss-2019-04-11-arm64-ab-stock.img
 fastboot oem reboot-recovery
 ```
+---
+
+!!! note inline "Posted" 
+
+    02-06-2021 14:24

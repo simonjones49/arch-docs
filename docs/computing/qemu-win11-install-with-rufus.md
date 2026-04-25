@@ -80,3 +80,9 @@ Open a file explorer and you will see the host directory in this PC
 ![Screenshot_2024-08-02_19-43-01](../assets/images/Screenshot_2024-08-02_19-43-01.png "Screenshot_2024-08-02_19-43-01")
 
 and we're done
+
+---
+
+!!! note inline "Posted" 
+
+    19:42 02-08-2024

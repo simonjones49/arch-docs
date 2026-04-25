@@ -64,3 +64,9 @@ and you should see something like this
 [  634.831758] scsi host8: usb-storage 9-1:1.0
 ```
 This shows the quirks is working, you should also now have a drive that works properly.
+
+---
+
+!!! note inline "Posted" 
+
+    11:39 01-09-2021

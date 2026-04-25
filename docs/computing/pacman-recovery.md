@@ -22,3 +22,9 @@ sudo pacman -Syu <package> --overwrite '*'
 The last command may prompt removal of an incorrect package in the cache, so delete it and run it again to download a new complete package.
 
 After all the errors are gone you can move on and hope this is fixed soon. 
+
+---
+
+!!! note inline "Posted" 
+
+    11:57 21-05-2024

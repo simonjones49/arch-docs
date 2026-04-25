@@ -45,3 +45,9 @@ Change status of faction (like or hate is 100 to -100)
 ```
 faction.modPlayerRaw("Goddard", 100)
 ```
+
+---
+
+!!! note inline "Posted" 
+
+    15:50 24-11-2022

@@ -77,3 +77,9 @@ Mark the launcher executable, and off we go! All movies work, sound works and mo
 Done!
 ![nfscrunning](../assets/images/nfscrunning.png "nfscrunning")
 Happily playing Need for Speed™ Carbon in 2024! 
+
+---
+
+!!! note inline "Posted" 
+
+    12:48 03-07-2024

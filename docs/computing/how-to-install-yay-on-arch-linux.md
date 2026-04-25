@@ -40,3 +40,9 @@ Build it:
 makepkg -si
 ```
 That's it, now you can manage packages with yay or pacman and install from the wonderful world of AUR. :)
+
+---
+
+!!! note inline "Posted" 
+
+    10:15 09-07-2021

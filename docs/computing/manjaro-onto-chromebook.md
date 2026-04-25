@@ -38,3 +38,9 @@ update-grub
 and exit.
 
 The system works very well and it is quicker than with KDE on, I tested that first. 
+
+---
+
+!!! note inline "Posted" 
+
+    31-05-2021 07:34

@@ -20,3 +20,9 @@ and reboot.
 While this is a security risk, needing access to the actual keyboard means it is a low risk.
 
 More info [here](https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html?target=_busier)
+
+---
+
+!!! note inline "Posted" 
+
+    05-06-2021 09:36

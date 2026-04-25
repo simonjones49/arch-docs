@@ -28,3 +28,9 @@ sudo pacman-key --add - &lt;&lt;&lt; "${key}"
 ```
 sudo pacman-key --lsign-key "${fingerprint}"
 ```
+
+---
+
+!!! note inline "Posted" 
+
+    09:17 26-02-2022

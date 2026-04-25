@@ -97,3 +97,9 @@ adb kill-server
 
 
 ```
+
+---
+
+!!! note inline "Posted" 
+
+    21-08-2025 12:59

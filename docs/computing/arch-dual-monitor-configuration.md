@@ -9,6 +9,7 @@ taxonomy:
         - resume
         - linux
 ---
+# Arch Dual Monitor configuration
 
 I have two monitors and only ever use one at a time, I have a script and keyboard shortcut to switch between them but at the moment 99% of my time is at one monitor.
 
@@ -17,7 +18,9 @@ When I login I have script switch the other monitor off but after putting the ma
 So here is my solution. 
 
 I created a file 
-```/usr/lib/systemd/system-sleep/monitor.sh```
+```
+/usr/lib/systemd/system-sleep/monitor.sh
+```
 and in it has 
 ```
 #!/bin/sh
@@ -40,3 +43,9 @@ The sleep part is needed to wait until both displays are awake, otherwise the co
 The sudo to my user is the extra piece that took some finding, a special thanks to [this](https://bbs.archlinux.org/viewtopic.php?target=arch&pid=1960895#p1960895) thread for pointing out a solution. 
 
 If you need a different option you can use any xrandr command and it will work.
+
+---
+
+!!! note inline "Posted" 
+  
+    08:31 03-07-2021

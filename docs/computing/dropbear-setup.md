@@ -65,10 +65,16 @@ DCIM    FCar      Music   Signal
 Connection to f1 closed.
 ```
 In Thunar you need to supply a full path that is accessible by the user, /storage is not readable.
-[center]![Screenshot_2021-08-23_11-00-49](../assets/images/Screenshot_2021-08-23_11-00-49.jpg "Screenshot_2021-08-23_11-00-49")[/center]
+![Screenshot_2021-08-23_11-00-49](../assets/images/Screenshot_2021-08-23_11-00-49.jpg "Screenshot_2021-08-23_11-00-49")
 
 If this is not the only machine to access the phone you would need to get the authorized_keys file from the phone and append the new key.
 ```
 cat  /home/simon/.ssh/id_rsa.pub >>/home/simon/authorised_keys
 ```
 Then copy file back into the /storage/emulated/0/ssh directory. All other steps are the same.
+
+---
+
+!!! note inline "Posted" 
+
+    08:48 23-08-2021

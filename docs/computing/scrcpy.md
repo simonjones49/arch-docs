@@ -1,5 +1,5 @@
 ---
-title: 'Arch and scrcpy'
+title: 'Scrcpy on Arch'
 media_order: 'android.png,arch.png,Screenshot_2021-06-21_13-20-52.jpg'
 taxonomy:
     tag:
@@ -36,3 +36,9 @@ My phone has a static address of 192.168.0.247, change this to your phone's IP a
 Now I can view the screen and use my mouse as a remote finger. The script above starts ADB then connects to the static IP address and starts scrcpy, then when I close the window it shuts it all down again, ready for next time.
 
 ![Screenshot_2021-06-21_13-20-52](../assets/images/Screenshot_2021-06-21_13-20-52.jpg "Screenshot_2021-06-21_13-20-52")
+
+---
+
+!!! note inline "Posted" 
+
+    25-02-2023 12:10

@@ -57,3 +57,9 @@ Make it executable with
 sudo chmod +x /etc/NetworkManager/dispatcher.d/70-wifi-wired-exclusive.sh
 ```
 That's it, we're done. 
+
+---
+
+!!! note inline "Posted" 
+
+    16:05 12-03-2025

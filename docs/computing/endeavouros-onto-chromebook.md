@@ -38,6 +38,14 @@ Then run the cleanup script
 chrooted_cleaner_script.sh
 ```
 and then 
-```exit```
+```
+exit
+```
 
 Reboot and all should be good.
+
+---
+
+!!! note inline "Posted" 
+
+    05-05-2021 07:36

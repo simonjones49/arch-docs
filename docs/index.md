@@ -19,7 +19,7 @@ My cycling records and real-time stats from the **Fiido C21**.
 
 Email me at : <span id="email-placeholder" style="font-weight: bold; color: #555;">[Hidden for privacy]</span>
 
-<button onclick="revealEmail()" style="cursor: pointer; padding: 5px 10px; border-radius: 4px; border: 1px solid #ccc; background: #f9f9f9;">
+<button onclick="revealEmail()" style="cursor: pointer; padding: 5px 10px; border-radius: 4px; border: 1px solid #ccc; background: #55aaff;">
   Show Email Address
 </button>
 

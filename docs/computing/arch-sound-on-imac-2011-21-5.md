@@ -16,10 +16,17 @@ This is a fairly simple fix, once you know what to put where.
 
 The file is 
 
-```/etc/modprobe.d/alsa-base.conf```
+```/etc/modprobe.d/alsa-base.conf
+```
 
 and all you have to add to it is
 ```
 options snd-hda-intel model=imac27_122
 ```
 Save the file and reboot, sound will now work as expected.
+
+---
+
+!!! note inline "Posted" 
+
+    14:37 17-08-2021

@@ -39,3 +39,8 @@ If you have the xfce4-mailwatch-plugin you need to change the command to
 ```
 env WEBKIT_FORCE_SANDBOX=0 evolution
 ```
+---
+
+!!! note inline "Posted" 
+
+    01-06-2021 07:35

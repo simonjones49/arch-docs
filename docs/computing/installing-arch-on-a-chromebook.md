@@ -35,3 +35,9 @@ Update: later a sound problem showed up where the sound would stop and a beep wo
 snd_sof.sof_debug=1
 ```
 to the default command line in grub.
+
+---
+
+!!! note inline "Posted" 
+
+    09:44 10-07-2021

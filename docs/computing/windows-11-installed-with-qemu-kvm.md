@@ -26,3 +26,9 @@ Type the following command to release the current network configuration and pres
 ```
 note: The command is a single phrase without spaces.
 Disable the network before the welcome screen comes back and the installer will reboot then offer an offline account option.
+
+---
+
+!!! note inline "Posted" 
+
+    09:27 26-10-2022

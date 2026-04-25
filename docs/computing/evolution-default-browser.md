@@ -5,7 +5,7 @@ media_order: evolution.png
 taxonomy:
     category:
         - blog
-    tag:
+    tags:
         - xfce4
         - evolution
 ---
@@ -25,3 +25,8 @@ xdg-mime default vivaldi-stable.desktop x-scheme-handler/http
 xdg-mime default vivaldi-stable.desktop x-scheme-handler/https
 ```
 Close and open Evolution and it's all set. Very simple once you know what is causing it.
+
+---
+!!! note inline "Posted" 
+
+    20:02 21-07-2021

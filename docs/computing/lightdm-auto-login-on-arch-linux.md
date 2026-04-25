@@ -25,4 +25,10 @@ and for Arch specifically you need to add a user group and add yourself to it.
 sudo groupadd -r autologin
 sudo gpasswd -a simon autologin
 ```
-Change simon to your username. 
+Change simon to your username.
+
+---
+
+!!! note inline "Posted" 
+
+    17:21 24-08-2021

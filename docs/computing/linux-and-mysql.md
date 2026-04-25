@@ -37,3 +37,9 @@ quit
  
 ```
 You can now login using the user and password you set, you can also use them in phpmyadmin.
+
+---
+
+!!! note inline "Posted" 
+
+    02-06-2021 07:34

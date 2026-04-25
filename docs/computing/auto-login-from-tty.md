@@ -40,3 +40,9 @@ Reboot and you will be logged in and XFCE4 started for you.
 The only issue so far is logout will drop you to tty1 and if you exit that, you will be logged in and XFCE4 started again.
 
 I was looking into this for an encrypted machine where the password is entered to boot.
+
+---
+
+!!! note inline "Posted" 
+
+    12:00 24-08-2021

@@ -37,3 +37,9 @@ vgchange -ay
 ```
 cryptsetup open --type luks /dev/nvme0n1p3 volumegroup
 ```
+
+---
+
+!!! note inline "Posted" 
+
+    18:19 29-06-2024

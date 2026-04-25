@@ -55,3 +55,9 @@ curlOpts="-z ${cloudFile} ${curlOpts}"
 fi
 ```
 The xfce4 settings to use the wallpaper are:![xfce4-wallpaper-settings](../assets/images/xfce4-wallpaper-settings.png "xfce4-wallpaper-settings")
+
+---
+
+!!! note inline "Posted" 
+
+    15:16 13-01-2023

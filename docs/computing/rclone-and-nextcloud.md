@@ -47,3 +47,9 @@ It is then shown as a remote filesystem in your filemanager
 ![rs](../assets/images/rs.png "rs")
 
 You can use this for all supported places, as shown above, Box, Dropbox, Google Drive etc.
+
+---
+
+!!! note inline "Posted" 
+
+    12:15 03-11-2022

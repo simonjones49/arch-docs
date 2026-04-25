@@ -49,3 +49,9 @@ else
 fi
 ifconfig | grep 192
 ```
+
+---
+
+!!! note inline "Posted" 
+
+	20:05 26-05-2023

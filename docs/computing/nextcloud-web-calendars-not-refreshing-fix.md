@@ -24,3 +24,9 @@ Then edit the refresh rate to the same value as other guides, I set mine to 30 m
 This will instantly change the time but you will need to wait for the refresh time to elapse.
 
 Along with the cron job running this solves all the problems with web calendars.
+
+---
+
+!!! note inline "Posted" 
+
+    09:17 08-09-2022
