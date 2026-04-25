@@ -45,15 +45,13 @@
   font-size: 1.1rem !important;
 /*  font-weight: 700;*/
 }
-/* Force center all images within the content area */
-.md-typeset p > img {
-  display: block !important;
-  margin: 2rem auto !important;
+/* Target the paragraph that contains your image */
+.md-typeset p:has(img) {
+  text-align: center;
 }
 
-/* If you are using figure/caption tags */
-.md-typeset figure {
-  display: table !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+/* Ensure the image inside that paragraph behaves correctly */
+.md-typeset p img {
+  display: inline-block;
+  margin: 0 auto;
 }
