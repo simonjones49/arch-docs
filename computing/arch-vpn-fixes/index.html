@@ -23,7 +23,7 @@
     
     
       
-        <title>Arch VPN fixes - Simon's Wiki</title>
+        <title>Arch cpn fixes - Simon's Wiki</title>
       
     
     
@@ -170,7 +170,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arch VPN fixes
+              Arch cpn fixes
             
           </span>
         </div>
@@ -356,7 +356,7 @@
   <span class="md-ellipsis">
     
   
-    Android $ADB_VENDOR_KEYS is not set 
+    Android USB vendor key error
   
 
     
@@ -412,7 +412,7 @@
   <span class="md-ellipsis">
     
   
-    Arch sound on imac (2011 21.5")
+    Arch sound on imac 2011
   
 
     
@@ -440,7 +440,7 @@
   <span class="md-ellipsis">
     
   
-    Arch turn off wifi when ethernet is connected
+    Arch network switching
   
 
     
@@ -475,7 +475,7 @@
   <span class="md-ellipsis">
     
   
-    Arch VPN fixes
+    Arch cpn fixes
   
 
     
@@ -504,7 +504,7 @@
   <span class="md-ellipsis">
     
   
-    Arch with luks and LVM on a Chromebook
+    Arch with LUKS and LVM
   
 
     
@@ -532,7 +532,7 @@
   <span class="md-ellipsis">
     
   
-    Authenticating Linux (LUKS) Full-Disk Encryption and System Access with USB Stick
+    Authenticating LUKS and system with USB
   
 
     
@@ -560,7 +560,7 @@
   <span class="md-ellipsis">
     
   
-    Auto Login from tty
+    Auto login from tty
   
 
     
@@ -588,7 +588,7 @@
   <span class="md-ellipsis">
     
   
-    Chromium v92, systemd and nss
+    Chromium v92 hangs on start
   
 
     
@@ -616,7 +616,7 @@
   <span class="md-ellipsis">
     
   
-    Closing the lid with XFCE4
+    Closing the lid fix
   
 
     
@@ -700,7 +700,7 @@
   <span class="md-ellipsis">
     
   
-    Enable REISUB with Endeavouros
+    Enable REISUB on Endeavouros
   
 
     
@@ -2467,8 +2467,7 @@
 
 
 
-  <h1>Arch VPN fixes</h1>
-
+<h1 id="arch-cpn-fixes">Arch cpn fixes</h1>
 <p>On starting the machine a network with vpn was causing the network connection to stall, I am not sure why and may dig into this more in the future, for now I have added a line to start script to bring the vpn up after the network has connected.
 <pre class="highlight"><code>nmcli con up "man-006" passwd-file ~/.ssh/vpn-pass</code></pre></p>
 <p>The vpn exists with user and password in network maanger but is not required by any network. The password file in ~/.ssh/pass looks like this
@@ -2538,9 +2537,6 @@ exit
 
 
 
-
-  
-  
 
 
 

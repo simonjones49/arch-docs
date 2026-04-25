@@ -23,7 +23,7 @@
     
     
       
-        <title>Closing the lid with XFCE4 - Simon's Wiki</title>
+        <title>Closing the lid fix - Simon's Wiki</title>
       
     
     
@@ -170,7 +170,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Closing the lid with XFCE4
+              Closing the lid fix
             
           </span>
         </div>
@@ -356,7 +356,7 @@
   <span class="md-ellipsis">
     
   
-    Android $ADB_VENDOR_KEYS is not set 
+    Android USB vendor key error
   
 
     
@@ -412,7 +412,7 @@
   <span class="md-ellipsis">
     
   
-    Arch sound on imac (2011 21.5")
+    Arch sound on imac 2011
   
 
     
@@ -440,7 +440,7 @@
   <span class="md-ellipsis">
     
   
-    Arch turn off wifi when ethernet is connected
+    Arch network switching
   
 
     
@@ -468,7 +468,7 @@
   <span class="md-ellipsis">
     
   
-    Arch VPN fixes
+    Arch cpn fixes
   
 
     
@@ -496,7 +496,7 @@
   <span class="md-ellipsis">
     
   
-    Arch with luks and LVM on a Chromebook
+    Arch with LUKS and LVM
   
 
     
@@ -524,7 +524,7 @@
   <span class="md-ellipsis">
     
   
-    Authenticating Linux (LUKS) Full-Disk Encryption and System Access with USB Stick
+    Authenticating LUKS and system with USB
   
 
     
@@ -552,7 +552,7 @@
   <span class="md-ellipsis">
     
   
-    Auto Login from tty
+    Auto login from tty
   
 
     
@@ -580,7 +580,7 @@
   <span class="md-ellipsis">
     
   
-    Chromium v92, systemd and nss
+    Chromium v92 hangs on start
   
 
     
@@ -615,7 +615,7 @@
   <span class="md-ellipsis">
     
   
-    Closing the lid with XFCE4
+    Closing the lid fix
   
 
     
@@ -700,7 +700,7 @@
   <span class="md-ellipsis">
     
   
-    Enable REISUB with Endeavouros
+    Enable REISUB on Endeavouros
   
 
     
@@ -2467,8 +2467,7 @@
 
 
 
-  <h1>Closing the lid with XFCE4</h1>
-
+<h1 id="closing-the-lid-fix">Closing the lid fix</h1>
 <p>After setting up a new laptop and find the lid switch is not recognized by logind or xfce4 power manager I found the state of the lid is reported </p>
 <p><pre class="highlight"><code>while :; do echo -n "$(date) -- "; cat /proc/acpi/button/lid/LID0/state ; sleep 1 ; done</code></pre>
 So adding a script to watch for this at startup makes the machine suspend when the lid is closed. 
@@ -2496,9 +2495,6 @@ done
 
 
 
-
-  
-  
 
 
 
