@@ -93,3 +93,16 @@
   line-height: 1.2;
   /*margin: 0; /* Tightens up the space in the small box */
 }
+/* Move the Back to Top button toward the center */
+.md-top {
+  right: 50%;
+  transform: translateX(50%); /* This perfectly centers it horizontally */
+  background-color: var(--md-primary-fg-color); /* Matches your theme color */
+  opacity: 0.8;
+}
+
+/* Optional: Make it look a bit more like a 'button' */
+.md-top:hover {
+  opacity: 1;
+  background-color: var(--md-accent-fg-color);
+}
