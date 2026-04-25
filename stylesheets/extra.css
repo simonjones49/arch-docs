@@ -45,9 +45,15 @@
   font-size: 1.1rem !important;
 /*  font-weight: 700;*/
 }
-/* Centers all images in your posts */
-.md-typeset img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* Force center all images within the content area */
+.md-typeset p > img {
+  display: block !important;
+  margin: 2rem auto !important;
+}
+
+/* If you are using figure/caption tags */
+.md-typeset figure {
+  display: table !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
