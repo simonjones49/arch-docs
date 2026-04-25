@@ -95,26 +95,26 @@
 }
 
 
-/* Custom 'Back to Top' Button - Right Aligned */
-.md-top {
-  /* Position it back to the bottom right */
-  right: 2rem !important;
-  bottom: 2rem !important;
 
-  /* Style it to match your site's vibe */
+
+/* Clean up the Back to Top button look */
+.md-top {
+  /* Hides the 'Back to top' text label that was overflowing */
+  font-size: 0 !important;
+
+  /* Matches your theme's primary color (Blue-Grey) */
   background-color: var(--md-primary-fg-color) !important;
   color: var(--md-primary-bg-color) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* Clean up the text/icon area */
-  font-size: 0 !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+  /* Adds a subtle shadow so it pops off the background */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  /* Smooths out the appearance/disappearance */
+  transition: opacity 0.25s, transform 0.25s;
 }
 
-/* Ensure the arrow shows up clearly */
+/* Ensure the icon inside is centered and sized correctly */
 .md-top .md-icon {
   font-size: 1.2rem;
-  color: inherit;
+  display: block;
 }
