@@ -97,24 +97,41 @@
 
 
 
-/* Clean up the Back to Top button look */
+/* Force the Back to Top button to be visible and stable */
 .md-top {
-  /* Hides the 'Back to top' text label that was overflowing */
-  font-size: 0 !important;
+  /* 1. Positioning: Fixed at the bottom right */
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
 
-  /* Matches your theme's primary color (Blue-Grey) */
+  /* 2. Visibility: Override the theme's "hide" logic */
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+
+  /* 3. Look: Clean circle with theme colors */
   background-color: var(--md-primary-fg-color) !important;
   color: var(--md-primary-bg-color) !important;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 
-  /* Adds a subtle shadow so it pops off the background */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-
-  /* Smooths out the appearance/disappearance */
-  transition: opacity 0.25s, transform 0.25s;
+  /* 4. Text Fix: Hide the overflowing label */
+  font-size: 0 !important;
+  z-index: 100;
 }
 
-/* Ensure the icon inside is centered and sized correctly */
+/* Ensure the arrow icon is centered and visible */
 .md-top .md-icon {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: block;
+}
+
+/* Hover effect so you know it's clickable */
+.md-top:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
 }
