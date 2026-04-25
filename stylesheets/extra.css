@@ -86,3 +86,10 @@
   font-weight: 500;
   color: #333333;
 }
+
+/* Target only paragraphs inside a 'Note' admonition */
+.md-typeset .admonition.note p {
+  font-size: 0.65rem;
+  line-height: 1.2;
+  /*margin: 0; /* Tightens up the space in the small box */
+}
