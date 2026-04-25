@@ -28,3 +28,20 @@
   margin-top: 0;
   padding-top: 1rem;
 }
+/* Increase font size for the content inside all admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 1.1rem; /* Adjust this number as needed */
+}
+
+/* Specifically target the list items inside the ingredients box */
+.md-typeset .admonition ul {
+  font-size: 1.1rem;
+  line-height: 1.0; /* Adds a bit of breathing room between ingredients */
+}
+
+/* Optional: Make the "Ingredients" title larger too */
+.md-typeset .admonition-title {
+  font-size: 1.1rem !important;
+/*  font-weight: 700;*/
+}
