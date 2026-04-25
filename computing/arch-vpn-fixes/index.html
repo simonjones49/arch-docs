@@ -23,7 +23,7 @@
     
     
       
-        <title>Arch cpn fixes - Simon's Wiki</title>
+        <title>Arch VPN fixes - Simon's Wiki</title>
       
     
     
@@ -170,7 +170,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arch cpn fixes
+              Arch VPN fixes
             
           </span>
         </div>
@@ -475,7 +475,7 @@
   <span class="md-ellipsis">
     
   
-    Arch cpn fixes
+    Arch VPN fixes
   
 
     
@@ -2467,7 +2467,7 @@
 
 
 
-<h1 id="arch-cpn-fixes">Arch cpn fixes</h1>
+<h1 id="arch-vpn-fixes">Arch VPN fixes</h1>
 <p>On starting the machine a network with vpn was causing the network connection to stall, I am not sure why and may dig into this more in the future, for now I have added a line to start script to bring the vpn up after the network has connected.
 <pre class="highlight"><code>nmcli con up "man-006" passwd-file ~/.ssh/vpn-pass</code></pre></p>
 <p>The vpn exists with user and password in network maanger but is not required by any network. The password file in ~/.ssh/pass looks like this
