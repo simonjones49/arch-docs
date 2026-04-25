@@ -12,3 +12,19 @@
     display: flex;
   }
 }
+/* 1. Force the content area to use the full available width */
+.md-content {
+  max-width: none !important;
+}
+
+/* 2. Expand the main container now that the TOC is hidden */
+.md-main__inner {
+  max-width: 100% !important;
+}
+
+/* 3. Ensure the automatic title (h1) is visible and correctly spaced */
+.md-typeset h1 {
+  display: block !important;
+  margin-top: 0;
+  padding-top: 1rem;
+}

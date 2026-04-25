@@ -2467,25 +2467,25 @@
 
 
 
+<h1 id="arch-dual-monitor-configuration">Arch Dual Monitor configuration</h1>
 <p>I have two monitors and only ever use one at a time, I have a script and keyboard shortcut to switch between them but at the moment 99% of my time is at one monitor.</p>
 <p>When I login I have script switch the other monitor off but after putting the machine to sleep they both wake up. I can manually run the script to turn the unneeded one off but because I cannot see it I often forget.</p>
 <p>So here is my solution. </p>
 <p>I created a file 
-```/usr/lib/systemd/system-sleep/monitor.sh
-<pre class="highlight"><code>and in it has </code></pre></p>
-<h1 id="binsh">!/bin/sh</h1>
-<p>case $1/$2 in
-  pre/<em>)
+<pre class="highlight"><code>/usr/lib/systemd/system-sleep/monitor.sh</code></pre>
+and in it has 
+<pre class="highlight"><code>#!/bin/sh
+case $1/$2 in
+  pre/*)
     ;;
-  post/</em>)
+  post/*)
     sleep 5
     export DISPLAY=:0
     sudo -u simon xrandr --output HDMI-0 --off &gt; /tmp/randr.dbg 2&gt;&amp;1
     ;;
-esac
-<pre class="highlight"><code>The script must be executable so </code></pre>
-sudo chmod +x /usr/lib/systemd/system-sleep/monitor.sh
-```
+esac</code></pre>
+The script must be executable so 
+<pre class="highlight"><code>sudo chmod +x /usr/lib/systemd/system-sleep/monitor.sh</code></pre>
 The sleep part is needed to wait until both displays are awake, otherwise the command fails. </p>
 <p>The sudo to my user is the extra piece that took some finding, a special thanks to <a href="https://bbs.archlinux.org/viewtopic.php?target=arch&amp;pid=1960895#p1960895">this</a> thread for pointing out a solution. </p>
 <p>If you need a different option you can use any xrandr command and it will work.</p>
