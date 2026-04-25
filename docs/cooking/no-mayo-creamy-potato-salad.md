@@ -61,4 +61,4 @@ taxonomy:
 
     - Serve at room temperature or even chilled, topped off with some chopped chives, enjoy!
 
-Source: [Spain On A Fork](https://spainonafork.com/no-mayo-creamy-potato-salad-recipe/)
+Source: [Spain On A Fork](https://spainonafork.com/no-mayo-creamy-potato-salad-recipe/){:target="_blank"}

@@ -4,7 +4,7 @@ Continuing the setup of the Chromebook I find that even Chromium is slow to load
 
 So here are the instructions to install ungoogled-chromium.
 
-First of all you need to add the [Opensuse](https://www.opensuse.org/) repository to your pacman configuration file. Yes OpenSuse have an Arch repository!
+First of all you need to add the [Opensuse](https://www.opensuse.org/){:target="_blank"} repository to your pacman configuration file. Yes OpenSuse have an Arch repository!
 ```
 echo '                            
 [home_ungoogled_chromium_Arch]

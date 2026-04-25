@@ -4,7 +4,7 @@ The advantage of a rolling release is the lack of re-installation, the disadvant
 
 You can check your .config and .local directories for old application directories but chasing down duplicate files is always hard.
 
-I have found [rmlint](https://github.com/sahib/rmlint) fills this void, it is simple and easy to use and yet incredibly powerful.
+I have found [rmlint](https://github.com/sahib/rmlint){:target="_blank"} fills this void, it is simple and easy to use and yet incredibly powerful.
 
 It is in the AUR and installed with 
 ```
@@ -23,7 +23,7 @@ This will perform the actions you just viewed and then generate a report rmlint.
 
 Initially I thought some of the actions were wrong but on inspection is showed where I had misnamed something or used a picture twice with different names.
 
-It is very simple to use but if this seems too much there is a GUI add-on called [shredder](https://rmlint.readthedocs.io/en/latest/) but I found it much easier reading in my text editor and do not need the GUI.
+It is very simple to use but if this seems too much there is a GUI add-on called [shredder](https://rmlint.readthedocs.io/en/latest/){:target="_blank"} but I found it much easier reading in my text editor and do not need the GUI.
 
 ---
 

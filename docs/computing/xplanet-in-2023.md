@@ -2,7 +2,7 @@
 
 Many years ago I set up xplanet and used it for the desktop wallpaper, I thought I would have a go again in 2023 and see how easy it was. In short, it is not. 
 
-The basic xplanet script works perfectly but the cloud data is no longer free, but after setting up an account at [Xeric Design](https://www.xericdesign.com/xplanet.php) (22€/year) all is working well and looks great as the desktop background.
+The basic xplanet script works perfectly but the cloud data is no longer free, but after setting up an account at [Xeric Design](https://www.xericdesign.com/xplanet.php){:target="_blank"} (22€/year) all is working well and looks great as the desktop background.
 
 ![xplanet](../assets/images/xplanet.png "xplanet")
 

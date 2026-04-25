@@ -2468,16 +2468,16 @@
 
 
 <h1 id="installing-arch-on-a-chromebook">Installing Arch on a Chromebook</h1>
-<p>Having already tried Manjaro and Endeavouros I have moved my main machine to <a href="https://archlinux.org">Arch Linux</a>.</p>
+<p>Having already tried Manjaro and Endeavouros I have moved my main machine to <a href="https://archlinux.org" target="_blank">Arch Linux</a>.</p>
 <p>When installing the Chromebook (Asus C300) I had issues with the bootloader and sound, so was reluctant to try installing Arch as it seemed I would have more issues, but I needed a project, so I gave it a go.</p>
 <p>My first issue was Ventoy would not boot in UEFI mode even though it is in GPT mode.</p>
 <p>So I flashed the Arch ISO directly to the USB drive and it started perfectly.</p>
 <p>The actual installation completed without issues, even the bootloader worked without any modifications.</p>
-<p>I did however only have a Dummy Output for a sound card, a quick check of the <a href="https://wiki.archlinux.org">Arch Wiki</a> showed I needed to install two packages, so I did.
+<p>I did however only have a Dummy Output for a sound card, a quick check of the <a href="https://wiki.archlinux.org" target="_blank">Arch Wiki</a> showed I needed to install two packages, so I did.
 <pre class="highlight"><code>pacman -S alsa-ucm-conf sof-firmware</code></pre>
 Reboot and the sound works.</p>
 <p>I then set up yay and installed the rest of the programs I need and it's all working. </p>
-<p>In actual fact the Arch install was easier than Manjaro and Endeavouros so never let it be said <a href="https://archlinux.org/">Arch Linux</a> is hard.</p>
+<p>In actual fact the Arch install was easier than Manjaro and Endeavouros so never let it be said <a href="https://archlinux.org/" target="_blank">Arch Linux</a> is hard.</p>
 <p>Update: later a sound problem showed up where the sound would stop and a beep would start for all types of video. This is fixed by adding this
 <pre class="highlight"><code>snd_sof.sof_debug=1</code></pre>
 to the default command line in grub.</p>

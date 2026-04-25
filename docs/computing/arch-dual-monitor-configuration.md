@@ -30,7 +30,7 @@ sudo chmod +x /usr/lib/systemd/system-sleep/monitor.sh
 ```
 The sleep part is needed to wait until both displays are awake, otherwise the command fails. 
 
-The sudo to my user is the extra piece that took some finding, a special thanks to [this](https://bbs.archlinux.org/viewtopic.php?target=arch&pid=1960895#p1960895) thread for pointing out a solution. 
+The sudo to my user is the extra piece that took some finding, a special thanks to [this](https://bbs.archlinux.org/viewtopic.php?target=arch&pid=1960895#p1960895){:target="_blank"} thread for pointing out a solution. 
 
 If you need a different option you can use any xrandr command and it will work.
 

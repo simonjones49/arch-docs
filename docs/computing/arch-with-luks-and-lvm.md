@@ -233,7 +233,7 @@ mkswap /myswap
 echo '/myswap none swap defaults 0 0' | tee -a /etc/fstab
 ```
 
-The bulk of this was inspired by [this](https://tonisagrista.com/blog/2020/arch-encryption/), I have changed it to work with my disks and modified to work with a chromebook. I also wanted a copy in case it got deleted!
+The bulk of this was inspired by [this](https://tonisagrista.com/blog/2020/arch-encryption/){:target="_blank"}, I have changed it to work with my disks and modified to work with a chromebook. I also wanted a copy in case it got deleted!
 
 ---
 

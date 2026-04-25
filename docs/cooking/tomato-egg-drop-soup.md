@@ -50,5 +50,5 @@ media_order: Tomato_egg_drop_soup.png
 
     - This is the style that my family makes all the time; it has a little touch of sweet and sour taste from the tomato.    
 
-View this and more on [Youtube](https://www.youtube.com/watch?v=eJd3SDAiMKI)
+View this and more on [Youtube](https://www.youtube.com/watch?v=eJd3SDAiMKI){:target="_blank"}
 

@@ -4,7 +4,7 @@ This document records the setup of this documentation suite.
 
 ## 🛠 Tech Stack
 * **System:** Arch Linux
-* **SSG:** [MkDocs](https://www.mkdocs.org/) with [Material Theme](https://squidfunk.github.io/mkdocs-material/)
+* **SSG:** [MkDocs](https://www.mkdocs.org/){:target="_blank"} with [Material Theme](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
 * **Hosting:** GitHub Pages (Managed via `gh-pages` branch)
 * **Auth:** SSH ed25519 Keys
 

@@ -4,7 +4,7 @@ We don't get very good phone reception at home and many things are moving to SMS
 
 The problem is receving a code means going out into the street or upstairs to get signal, then going back to the computer before the code expires.
 
-A solution is an Android screen sharing program so I can leave the phone upstairs and view from my computer, enter [scrcpy](https://github.com/Genymobile/scrcpy?target=scrcpy)
+A solution is an Android screen sharing program so I can leave the phone upstairs and view from my computer, enter [scrcpy](https://github.com/Genymobile/scrcpy?target=scrcpy{:target="_blank"}
 
 To install this you just need to type 
 ```

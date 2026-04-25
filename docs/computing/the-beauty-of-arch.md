@@ -11,7 +11,7 @@ aur/masterpdfeditor-free 4.3.89-1 (+64 2.46)
 
 A quick install later and I could edit the file and email it right back, in seconds I had achieved what I needed and no local files needed.
 
-You can read about Arch [here](https://archlinux.org/?target=arch)
+You can read about Arch [here](https://archlinux.org/?target=arch){:target="_blank"}
 
 ---
 

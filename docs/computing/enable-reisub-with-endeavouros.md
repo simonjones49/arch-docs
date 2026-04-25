@@ -9,7 +9,7 @@ and reboot.
 
 While this is a security risk, needing access to the actual keyboard means it is a low risk.
 
-More info [here](https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html?target=_busier)
+More info [here](https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html?target=_busier){:target="_blank"}
 
 ---
 

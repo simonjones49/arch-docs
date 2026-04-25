@@ -58,4 +58,4 @@ taxonomy:
 
     - Slide the omelette into a serving dish, serve warm, at room temperature, or even chilled, enjoy!
 
-Author Albert Bevia @ [Spain on a Fork](https://spainonafork.com) 
+Author Albert Bevia @ [Spain on a Fork](https://spainonafork.com){:target="_blank"}
