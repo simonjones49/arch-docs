@@ -1,44 +1,88 @@
-/* --- ADMONITIONS (Boxes) --- */
+/* --- LAYOUT & SIDEBAR --- */
+:root {
+  --md-sidebar-width: 20rem;
+}
 
-/* RESET: Ensure no global tiny font is leaking to other boxes */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 20rem;
+  }
+  .md-container {
+    display: flex;
+  }
+}
+
+.md-content {
+  max-width: none !important;
+}
+
+.md-main__inner {
+  max-width: 100% !important;
+}
+
+.md-typeset h1 {
+  display: block !important;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+/* --- UNIFIED ADMONITIONS (All boxes now match) --- */
 .md-typeset .admonition,
 .md-typeset details {
-  font-size: inherit;
+  font-size: 0.8rem; /* Standard readable size for all boxes */
 }
 
-/* 1. INGREDIENTS (Info Boxes ONLY) */
-.md-typeset .admonition.info,
-.md-typeset details.info {
-  font-size: 1.1rem;
+.md-typeset .admonition ul,
+.md-typeset details ul {
+  font-size: 0.8rem;
+  line-height: 1.4; /* Better spacing for readability */
 }
 
-.md-typeset .admonition.info ul {
-  font-size: 1.1rem;
-  line-height: 1.2;
-}
-
-.md-typeset .admonition.info > .admonition-title {
-  font-size: 1.1rem !important;
-}
-
-/* 2. TAGS (Note Boxes ONLY) */
-/* We use the double class .admonition.note to ensure it doesn't touch .success */
-.md-typeset .admonition.note,
-.md-typeset details.note {
-  font-size: 0.65rem;
-}
-
-.md-typeset .admonition.note ul {
-  font-size: 0.45rem;
-  line-height: 1.1;
-}
-
-.md-typeset .admonition.note > .admonition-title {
+.md-typeset .admonition-title {
   font-size: 0.9rem !important;
 }
 
-/* --- EVERYTHING ELSE (Success, Warning, etc.) --- */
-/* This ensures they stay at the theme's default size */
-.md-typeset .admonition.success {
-  font-size: 0.8rem; /* Or whatever your theme's default is */
+/* --- IMAGES & POLAROID BOX --- */
+.md-typeset p:has(img) {
+  text-align: center;
+}
+
+.md-typeset p img {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.md-typeset .polaroid-box {
+  display: block;
+  width: fit-content;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 10px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.md-typeset .polaroid-box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.md-typeset .polaroid-caption {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333333;
 }
