@@ -70,7 +70,7 @@
   padding: 10px;      /* Standard 'matting' around the image */
 
   /* Make the bottom border much bigger */
-  padding-bottom: 25px; /* Adjust this to make the space for the title bigger */
+  padding-bottom: 10px; /* Adjust this to make the space for the title bigger */
 
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
