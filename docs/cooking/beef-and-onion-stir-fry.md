@@ -50,7 +50,7 @@ taxonomy:
     - Do not overcook as you want to keep the onion crunchy.
     - Remove when done.
 
-!!! success Combine and serve
+!!! success "Combine and serve"
 
     - Add 1 1/2 tbsp oil to pan.
 
