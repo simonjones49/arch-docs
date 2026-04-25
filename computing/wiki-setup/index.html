@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#wiki-project-log-migration-deployment" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -1695,26 +1690,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Wiki Project Log: Migration &amp; Deployment
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1732,86 +1707,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠 Tech Stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies-arch-specific" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📦 Dependencies (Arch Specific)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📂 Project Structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operations-manual" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Operations Manual
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Operations Manual">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-preview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Preview
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2491,77 +2386,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠 Tech Stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies-arch-specific" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📦 Dependencies (Arch Specific)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📂 Project Structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operations-manual" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Operations Manual
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Operations Manual">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-preview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Preview
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2578,28 +2402,28 @@
 
 
 
-<h1 id="wiki-project-log-migration-deployment">Wiki Project Log: Migration &amp; Deployment<a class="headerlink" href="#wiki-project-log-migration-deployment" title="Permanent link">&para;</a></h1>
+<h1 id="wiki-project-log-migration-deployment">Wiki Project Log: Migration &amp; Deployment</h1>
 <p>This document records the setup of this documentation suite on <strong>Silex</strong>. It serves as a technical reference for the December move and future maintenance.</p>
-<h2 id="tech-stack">🛠 Tech Stack<a class="headerlink" href="#tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="tech-stack">🛠 Tech Stack</h2>
 <ul>
 <li><strong>System:</strong> Arch Linux</li>
 <li><strong>SSG:</strong> <a href="https://www.mkdocs.org/">MkDocs</a> with <a href="https://squidfunk.github.io/mkdocs-material/">Material Theme</a></li>
 <li><strong>Hosting:</strong> GitHub Pages (Managed via <code>gh-pages</code> branch)</li>
 <li><strong>Auth:</strong> SSH ed25519 Keys</li>
 </ul>
-<h2 id="dependencies-arch-specific">📦 Dependencies (Arch Specific)<a class="headerlink" href="#dependencies-arch-specific" title="Permanent link">&para;</a></h2>
+<h2 id="dependencies-arch-specific">📦 Dependencies (Arch Specific)</h2>
 <p>Prefer <code>pacman</code> for stability. In case of a fresh install, run:
 <pre class="highlight"><code class="language-bash"># Core extensions and tools via pacman/AUR
 sudo pacman -S python-pymdown-extensions python-pip</code></pre></p>
-<h2 id="project-structure">📂 Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h2>
+<h2 id="project-structure">📂 Project Structure</h2>
 <ul>
 <li><code>/docs</code>: The source Markdown files.</li>
 <li><code>/docs/recipes</code>: Culinary database.</li>
 <li><code>/docs/technology</code>: Technical guides and this log.</li>
 <li><code>mkdocs.yml</code>: The brain of the site (extensions, theme, and nav).</li>
 </ul>
-<h2 id="operations-manual">🚀 Operations Manual<a class="headerlink" href="#operations-manual" title="Permanent link">&para;</a></h2>
-<h3 id="local-preview">Local Preview<a class="headerlink" href="#local-preview" title="Permanent link">&para;</a></h3>
+<h2 id="operations-manual">🚀 Operations Manual</h2>
+<h3 id="local-preview">Local Preview</h3>
 <p>To see changes in real-time before pushing:
 ```bash
 mkdocs serve</p>
