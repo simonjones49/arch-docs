@@ -1736,7 +1736,7 @@
   <span class="md-ellipsis">
     
   
-    Ungoogled Chromium
+    Ungoogled Chromium on a Chromebook
   
 
     
@@ -2467,8 +2467,7 @@
 
 
 
-  <h1>Ungoogled Chromium on Arch Key Refresh</h1>
-
+<h1 id="ungoogled-chromium-on-arch-key-refresh">Ungoogled Chromium on Arch Key Refresh</h1>
 <p>If you update the keys on Arch and lose the ungoogled chromium key, here is how to update the key.</p>
 <p><pre class="highlight"><code>key=$(curl -fsSL https://download.opensuse.org/repositories/home:justkidding:arch/Arch/$(uname -m)/home_justkidding_arch_Arch.key)</code></pre>
 <pre class="highlight"><code>fingerprint=$(gpg --quiet --with-colons --import-options show-only --import --fingerprint &amp;lt;&amp;lt;&amp;lt; "${key}" | awk -F: '$1 == "fpr" { print $10 }')</code></pre>
@@ -2486,9 +2485,6 @@
 
 
 
-
-  
-  
 
 
 

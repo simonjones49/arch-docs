@@ -1736,7 +1736,7 @@
   <span class="md-ellipsis">
     
   
-    Ungoogled Chromium
+    Ungoogled Chromium on a Chromebook
   
 
     
@@ -2467,8 +2467,7 @@
 
 
 
-  <h1>Fix Evolution print</h1>
-
+<h1 id="fix-evolution-print">Fix Evolution print</h1>
 <p>Currently Evolution is unable to print, it has been an issue since at least v3.38. This is a workround, not a fix but it will do until it is fixed.</p>
 <p><pre class="highlight"><code>cp /usr/share/applications/org.gnome.Evolution.desktop ~/.local/share/applications/</code></pre>
 <pre class="highlight"><code>sed -i 's/Exec=evolution/Exec=env WEBKIT_FORCE_SANDBOX=0 evolution/g' ~/.local/share/applications/org.gnome.Evolution.desktop</code></pre>
@@ -2495,9 +2494,6 @@ Exec=env WEBKIT_FORCE_SANDBOX=0 evolution -c tasks</code></pre></p>
 
 
 
-
-  
-  
 
 
 
