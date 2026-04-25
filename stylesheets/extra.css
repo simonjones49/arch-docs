@@ -88,7 +88,7 @@
 
 /* The title styling at the bottom */
 .md-typeset .polaroid-caption {
-  margin-top: 15px; /* Space between image and text */
+  margin-top: 30px; /* Space between image and text */
   text-align: center;
   font-size: 1.1rem; /* Adjust as needed */
   font-weight: 500;  /* Not quite bold, but substantial */
