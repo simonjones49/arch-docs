@@ -97,13 +97,3 @@
 
 
 
-/* Force the Back to Top button to be visible and stable */
-/* Only fix the icon and hide the text label */
-.md-top {
-  font-size: 0 !important; /* Hides the messy text */
-}
-
-.md-top .md-icon {
-  font-size: 1.2rem;
-  display: flex;
-}
