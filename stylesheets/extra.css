@@ -12,17 +12,3 @@
     display: flex;
   }
 }
-/* This targets the entire secondary sidebar (the TOC column) */
-.md-sidebar--secondary {
-  display: none !important;
-}
-
-/* This targets the navigation list inside the sidebar if it's integrated */
-nav.md-nav--secondary {
-  display: none !important;
-}
-
-/* This ensures the main content stretches to fill the empty space */
-.md-content {
-  margin-right: 0 !important;
-}
