@@ -49,12 +49,12 @@
 /* 2. TAGS/GENERAL (Note Boxes) - Small Font */
 .md-typeset .admonition.note,
 .md-typeset details.note {
-  font-size: 0.65rem; /* Smaller for your tags */
+  font-size: 0.45rem; /* Smaller for your tags */
 }
 
 .md-typeset .admonition.note ul {
-  font-size: 0.65rem;
-  line-height: 1.0;
+  font-size: 0.45rem;
+  line-height: 0.8;
 }
 
 .md-typeset .admonition.note > .admonition-title {
