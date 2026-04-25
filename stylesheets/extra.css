@@ -49,7 +49,7 @@
 /* 2. TAGS/GENERAL (Note Boxes) - Small Font */
 .md-typeset .admonition.note,
 .md-typeset details.note {
-  font-size: 0.85rem; /* Smaller for your tags */
+  font-size: 0.65rem; /* Smaller for your tags */
 }
 
 .md-typeset .admonition.note ul {
