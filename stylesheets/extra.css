@@ -116,40 +116,26 @@
   justify-content: center;
 }
 
-/* Custom 'Back to Top' Button - Bottom Centered */
+/* Custom 'Back to Top' Button - Right Aligned */
 .md-top {
-  /* Position it at the bottom center */
-  top: auto !important;
-  bottom: 2rem !important; /* 2rem from the bottom of the screen */
-  right: 50% !important;
-  transform: translateX(50%);
+  /* Position it back to the bottom right */
+  right: 2rem !important;
+  bottom: 2rem !important;
 
-  /* Style it as a clean circle */
-  background-color: #2196f3 !important;
-  color: white !important;
-  border: 2px solid white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  /* Style it to match your site's vibe */
+  background-color: var(--md-primary-fg-color) !important;
+  color: var(--md-primary-bg-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* Remove text and ensure icon is centered */
-  font-size: 0 !important; /* Hides the 'Back to top' text string */
+  /* Clean up the text/icon area */
+  font-size: 0 !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 100;
 }
 
-/* Use the built-in arrow icon via CSS content */
-.md-top::after {
-  content: ""; /* This is the Material arrow-up icon code */
-  font-family: "Material Icons";
-  font-size: 1.5rem;
-}
-
-/* Hover effects */
-.md-top:hover {
-  background-color: #1976d2 !important;
-  transform: translateX(50%) translateY(-5px);
+/* Ensure the arrow shows up clearly */
+.md-top .md-icon {
+  font-size: 1.2rem;
+  color: inherit;
 }
