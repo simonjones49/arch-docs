@@ -93,16 +93,36 @@
   line-height: 1.2;
   /*margin: 0; /* Tightens up the space in the small box */
 }
-/* Move the Back to Top button toward the center */
+/* Custom 'Back to Top' Button */
 .md-top {
-  right: 50%;
-  transform: translateX(50%); /* This perfectly centers it horizontally */
-  background-color: var(--md-primary-fg-color); /* Matches your theme color */
-  opacity: 0.8;
+  /* 1. Positioning it in the bottom center */
+  right: 50% !important;
+  transform: translateX(50%);
+
+  /* 2. Making it look like a distinct button */
+  background-color: #2196f3 !important; /* Brighter blue to stand out */
+  color: white !important;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  /* 3. Ensure it sits on top of everything */
+  z-index: 100;
+
+  /* 4. Size adjustment */
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Optional: Make it look a bit more like a 'button' */
+/* Make it slightly transparent until hovered */
+.md-top {
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
 .md-top:hover {
   opacity: 1;
-  background-color: var(--md-accent-fg-color);
+  transform: translateX(50%) translateY(-5px); /* Lift up slightly on hover */
 }
