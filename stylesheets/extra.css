@@ -93,28 +93,7 @@
   line-height: 1.2;
   /*margin: 0; /* Tightens up the space in the small box */
 }
-/* Custom 'Back to Top' Button */
-.md-top {
-  /* 1. Positioning it in the bottom center */
-  right: 50% !important;
-  transform: translateX(50%);
 
-  /* 2. Making it look like a distinct button */
-  background-color: #2196f3 !important; /* Brighter blue to stand out */
-  color: white !important;
-  border: 2px solid white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-
-  /* 3. Ensure it sits on top of everything */
-  z-index: 100;
-
-  /* 4. Size adjustment */
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* Custom 'Back to Top' Button - Right Aligned */
 .md-top {
