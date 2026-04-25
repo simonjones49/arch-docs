@@ -12,53 +12,57 @@ taxonomy:
     tag:
         - chicken
 ---
+# Creamy Tuscan Chicken
+<figure class="polaroid-box">
+    <img alt="Creamy Tuscan Chicken" src="../../assets/images/tuscan-chicken.png" title="Creamy Tuscan Chicken">
+    <figcaption class="polaroid-caption">Serving suggestion</figcaption>
+</figure>
+!!! info "Ingredients for the chicken & sauce"
 
-# Ingredients:
+    - 4-6 chicken thighs
 
-## For the Chicken & Sauce:
+    - 2 tbsp | 30 ml olive oil (divided)
 
-• 4-6 chicken thighs
+    - 2 tbsp | 28 g unsalted butter
 
-• 2 tbsp | 30 ml olive oil (divided)
+    - 1 tbsp | 15 g tomato paste
 
-• 2 tbsp | 28 g unsalted butter
+    - 1 cup | 240 ml  heavy cream
 
-• 1 tbsp | 15 g tomato paste
+    - ½ cup | 120 ml  chicken broth
 
-• 1 cup | 240 ml  heavy cream
+    - ½ cup | 50 g  grated cheese
 
-• ½ cup | 120 ml  chicken broth
+    - ½ tsp | 1.2 g paprika
 
-• ½ cup | 50 g  grated cheese
+    - ¼ tsp | 0.5 g red pepper flakes (optional)
 
-• ½ tsp | 1.2 g paprika
+    - ½ cup | 60 g chopped sun-dried tomatoes, drained
 
-• ¼ tsp | 0.5 g red pepper flakes (optional)
+    - 1 cup | 30 g chopped fresh spinach
 
-• ½ cup | 60 g chopped sun-dried tomatoes, drained
+    - Salt and pepper to taste
 
-• 1 cup | 30 g chopped fresh spinach
+    - Fresh basil to garnish (optional)
 
-• Salt and pepper to taste
+!!! info "Ingredients for the roasted veg"
 
-• Fresh basil to garnish (optional)
+    - 1 red onion, cut into wedges
 
-## For the Roasted Veg:
+    - 1 red or yellow bell pepper, sliced
 
-• 1 red onion, cut into wedges
+    - 1 courgette (zucchini), cut into thick half-moons
 
-• 1 red or yellow bell pepper, sliced
+    - 1 tbsp | 15 ml olive oil
 
-• 1 courgette (zucchini), cut into thick half-moons
+    - Salt and pepper to taste
 
-• 1 tbsp | 15 ml olive oil
+    - Optional: pinch of oregano or smoked paprika
 
-• Salt and pepper to taste
+!!! success "METHOD"
 
-• Optional: pinch of oregano or smoked paprika
+    - Pre-heat the oven to 200°C (180°C fan) / 400°F.
+    - Add chicken and eveything to the pan, mix well. 
+    - Cook uncovered for 35–40 minutes, until chicken is cooked through (75°C / 165°F internal temp) and sauce is bubbling.
 
-## Oven:
-To 200°C (180°C fan) / 400°F.
-uncovered for 35–40 minutes, until chicken is cooked through (75°C / 165°F internal temp) and sauce is bubbling.
-
-![tuscan-chicken](../assets/images/tuscan-chicken.png "Tuscan Chicken")
+<!-- ![tuscan-chicken](../assets/images/tuscan-chicken.png "Tuscan Chicken") -->

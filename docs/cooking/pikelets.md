@@ -9,39 +9,46 @@ taxonomy:
     tag:
         - cooking
 ---
+# Pikelets
+<figure class="polaroid-box">
+    <img alt="Pikelets" src="../../assets/images/pikelets-recipe-nz-328487437.jpg" title="Pikelets">
+    <figcaption class="polaroid-caption">From BakingMad.com</figcaption>
+</figure>
 
-I originally had the recipe off:-
+!!! info "Ingredients"
 
-BakingMad.com
+    - 450gm Strong white flour
 
-450gm Strong white flour
+    - 7gm quick bake yeast
 
-7gm quick bake yeast
+    - 300ml water
 
-300ml water
+    - 300ml Plenish Almond Drink (I am Lactose intolerant)
 
-300ml Plenish Almond Drink (I am Lactose intolerant)
+    - 1tsp Sugar
 
-1tsp Sugar
+    - 1tsp Salt
 
-1tsp Salt
 
-Warm Almond Drink and Water together
+!!! success "METHOD"
 
-Place all the ingredients into a bowl and beat until smooth.  Put to
-one side until frothy and the size has doubled.
+    - Warm Almond Drink and Water together
 
-Grease a heavy frying pan and some 4 inch egg rings. Heat.
+    - Place all the ingredients into a bowl and beat until smooth.  Put to
+    one side until frothy and the size has doubled.
 
-Half fill each ring.
+    - Grease a heavy frying pan and some 4 inch egg rings. Heat.
 
-Cook the crumpets until the surface bubbles (about 5 minutes). Reduce
-heat until the bubbles have burst.
+    - Half fill each ring.
 
-Turn the crumpets over and for further time until the edges of the
-bubbles start to brown, slightly.
+    - Cook the crumpets until the surface bubbles (about 5 minutes).
 
-Re-grease, increase the heat and repeat.
+    - Reduce heat until the bubbles have burst.
+
+    - Turn the crumpets over and for further time until the edges of the
+    bubbles start to brown, slightly.
+
+    - Re-grease, increase the heat and repeat.
 
 There you are, easier than pancakes.
-![pikelets-recipe-nz-328487437](../assets/images/pikelets-recipe-nz-328487437.jpg "pikelets-recipe-nz-328487437")
+

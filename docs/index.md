@@ -5,7 +5,7 @@ Hi! I'm Simon. This is my personal digital garden where I document my journey wi
 ---
 
 ### :computer: Computing
-My Arch Linux setup guides, AUR package notes, and system configuration fixes. This is my "external brain" for keeping my machine running perfectly.
+This covers guides I have followed or created for Linux, Android and even Windows. I document fixes that work but please watch the date it was created. Old guides may not work today, or at least follow with care.
 
 ### :cooking: Cooking
 A collection of tried-and-tested meals. From quick weeknight stir-fries to slow-cooked favorites.

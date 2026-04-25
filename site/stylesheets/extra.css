@@ -28,3 +28,72 @@
   margin-top: 0;
   padding-top: 1rem;
 }
+/* Increase font size for the content inside all admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 1.1rem; /* Adjust this number as needed */
+}
+
+/* Specifically target the list items inside the ingredients box */
+.md-typeset .admonition ul {
+  font-size: 1.1rem;
+  line-height: 1.0; /* Adds a bit of breathing room between ingredients */
+}
+
+/* Optional: Make the "Ingredients" title larger too */
+.md-typeset .admonition-title {
+  font-size: 1.1rem !important;
+/*  font-weight: 700;*/
+}
+/* Target the paragraph that contains your image */
+.md-typeset p:has(img) {
+  text-align: center;
+}
+
+/* Ensure the image inside that paragraph behaves correctly */
+.md-typeset p img {
+  display: inline-block;
+  margin: 0 auto;
+  /* The "Box" styling */
+  padding: 10px;               /* Space between image and border */
+  border: 1px solid #e0e0e0;   /* Light grey border line */
+  border-radius: 4px;          /* Slightly rounded corners */
+  background-color: #ffffff;   /* White background for the "frame" */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+/* Container box that holds the image and title */
+.md-typeset .polaroid-box {
+  display: block;
+  width: fit-content; /* Shrinks the box to fit the image */
+  max-width: 90%;     /* Prevents it from going off-screen */
+  margin: 2rem auto;  /* Centers the whole box */
+  padding: 10px;      /* Standard 'matting' around the image */
+
+  /* Make the bottom border much bigger */
+  padding-bottom: 10px; /* Adjust this to make the space for the title bigger */
+
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* More pronounced shadow */
+}
+
+/* Ensure the image inside stays contained */
+.md-typeset .polaroid-box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* The title styling at the bottom */
+.md-typeset .polaroid-caption {
+  margin-top: 30px; /* Space between image and text */
+  text-align: center;
+  font-size: 1.1rem; /* Adjust as needed */
+  font-weight: 500;  /* Not quite bold, but substantial */
+  color: #333333;     /* Standard grey text */
+
+  /* Optional: A cursive-style font closer to the polaroid aesthetic */
+  /* font-family: 'Comic Sans MS', cursive; */
+}

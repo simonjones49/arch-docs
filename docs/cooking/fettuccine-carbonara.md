@@ -10,6 +10,12 @@ taxonomy:
 date: '22-10-2019 18:06'
 ---
 
+# Fettuccine Carbonara
+<figure class="polaroid-box">
+    <img alt="Fettuccine Carbonara" src="../../assets/images/fc.jpg" title="Fettuccine Carbonara">
+    <figcaption class="polaroid-caption">Serving suggestion</figcaption>
+</figure>
+
 Preparation time:10 minutes
 
 Cooking time:10 minutes
@@ -19,46 +25,43 @@ Total time:20 minutes
 Serves:4
 
  
+!!! info "Ingredients"
 
-Ingredients
+    - 300g San Remo fettuccine pasta
 
-300g San Remo fettuccine pasta
+    - 3 cups Sliced mushrooms
 
-3 cups Sliced mushrooms
+    - 1 cup Diced lean ham
 
-1 cup Diced lean ham
+    - 1 Chicken breast, diced
 
-1 Chicken breast, diced
+    - 1 Brown onion
 
-1 Brown onion
+    - 375ml Evaporated skim milk
 
-375ml Evaporated skim milk
+    - 3/4 cup Skim milk
 
-3/4 cup Skim milk
+    - 2 sachets Cream of mushroom cuppa soup
 
-2 sachets Cream of mushroom cuppa soup
+    - 2 tbsp Grated cheese
 
-2 tbsp Grated cheese
+    - 1 lvl tbsp Reduce fat margarine
 
-1 lvl tbsp Reduce fat margarine
+    - 2 lvl tbsp Plain flour
 
-2 lvl tbsp Plain flour
+    - 1 lvl tbsp Beef stock powder
 
-1 lvl tbsp Beef stock powder
-
-Salt and pepper to taste
-
-!fettucini](../assets/images/fc.png "Fettuccine Carbonara")
+    - Salt and pepper to taste
 
 
-Method
+!!! success "METHOD"
 
-Coat large non-stick saucepan with cooking spray. Saute onion for 2 minutes.
+    - Coat large non-stick saucepan with cooking spray. Saute onion for 2 minutes.
 
-Add chicken. When almost cooked, toss in ham and cook for 2 minutes.
+    - Add chicken. When almost cooked, toss in ham and cook for 2 minutes.
 
-Add sliced mushrooms and cook a further 2-3 minutes. Remove from pan and set to one side.
+    - Add sliced mushrooms and cook a further 2-3 minutes. Remove from pan and set to one side.
 
-In the same saucepan melt margarine. Add flour & mix well. Slowly add in evaporated milk and then skim milk, mixing continually until smooth. Stir in dry soup mix, stock powder and parmesan cheese. Return mushroom mixture to pot, combine well, add salt and pepper to taste.
+    - In the same saucepan melt margarine. Add flour & mix well. Slowly add in evaporated milk and then skim milk, mixing continually until smooth. Stir in dry soup mix, stock powder and parmesan cheese. Return mushroom mixture to pot, combine well, add salt and pepper to taste.
 
-Cook San Remo pasta and serve.
+    - Cook San Remo pasta and serve.
