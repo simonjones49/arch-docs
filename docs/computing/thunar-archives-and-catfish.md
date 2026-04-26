@@ -8,6 +8,7 @@ So then I went back to the thunar window, and right clicked a folder and oddly t
 
 I right clicked and said "open with" and chose thunar, and now archiver opens with thunar as well.
 ![thunar](../assets/images/thunar.jpg "thunar")
+
 It's a simple fix but only if you know where to look. I am glad I found it, I hope it helps someone else.
 
 It survived a reboot so I am guessing it is fixed, for now. :)

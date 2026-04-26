@@ -2471,10 +2471,9 @@
 <p>Having installed Arch on an imac everything seems to work except sound through the headphones. Despite the speakers working and being able to switch speakers to headphones the sound just stops.</p>
 <p>This is a fairly simple fix, once you know what to put where.</p>
 <p>The file is </p>
-<p><code>/etc/modprobe.d/alsa-base.conf
-<pre class="highlight"><code>
-and all you have to add to it is</code></pre>
-options snd-hda-intel model=imac27_122</code>
+<pre class="highlight"><code>/etc/modprobe.d/alsa-base.conf</code></pre>
+<p>and all you have to add to it is
+<pre class="highlight"><code>options snd-hda-intel model=imac27_122</code></pre>
 Save the file and reboot, sound will now work as expected.</p>
 <hr />
 <div class="admonition note inline">

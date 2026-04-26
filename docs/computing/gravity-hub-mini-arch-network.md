@@ -1,7 +1,7 @@
 # GRAVITY Hub Mini Arch Network
-
-I bought this hub for the USB ports and it is plug and play in Arch. No issues at all, until I plugged an Ethernet cable in to connect a wired network and nothing. 
 ![51bwviaLouL._AC_SL1500_](../assets/images/51bwviaLouL._AC_SL1500_.jpg "51bwviaLouL._AC_SL1500_")
+I bought this hub for the USB ports and it is plug and play in Arch. No issues at all, until I plugged an Ethernet cable in to connect a wired network and nothing. 
+
 Checking in the system is shows up as 
 ```
 Bus 002 Device 005: ID 2109:0817 VIA Labs, Inc. USB3.0 Hub     

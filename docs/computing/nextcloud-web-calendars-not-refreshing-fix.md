@@ -3,6 +3,7 @@
 The default fix for setting a manual refresh time is using the terminal on the server. Having set up an instance of Nextcloud without terminal access I needed to find an alternate way to achieve this. It turns out the official method is simply a way to edit the fields in the database, I can do this in PHPMyAdmin directly.
 
 Simply go to to the Nextcloud database and find the subscriptions table
+
 ![Screenshot_2022-09-08_11-21-33](../assets/images/Screenshot_2022-09-08_11-21-33.png "Screenshot_2022-09-08_11-21-33")
 
 Then edit the refresh rate to the same value as other guides, I set mine to 30 minutes. 

@@ -6,7 +6,7 @@ As long as the USB key is present it boots to the desktop, if not the password i
 
 The changes are in /etc/default/grub
 ```
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 cryptdevice=/dev/nvme0n1p3:volumegroup:allow-discards cryptkey=/dev/disk/by-uuid/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:ext4:/&lt;filename&gt;  quiet"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 cryptdevice=/dev/nvme0n1p3:volumegroup:allow-discards cryptkey=/dev/disk/by-uuid/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:ext4:/>filename&gt;  quiet"
 ```
 
 and in /etc/mkinitcpio.conf
@@ -20,7 +20,7 @@ and boot with the usb drive in, no password needed.
 
 To create the password file
 ```
-echo -n '&lt;your luks password&gt;' /run/media/simon/USBDRIVE/&lt;filename&gt;
+echo -n '>your luks password&gt;' /run/media/simon/USBDRIVE/>filename&gt;
 ```
 
 ---

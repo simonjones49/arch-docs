@@ -33,7 +33,7 @@ $ lsblk
 NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
 sda                      8:0    1  29.3G  0 disk  
 └─sda1                   8:1    1  29.3G  0 part  /run/media/simon/USBKEY
- ```
+```
  The drive is mounted to /run/media/simon/USBKEY
  
  Copy the keyfile to it
@@ -44,7 +44,7 @@ Then, take a note of the UUID of the USB stick partition, we'll need it in order
 ```
 $ sudo blkid | grep sda1
 /dev/sda1: UUID="F7B7-F9E8" BLOCK_SIZE="512" TYPE="exfat" PARTUUID="333a96b6-01"
- ```                   
+```                   
 With the keyfile on the stick and the key added to the partition, we can move on to tell LUKS about it during boot.
 Loading the Keyfile during Boot
 We'll need to modify the cmdline of the Linux kernel used by your system, and for this, you need to know the bootloader that executes it. Common choices include bootloaders like GRUB, systemd-boot, or booting Linux directly using your Mainboard's EFI implementation.

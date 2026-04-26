@@ -6,14 +6,13 @@ So here are the instructions to install ungoogled-chromium.
 
 First of all you need to add the [Opensuse](https://www.opensuse.org/){:target="_blank"} repository to your pacman configuration file. Yes OpenSuse have an Arch repository!
 ```
-echo '                            
-[home_ungoogled_chromium_Arch]
+echo '[home_ungoogled_chromium_Arch]
 SigLevel = Required TrustAll
 Server = https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/$arch' | sudo tee --append /etc/pacman.conf
 ```
 Then you need to update the repository information and install the package
 ```
-sudo pacman -Sy ungoogled-chromium
+sudo pacman -Syu ungoogled-chromium
 ```
 
 If you currently have Chromium installed it will prompt you to uninstall it due to a conflict, it will have No as the default answer you so must type Y/y to confirm.

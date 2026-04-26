@@ -2470,11 +2470,10 @@
 <h1 id="kde-connect-and-ufw">KDE connect and UFW</h1>
 <p>I like using KDE connect and I like being behind a firewall. </p>
 <p>Having done some research I find KDE connect uses a range of ports so I need those open.</p>
-<p>```
-sudo ufw allow proto udp from 192.168.0.0/24  to any port 1714:1764</p>
-<p>sudo ufw allow proto tcp from 192.168.0.0/24  to any port 1714:1764</p>
-<p>sudo ufw reload
- ```</p>
+<pre><code>sudo ufw allow proto udp from 192.168.0.0/24  to any port 1714:1764
+sudo ufw allow proto tcp from 192.168.0.0/24  to any port 1714:1764
+sudo ufw reload
+</code></pre>
 <hr />
 <div class="admonition note inline">
 <p class="admonition-title">Posted</p>

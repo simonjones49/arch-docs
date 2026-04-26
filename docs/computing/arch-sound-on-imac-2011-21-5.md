@@ -6,7 +6,8 @@ This is a fairly simple fix, once you know what to put where.
 
 The file is 
 
-```/etc/modprobe.d/alsa-base.conf
+```
+/etc/modprobe.d/alsa-base.conf
 ```
 
 and all you have to add to it is

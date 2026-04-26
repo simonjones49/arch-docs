@@ -8,7 +8,8 @@ Back when it was released I had to run it on Windows, Linux could not emulate th
 
 So, to get this running on Arch Linux. I am not a Wine guru, so I installed WineGUI from the AUR.
 
-I chose Windows 7 (seems a good fit) and of course 32 bit. These are the settings I used
+I chose Windows 7 (seems a good fit) and of course 32 bit. These are the settings I used :
+
 ![WineGUI](../assets/images/WineGUI.png "WineGUI")
 
 I decided to create an ISO image, in case I needed it to run the game all the time. To get the info to do this I ran
