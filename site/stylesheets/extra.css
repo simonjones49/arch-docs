@@ -95,5 +95,7 @@
 }
 
 
-
+.md-nav__title {
+  display: none;
+}
 
