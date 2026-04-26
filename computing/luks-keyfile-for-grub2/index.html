@@ -2471,13 +2471,13 @@
 <p>Having setup a LVM disk with LUKS encryption on my main machine, I used the guide I made for the Chromebook with some minor changes. I now wanted to add a USB drive with the key file to save entering the password all the time.</p>
 <p>As long as the USB key is present it boots to the desktop, if not the password is needed. </p>
 <p>The changes are in /etc/default/grub
-<pre class="highlight"><code>GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 cryptdevice=/dev/nvme0n1p3:volumegroup:allow-discards cryptkey=/dev/disk/by-uuid/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:ext4:/&amp;lt;filename&amp;gt;  quiet"</code></pre></p>
+<pre class="highlight"><code>GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 cryptdevice=/dev/nvme0n1p3:volumegroup:allow-discards cryptkey=/dev/disk/by-uuid/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:ext4:/&gt;filename&amp;gt;  quiet"</code></pre></p>
 <p>and in /etc/mkinitcpio.conf
 <pre class="highlight"><code>MODULES=(ext4)</code></pre></p>
 <p>Then grub-mkconfig -o /boot/grub/grub.cfg</p>
 <p>and boot with the usb drive in, no password needed.</p>
 <p>To create the password file
-<pre class="highlight"><code>echo -n '&amp;lt;your luks password&amp;gt;' /run/media/simon/USBDRIVE/&amp;lt;filename&amp;gt;</code></pre></p>
+<pre class="highlight"><code>echo -n '&gt;your luks password&amp;gt;' /run/media/simon/USBDRIVE/&gt;filename&amp;gt;</code></pre></p>
 <hr />
 <div class="admonition note inline">
 <p class="admonition-title">Posted</p>
