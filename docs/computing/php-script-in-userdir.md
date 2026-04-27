@@ -8,15 +8,15 @@ sudo nano /etc/apache2/mods-enabled/php*.conf
 ```
 Change 
 
-       php_admin_flag engine Off
+    php_admin_flag engine Off
 
 to
 
-        php_admin_flag engine On
+    php_admin_flag engine On
 
 save.
 ```
- sudo service apache2 restart
+sudo service apache2 restart
 ```
 to make the change active
 

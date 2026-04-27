@@ -300,20 +300,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -1907,22 +1902,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -2474,28 +2462,28 @@
 <p>So, to get this running on Arch Linux. I am not a Wine guru, so I installed WineGUI from the AUR.</p>
 <p>I chose Windows 7 (seems a good fit) and of course 32 bit. These are the settings I used :</p>
 <p><img alt="WineGUI" src="../../assets/images/WineGUI.png" title="WineGUI" /></p>
-<p>I decided to create an ISO image, in case I needed it to run the game all the time. To get the info to do this I ran
+<p>I decided to create an ISO image, in case I needed it to run the game all the time. To get the info to do this I ran</p>
 <pre class="highlight"><code>isoinfo -d -i /dev/cdrom | grep -i -E 'block size|volume size'</code></pre>
-This gives the values needed to create the ISO with
+<p>This gives the values needed to create the ISO with</p>
 <pre class="highlight"><code>dd if=/dev/cdrom of=NFSC.iso bs=2048 count=1878560</code></pre>
-I then put the disc away and copied the game key into Keepass for easy reference. </p>
-<p>I mounted the ISO to /mnt
+<p>I then put the disc away and copied the game key into Keepass for easy reference. </p>
+<p>I mounted the ISO to /mnt</p>
 <pre class="highlight"><code>sudo mkdir /mnt/NFS
 sudo mount -o loop NFSC.iso /mnt/NFS/</code></pre>
-This shows up in WineGUI as drive d:</p>
+<p>This shows up in WineGUI as drive d:</p>
 <p>I completed the install as though in Windows, skipping the registration as the EA server is no longer there.</p>
 <p>I did copy a no CD application so I would not need the ISO mounted all the time.
-I removed the mount with 
+I removed the mount with </p>
 <pre class="highlight"><code>sudo umount /mnt/NFS 
 sudo rmdir /mnt/NFS/</code></pre>
-Then to create a launcher.
-Name
+<p>Then to create a launcher.
+Name</p>
 <pre class="highlight"><code>Need for Speed™ Carbon</code></pre>
-Command
+<p>Command</p>
 <pre class="highlight"><code>env WINEPREFIX="/home/simon/.local/share/winegui/prefixes/NFS Carbon" wine "/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon/NFSC.exe"</code></pre>
-Working Directory
+<p>Working Directory</p>
 <pre class="highlight"><code>/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon</code></pre>
-You will need to change these to suit your setup, but you get the idea.
+<p>You will need to change these to suit your setup, but you get the idea.
 Add the icon as shown</p>
 <p><img alt="Screenshot_2024-07-03_12-12-15" src="../../assets/images/Screenshot_2024-07-03_12-12-15.png" title="Screenshot_2024-07-03_12-12-15" /></p>
 <p>Mark the launcher executable, and off we go! All movies work, sound works and most importantly the USB controller works!</p>
@@ -2540,6 +2528,11 @@ Happily playing Need for Speed™ Carbon in 2024! </p>
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Simon Jones – <a href="#__consent">Change cookie settings</a>
+
+    </div>
   
   
     Made with
@@ -2604,11 +2597,77 @@ Happily playing Need for Speed™ Carbon in 2024! </p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+      
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="preferences" checked>
+      <span class="task-list-indicator"></span>
+      Github
+    </label>
+  </li>
+
+      
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.top", "search.suggest", "search.highlight", "navigation.instant.progress"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

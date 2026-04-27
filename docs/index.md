@@ -1,6 +1,8 @@
 # Welcome to Simon's Wiki
 
-Hi! I'm Simon. This is my personal digital garden where I document my journey with Arch Linux and keep track of my favorite cooking.
+Hi! I'm Simon. This is my personal digital garden where I document my journey with Arch Linux and keep track of my favourite cooking.
+
+Click a category to the left to browse articles or use the search at the top if you are looking for something specific.
 
 ---
 
@@ -8,7 +10,7 @@ Hi! I'm Simon. This is my personal digital garden where I document my journey wi
 This covers guides I have followed or created for Linux, Android and even Windows. I document fixes that work but please watch the date it was created. Old guides may not work today, or at least follow with care.
 
 ### :cooking: Cooking
-A collection of tried-and-tested meals. From quick weeknight stir-fries to slow-cooked favorites.
+A collection of tried-and-tested meals. From quick weeknight stir-fries to slow-cooked favourites.
 
 ## :bicyclist: My Tracks 
 My cycling records and real-time stats from the **Fiido C21**.
@@ -29,7 +31,7 @@ function revealEmail() {
     const domain = "gmx.com";
     const email = user + '@' + domain;
     const placeholder = document.getElementById("email-placeholder");
-    
+
     placeholder.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
     // Optional: Hide the button after clicking
     event.target.style.display = 'none';

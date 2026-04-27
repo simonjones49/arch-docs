@@ -13,43 +13,57 @@ I chose Windows 7 (seems a good fit) and of course 32 bit. These are the setting
 ![WineGUI](../assets/images/WineGUI.png "WineGUI")
 
 I decided to create an ISO image, in case I needed it to run the game all the time. To get the info to do this I ran
+
 ```
 isoinfo -d -i /dev/cdrom | grep -i -E 'block size|volume size'
 ```
+
 This gives the values needed to create the ISO with
+
 ```
 dd if=/dev/cdrom of=NFSC.iso bs=2048 count=1878560
 ```
+
 I then put the disc away and copied the game key into Keepass for easy reference. 
 
 I mounted the ISO to /mnt
+
 ```
 sudo mkdir /mnt/NFS
 sudo mount -o loop NFSC.iso /mnt/NFS/
 ```
+
 This shows up in WineGUI as drive d:
 
 I completed the install as though in Windows, skipping the registration as the EA server is no longer there.
 
 I did copy a no CD application so I would not need the ISO mounted all the time.
 I removed the mount with 
+
 ```
 sudo umount /mnt/NFS 
 sudo rmdir /mnt/NFS/
 ```
+
 Then to create a launcher.
 Name
+
 ```
 Need for Speed™ Carbon
 ```
+
 Command
+
 ```
 env WINEPREFIX="/home/simon/.local/share/winegui/prefixes/NFS Carbon" wine "/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon/NFSC.exe"
 ```
+
 Working Directory
+
 ```
 /home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon
 ```
+
 You will need to change these to suit your setup, but you get the idea.
 Add the icon as shown
 

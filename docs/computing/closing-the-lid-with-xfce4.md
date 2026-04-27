@@ -22,6 +22,8 @@ done
 
 ```
 
+As an update, this never changed, various DE/WM combinations and this script has always been needed. Currently using [Niri](https://niri-wm.github.io/niri/){:target="_blank"} and [Noctalia](https://noctalia.dev/){:target="_blank"} and the script works just fine. 
+
 ---
 
 !!! note inline "Posted" 
