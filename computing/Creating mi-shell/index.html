@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../chromium-v92-systemd-and-nss/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../dropbear-setup/">
+        <link rel="next" href="../android-usdadb_vendor_keys-is-not-set/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Closing the lid fix - Simon's Wiki</title>
+        <title>Creating mi-shell - Simon's Wiki</title>
       
     
     
@@ -170,7 +170,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Closing the lid fix
+              Creating mi-shell
             
           </span>
         </div>
@@ -341,10 +341,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Creating%20mi-shell/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -360,6 +367,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -621,17 +629,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../closing-the-lid-with-xfce4/" class="md-nav__link">
         
   
   
@@ -647,7 +648,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2483,29 +2483,51 @@
 
 
 
-<h1 id="closing-the-lid-fix">Closing the lid fix</h1>
-<p>After setting up a new laptop and find the lid switch is not recognized by logind or xfce4 power manager I found the state of the lid is reported </p>
-<p><pre class="highlight"><code>while :; do echo -n "$(date) -- "; cat /proc/acpi/button/lid/LID0/state ; sleep 1 ; done</code></pre>
-So adding a script to watch for this at startup makes the machine suspend when the lid is closed. 
-I created lidcheck.sh in $HOME/bin/ 
-<pre class="highlight"><code>
-#!/bin/bash
-while :; do
-grep -q closed /proc/acpi/button/lid/LID0/state
-if [ $? = 0 ]
-then
-xfce4-session-logout --suspend
-fi
-sleep 5;
-done
-
-</code></pre></p>
-<p>As an update, this never changed, various DE/WM combinations and this script has always been needed. Currently using <a href="https://niri-wm.github.io/niri/" target="_blank">Niri</a> and <a href="https://noctalia.dev/" target="_blank">Noctalia</a> and the script works just fine. </p>
+<h1 id="creating-mi-shell">Creating mi-shell</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>mi-shell</strong> is a custom, lightweight desktop shell and status bar designed specifically for the <strong>Niri</strong> compositor. It serves as a centralised hub for window management, system monitoring, and hardware state visualisation.</p>
+<p>The project is built on a <strong>Zero-Footprint</strong> philosophy—using standard Linux system files and existing CLI tools rather than heavy external libraries.</p>
+<h2 id="core-capabilities">Core Capabilities</h2>
+<ul>
+<li><strong>Dynamic Window Management</strong>: Real-time tracking and switching of Niri workspaces and windows using <code>niri msg</code>.</li>
+<li><strong>Hardware State Indicators</strong>: Polling-based indicators for <strong>NumLock</strong> and <strong>CapsLock</strong> status by reading directly from <code>/sys/class/leds/</code>.</li>
+<li><strong>System Telemetry</strong>: Live updates for CPU usage, thermal temperatures, and memory/disk statistics.</li>
+<li><strong>Power &amp; Safety Management</strong>:</li>
+<li>Integrated power menu (Logout, Reboot, Shutdown).</li>
+<li>System "Stay Awake" monitoring to prevent sleep during critical tasks like <code>rclone</code> backups.</li>
+<li><strong>Productivity Integration</strong>: Built-in calendar grid via <code>cal</code> and a 7-day event agenda pulled from <code>khal</code>.</li>
+</ul>
+<h2 id="technical-stack">Technical Stack</h2>
+<ul>
+<li><strong>Framework</strong>: <a href="https://www.google.com/search?q=https://outfoxxed.github.io/quickshell/">Quickshell</a> (A Wayland-native shell scripting framework).</li>
+<li><strong>Language</strong>: QML (Qt Modeling Language) for the UI and JavaScript for the logic.</li>
+<li><strong>Communication</strong>: <code>Quickshell.Io</code> for asynchronous process execution and shell integration.</li>
+<li><strong>IPC</strong>: Extensive use of <code>sh</code> commands to bridge the gap between the GUI and the Linux kernel.</li>
+</ul>
+<h2 id="architecture-lifecycle">Architecture &amp; Lifecycle</h2>
+<p>The shell uses a <strong>Hybrid Lifecycle Model</strong> to balance UI responsiveness with system stability:</p>
+<h3 id="1-the-orchestrator-quickshell">1. The Orchestrator (Quickshell)</h3>
+<p>The main QML bar manages UI-focused scripts. It uses a <strong>Polling Heartbeat</strong> (500ms Timer) to trigger "One-Shot" processes.</p>
+<ul>
+<li><strong>Reliability Pattern</strong>: Uses <code>onStreamFinished</code> instead of <code>onRead</code> to ensure data buffers are fully captured after a process exits.</li>
+<li><strong>Lazy Loading</strong>: Heavy system processes (like disk usage or calendar agendas) are only triggered when their respective popups are visible.</li>
+</ul>
+<h3 id="2-the-daemon-layer-init-scripts">2. The Daemon Layer (Init Scripts)</h3>
+<p>Mission-critical logic—specifically the <strong>Stay Awake/Idle Loop</strong>—is decoupled from the UI.</p>
+<ul>
+<li><strong>Launcher</strong>: A central <code>init.sh</code> manages permissions (<code>chmod +x</code>), starts background loops, and finally launches the Quickshell bar.</li>
+<li><strong>Persistence</strong>: By running the loop via the shell rather than the bar, critical tasks (like backup inhibition) remain active even if the UI is restarted or crashes.</li>
+</ul>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>To ensure portability and version control, all logic is contained within the project folder:</p>
+<ul>
+<li><code>/main.qml</code>: The primary UI and process definitions.</li>
+<li><code>/theme.qml</code>: Centralized color and styling variables.</li>
+<li><code>/scripts/</code>: Executable bash scripts for hardware checks and system monitors.</li>
+<li><code>.git/</code>: Version history is maintained within the directory for atomic updates of both UI and logic.</li>
+</ul>
 <hr />
-<div class="admonition note inline">
-<p class="admonition-title">Posted</p>
-<p>10:06 22-10-2022</p>
-</div>
+<p><strong>Wiki Note</strong>: To launch the full environment, use the <code>init.sh</code> script to ensure all background daemons and permissions are initialized correctly.</p>
 
 
 
