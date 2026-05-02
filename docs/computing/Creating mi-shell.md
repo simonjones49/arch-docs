@@ -19,7 +19,7 @@ The project is built on a **Zero-Footprint** philosophy—using standard Linux s
 ## Technical Stack
 
 - **Framework**: [Quickshell](https://www.google.com/search?q=https://outfoxxed.github.io/quickshell/) (A Wayland-native shell scripting framework).
-- **Language**: QML (Qt Modeling Language) for the UI and JavaScript for the logic.
+- **Language**: QML (Qt Modelling Language) for the UI and JavaScript for the logic.
 - **Communication**: `Quickshell.Io` for asynchronous process execution and shell integration.
 - **IPC**: Extensive use of `sh` commands to bridge the gap between the GUI and the Linux kernel.
 
@@ -46,10 +46,18 @@ Mission-critical logic—specifically the **Stay Awake/Idle Loop**—is decouple
 To ensure portability and version control, all logic is contained within the project folder:
 
 - `/main.qml`: The primary UI and process definitions.
-- `/theme.qml`: Centralized color and styling variables.
+- `/theme.qml`: Centralised colour and styling variables.
 - `/scripts/`: Executable bash scripts for hardware checks and system monitors.
 - `.git/`: Version history is maintained within the directory for atomic updates of both UI and logic.
 
 ------
 
-**Wiki Note**: To launch the full environment, use the `init.sh` script to ensure all background daemons and permissions are initialized correctly.
+**Wiki Note**: To launch the full environment, use the `init.sh` script to ensure all background daemons and permissions are initialised correctly. 
+
+The Git repository is [mi-shell](https://github.com/simonjones49/mi-shell)
+
+---
+
+!!! note inline "Posted" 
+
+    18:40 01-05-2026
