@@ -7,12 +7,15 @@ Click a category to the left to browse articles or use the search at the top if 
 ---
 
 ### :computer: Computing
+
 This covers guides I have followed or created for Linux, Android and even Windows. I document fixes that work but please watch the date it was created. Old guides may not work today, or at least follow with care.
 
 ### :cooking: Cooking
+
 A collection of tried-and-tested meals. From quick weeknight stir-fries to slow-cooked favourites.
 
-## :bicyclist: My Tracks 
+## :bicyclist: My Tracks
+
 My cycling records and real-time stats from the **Fiido C21**.
 
 * [View Cycling Stats](https://simonj.42web.io/tracks.php){:target="_blank"}
@@ -39,4 +42,5 @@ function revealEmail() {
 </script>
 
 ---
-*Last updated: April 2026*
+
+*Last updated: May 2026*
