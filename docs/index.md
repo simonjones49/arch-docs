@@ -1,6 +1,8 @@
 # Welcome to Simon's Wiki
 
-Hi! I'm Simon. This is my personal digital garden where I document my journey with Arch Linux and keep track of my favourite cooking.
+Hi! I'm Simon. This is my personal digital garden where I document my journey with Arch Linux and general technology notes. 
+
+I also like to cook and I have kept some recipes that I either like to make or would like to make. 
 
 Click a category to the left to browse articles or use the search at the top if you are looking for something specific.
 
