@@ -2551,18 +2551,18 @@
 <p>Location: <code>/usr/local/bin/resume.sh</code></p>
 <p>Permissions: chmod +x</p>
 <pre class="highlight"><code># `Wait for hardware to initialize`
-`sleep 5`
+sleep 5
 
-# `Restart Tuxedo Control Center to fix CPU/Fan control`
-`systemctl restart tccd`
+# Restart Tuxedo Control Center to fix CPU/Fan control
+systemctl restart tccd
 
-# `Reconnect Bluetooth LED Clock`
-`expect &lt;&lt;EOF`
-`spawn bluetoothctl`
-`connect 4E:E7:34:D0:AA:6A`
-`expect "Connection successful"`
-`expect eof`
-`EOF``</code></pre>
+# Reconnect Bluetooth LED Clock
+expect &lt;&lt;EOF
+spawn bluetoothctl
+connect 4E:E7:34:D0:AA:6A
+expect "Connection successful"
+expect eof
+EOF</code></pre>
 <ol>
 <li>The Systemd Service</li>
 </ol>
