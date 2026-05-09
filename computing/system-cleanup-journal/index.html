@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../termux-bashrc/">
+        <link rel="prev" href="../servers-and-ufw/">
       
       
-        <link rel="next" href="../thunar-archives-and-catfish/">
+        <link rel="next" href="../systemd-logout-on-updates/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>The beauty of Arch - Simon's Wiki</title>
+        <title>System Cleanup: Disabling Unused Core Services - Simon's Wiki</title>
       
     
     
@@ -170,7 +170,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The beauty of Arch
+              System Cleanup: Disabling Unused Core Services
             
           </span>
         </div>
@@ -1629,10 +1629,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../system-cleanup-journal/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1648,6 +1655,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1713,17 +1721,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../the-beauty-of-arch/" class="md-nav__link">
         
   
   
@@ -1739,7 +1740,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2539,18 +2539,47 @@
 
 
 
-<h1 id="the-beauty-of-arch">The beauty of Arch</h1>
-<p>After many years of using Debian I find that Arch is so much easier. I used to collect scarce debs so I could reuse them if I installed another distro or another machine. None of that seems necessary now with the wonder of the Arch User Repository (AUR).</p>
-<p>Today I needed to edit a PDF file and evince failed to do it. I recalled I used Master PDF editor in Debian and sure enough I kept the deb file.</p>
-<p>Thinking it would be a long shot I, I search with yay, and found 
-<pre class="highlight"><code>aur/masterpdfeditor-free 4.3.89-1 (+64 2.46) </code></pre></p>
-<p>A quick install later and I could edit the file and email it right back, in seconds I had achieved what I needed and no local files needed.</p>
-<p>You can read about Arch <a href="https://archlinux.org/?target=arch" target="_blank">here</a></p>
+<h1 id="system-cleanup-disabling-unused-core-services">System Cleanup: Disabling Unused Core Services</h1>
+<h2 id="problem">Problem</h2>
+<p>The system journal was cluttered with "Unit is masked" errors and PAM (Authentication) failures. This was caused by <code>systemd-homed</code> and <code>systemd-resolved</code> being hard-masked while other system components (NetworkManager and PAM) were still trying to "poke" them.</p>
+<h2 id="solution">Solution</h2>
+<p>Transitioned from <strong>Masking</strong> to <strong>Disabling</strong> to provide a "Silent Inactive" state, and updated configuration files to stop the system from looking for these services.</p>
+<h3 id="1-systemd-service-state">1. Systemd Service State</h3>
+<p>Masking is too aggressive for core services. Disabling them allows the system to acknowledge their existence without starting them.</p>
+<p><strong>Commands:</strong></p>
+<p>Bring them back from /dev/null
+<code>sudo systemctl unmask systemd-homed systemd-resolved</code></p>
+<p>Ensure they do not start at boot
+<code>sudo systemctl disable systemd-homed systemd-resolved</code></p>
+<p>PAM (Authentication) Cleanup</p>
+<p>To stop sudo and login processes from looking for encrypted home directory support, the homed module must be silenced in the PAM stack.</p>
+<p>File: <code>/etc/pam.d/system-auth</code>
+Action: Comment out all lines containing pam_systemd_home.so.</p>
+<p><pre class="highlight"><code># -auth      [success=2 default=ignore]  pam_systemd_home.so
+# -account   [success=1 default=ignore]  pam_systemd_home.so
+# -password  [success=1 default=ignore]  pam_systemd_home.so
+# -session   optional                    pam_systemd_home.so</code></pre>
+3. NetworkManager DNS Cleanup</p>
+<p>To ensure NetworkManager doesn't attempt to use systemd-resolved as a DNS backend:</p>
+<p>File: <code>/etc/NetworkManager/conf.d/no-resolved.conf</code>
+Content:</p>
+<p><pre class="highlight"><code>[main]
+dns=default
+systemd-resolved=false</code></pre>
+Maintenance &amp; Pacman Updates</p>
+<p>When running pacman -Syu, look out for .pacnew files for:</p>
+<pre><code>/etc/pam.d/system-auth
+
+/etc/NetworkManager/NetworkManager.conf
+</code></pre>
+<p>If a .pacnew appears, merge the new Arch defaults but ensure the systemd-homed lines in PAM remain commented out and the NetworkManager dns=default setting remains active.
+Verification</p>
+<p>After updates, the following should show inactive (dead) with no red error text:
+<pre class="highlight"><code>systemctl status systemd-homed systemd-resolved</code></pre></p>
 <hr />
-<div class="admonition note inline">
-<p class="admonition-title">Posted</p>
-<p>02-06-2021 14:53</p>
-</div>
+<h2 id="note-inline-posted">!!! note inline "Posted"</h2>
+<pre><code>10:15 09-07-2021
+</code></pre>
 
 
 

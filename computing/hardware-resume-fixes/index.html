@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../termux-bashrc/">
+        <link rel="prev" href="../gui-pacdiff/">
       
       
-        <link rel="next" href="../thunar-archives-and-catfish/">
+        <link rel="next" href="../home-cleanup/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>The beauty of Arch - Simon's Wiki</title>
+        <title>Hardware & Resume Automation - Simon's Wiki</title>
       
     
     
@@ -170,7 +170,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The beauty of Arch
+              Hardware &amp; Resume Automation
             
           </span>
         </div>
@@ -929,10 +929,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../hardware-resume-fixes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -948,6 +955,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1713,17 +1721,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../the-beauty-of-arch/" class="md-nav__link">
         
   
   
@@ -1739,7 +1740,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2539,17 +2539,49 @@
 
 
 
-<h1 id="the-beauty-of-arch">The beauty of Arch</h1>
-<p>After many years of using Debian I find that Arch is so much easier. I used to collect scarce debs so I could reuse them if I installed another distro or another machine. None of that seems necessary now with the wonder of the Arch User Repository (AUR).</p>
-<p>Today I needed to edit a PDF file and evince failed to do it. I recalled I used Master PDF editor in Debian and sure enough I kept the deb file.</p>
-<p>Thinking it would be a long shot I, I search with yay, and found 
-<pre class="highlight"><code>aur/masterpdfeditor-free 4.3.89-1 (+64 2.46) </code></pre></p>
-<p>A quick install later and I could edit the file and email it right back, in seconds I had achieved what I needed and no local files needed.</p>
-<p>You can read about Arch <a href="https://archlinux.org/?target=arch" target="_blank">here</a></p>
+<h1 id="hardware-resume-automation">Hardware &amp; Resume Automation</h1>
+<h3 id="problem">Problem</h3>
+<p>On resume from suspend, the system experienced:</p>
+<p>CPU clock speeds stuck at 800MHz (Tuxedo tccd daemon sync issue).</p>
+<p>Bluetooth LED Clock (4E:E7:34:D0:AA:6A) failing to reconnect automatically.</p>
+<p>Permission errors (EPERM) in tccd due to hardware state changes.</p>
+<h3 id="solution">Solution</h3>
+<p>A custom systemd service runs a script as root immediately upon wake-up.
+1. The Resume Script</p>
+<p>Location: <code>/usr/local/bin/resume.sh</code></p>
+<p>Permissions: chmod +x</p>
+<pre class="highlight"><code># `Wait for hardware to initialize`
+`sleep 5`
+
+# `Restart Tuxedo Control Center to fix CPU/Fan control`
+`systemctl restart tccd`
+
+# `Reconnect Bluetooth LED Clock`
+`expect &lt;&lt;EOF`
+`spawn bluetoothctl`
+`connect 4E:E7:34:D0:AA:6A`
+`expect "Connection successful"`
+`expect eof`
+`EOF``</code></pre>
+<ol>
+<li>The Systemd Service</li>
+</ol>
+<p>Location: /etc/systemd/system/resume-fix.service
+<pre class="highlight"><code>[Unit]
+Description=Run Resume Scripts
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/resume.sh
+User=root
+
+[Install]
+WantedBy=suspend.target</code></pre></p>
 <hr />
 <div class="admonition note inline">
 <p class="admonition-title">Posted</p>
-<p>02-06-2021 14:53</p>
+<p>12:27 09-05-2026</p>
 </div>
 
 
