@@ -28,6 +28,7 @@ theme:
     - search.suggest
     - search.highlight
     - navigation.instant.progress
+
 extra:
   social:
     - icon: material/web
@@ -39,17 +40,26 @@ extra:
       link: https://www.youtube.com/@SimonJones49
     - icon: material/bike
       link: https://simonj.42web.io/tracks.php
+
+  analytics:
+    provider: google
+    property: G-GF4PSVJH68
+
   consent:
-    cookies:
-      preferences:
-        name: Github
-        checked: true
     title: Cookie consent
     description: >-
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
+    actions:
+      - accept
+      - manage
+      - reject
+    cookies:
+      analytics: Google Analytics
+      github: GitHub
+
 markdown_extensions:
   - admonition
   - tables
