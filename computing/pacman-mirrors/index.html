@@ -2550,8 +2550,9 @@
 
 
 <h1 id="pacman-mirrors">Pacman mirrors</h1>
-<p>To update the mirrors to local ones and rate them, you just need to run one command.
-<pre class="highlight"><code>sudo reflector --country France --country Spain --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist</code></pre></p>
+<p>To update the mirrors to local ones and rate them, you just need to run one command.</p>
+<p>This selects the countries France and Spain and sorts by rate and then saves the file.</p>
+<pre class="highlight"><code>sudo reflector --country France --country Spain --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist</code></pre>
 <hr />
 <div class="admonition note inline">
 <p class="admonition-title">Posted</p>
