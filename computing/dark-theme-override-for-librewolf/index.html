@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../naev-cheat-codes/">
+        <link rel="prev" href="../creating%20mi-shell/">
       
       
-        <link rel="next" href="../nextcloud-web-calendars-not-refreshing-fix/">
+        <link rel="next" href="../dropbear-setup/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Need for Speed™ Carbon on Arch using WineGUI - Simon's Wiki</title>
+        <title>Dark theme override for librewolf - Simon's Wiki</title>
       
     
     
@@ -180,7 +180,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Need for Speed™ Carbon on Arch using WineGUI
+              Dark theme override for librewolf
             
           </span>
         </div>
@@ -659,10 +659,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../dark-theme-override-for-librewolf/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -678,6 +685,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1331,17 +1339,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../need-for-speed-carbon-on-arch-using-winegui/" class="md-nav__link">
         
   
   
@@ -1357,7 +1358,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2577,45 +2577,59 @@
 
 
 
-<h1 id="need-for-speedtm-carbon-on-arch-using-winegui">Need for Speed™ Carbon on Arch using WineGUI</h1>
-<p>It's 2024 and I still like Need for Speed™ Carbon.</p>
-<p>It has been around a long time and I have played newer versions but this still is the one I enjoy most.</p>
-<p>Back when it was released I had to run it on Windows, Linux could not emulate the environment needed for games. Today 99% of my games are in Steam. NFS Carbon is not available in Steam, if it was, I would just have bought it again.</p>
-<p>So, to get this running on Arch Linux. I am not a Wine guru, so I installed WineGUI from the AUR.</p>
-<p>I chose Windows 7 (seems a good fit) and of course 32 bit. These are the settings I used :</p>
-<p><img alt="WineGUI" src="../../assets/images/WineGUI.png" title="WineGUI" /></p>
-<p>I decided to create an ISO image, in case I needed it to run the game all the time. To get the info to do this I ran</p>
-<pre class="highlight"><code>isoinfo -d -i /dev/cdrom | grep -i -E 'block size|volume size'</code></pre>
-<p>This gives the values needed to create the ISO with</p>
-<pre class="highlight"><code>dd if=/dev/cdrom of=NFSC.iso bs=2048 count=1878560</code></pre>
-<p>I then put the disc away and copied the game key into Keepass for easy reference. </p>
-<p>I mounted the ISO to /mnt</p>
-<pre class="highlight"><code>sudo mkdir /mnt/NFS
-sudo mount -o loop NFSC.iso /mnt/NFS/</code></pre>
-<p>This shows up in WineGUI as drive d:</p>
-<p>I completed the install as though in Windows, skipping the registration as the EA server is no longer there.</p>
-<p>I did copy a no CD application so I would not need the ISO mounted all the time.
-I removed the mount with </p>
-<pre class="highlight"><code>sudo umount /mnt/NFS 
-sudo rmdir /mnt/NFS/</code></pre>
-<p>Then to create a launcher.
-Name</p>
-<pre class="highlight"><code>Need for Speed™ Carbon</code></pre>
-<p>Command</p>
-<pre class="highlight"><code>env WINEPREFIX="/home/simon/.local/share/winegui/prefixes/NFS Carbon" wine "/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon/NFSC.exe"</code></pre>
-<p>Working Directory</p>
-<pre class="highlight"><code>/home/simon/.local/share/winegui/prefixes/NFS Carbon/dosdevices/c:/Program Files/Electronic Arts/Need for Speed Carbon</code></pre>
-<p>You will need to change these to suit your setup, but you get the idea.
-Add the icon as shown</p>
-<p><img alt="Screenshot_2024-07-03_12-12-15" src="../../assets/images/Screenshot_2024-07-03_12-12-15.png" title="Screenshot_2024-07-03_12-12-15" /></p>
-<p>Mark the launcher executable, and off we go! All movies work, sound works and most importantly the USB controller works!</p>
-<p>Done!
-<img alt="nfscrunning" src="../../assets/images/nfscrunning.png" title="nfscrunning" />
-Happily playing Need for Speed™ Carbon in 2024! </p>
+  <h1>Dark theme override for librewolf</h1>
+
+<h2 id="fixing-dark-mode-reversion-in-hardened-browsers">🛠️ Fixing Dark Mode Reversion in Hardened Browsers</h2>
+<p>When using privacy-focused, Firefox-based browsers (like <strong>LibreWolf</strong> or <strong>Mullvad Browser</strong>), certain websites may constantly revert to "Light Mode" even when you are signed in or have manually toggled the theme.</p>
+<h3 id="the-problem-anti-fingerprinting-rfp">The Problem: Anti-Fingerprinting (RFP)</h3>
+<p>Standard Google services like <strong>Search</strong> and <strong>Calendar</strong> store your theme preference server-side in your Google Account. However,  many modern SPAs rely on the browser's CSS Media Query: <code>$prefers-color-scheme$</code>.</p>
+<p>By default, hardened browsers enable <strong>Resist Fingerprinting (RFP)</strong>. This security feature forces the browser to report "Light Mode" to every website to prevent them from identifying you based on your specific OS/System appearance settings.</p>
+<h3 id="the-solution-granular-rfp-overrides">The Solution: Granular RFP Overrides</h3>
+<p>Instead of disabling all privacy protections, you can use a surgical override to allow the browser to report your actual theme preference while keeping other fingerprinting protections active.</p>
+<h4 id="configuration-steps">Configuration Steps</h4>
+<ol>
+<li>Open your browser and type <code>about:config</code> in the address bar.</li>
+<li>Search for and modify the following preferences:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Preference</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>privacy.resistFingerprinting</code></td>
+<td><code>false</code></td>
+<td>Disables the "Master Switch" to allow for granular overrides.</td>
+</tr>
+<tr>
+<td><code>privacy.fingerprintingProtection</code></td>
+<td><code>true</code></td>
+<td>Re-enables the modern Fingerprinting Protection stack.</td>
+</tr>
+<tr>
+<td><code>privacy.fingerprintingProtection.overrides</code></td>
+<td><code>+AllTargets,-CSSPrefersColorScheme</code></td>
+<td>Tells the browser to protect everything <strong>except</strong> the color scheme query.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="how-it-works-technical-deep-dive">🧠 How it Works (Technical Deep Dive)</h3>
+<ul>
+<li><strong><code>+AllTargets</code></strong>: This acts as a wildcard that enables all standard fingerprinting protections (standardizing fonts, spoofing screen resolution, hiding hardware specs).</li>
+<li><strong><code>-CSSPrefersColorScheme</code></strong>: The minus sign explicitly removes this specific "target" from the protection list. It allows the browser to pass your real system theme (Dark/Light) through to the website's CSS.</li>
+<li><strong>The Result</strong>: Sites read the "Dark" signal from your browser, matches it to your account preference, and stops defaulting to Light Mode on every refresh.</li>
+</ul>
+<h3 id="note-on-privacy">⚠️ Note on Privacy</h3>
+<p>By applying this override, you are technically making your "fingerprint" slightly more unique by revealing your theme preference. However, since most users globally utilize Dark Mode, the privacy trade-off is generally considered negligible compared to the usability benefit.</p>
 <hr />
 <div class="admonition note inline">
 <p class="admonition-title">Posted</p>
-<p>12:48 03-07-2024</p>
+<p>21:23 11/5/2026</p>
 </div>
 
 
