@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../authenticating-linux-luks-full-disk-encryption-and-system-access-with-usb-stick/">
+        <link rel="prev" href="../manjaro-onto-chromebook/">
       
       
-        <link rel="next" href="../chromium-v92-systemd-and-nss/">
+        <link rel="next" href="../naev-cheat-codes/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Auto login from tty - Simon's Wiki</title>
+        <title>Map tiles screenshot rainbox fix - Simon's Wiki</title>
       
     
     
@@ -180,7 +180,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Auto login from tty
+              Map tiles screenshot rainbox fix
             
           </span>
         </div>
@@ -547,17 +547,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../auto-login-from-tty/" class="md-nav__link">
         
   
   
@@ -573,7 +566,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1311,10 +1303,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../map-tiles-screenshot-rainbox-fix/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1330,6 +1329,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2605,29 +2605,32 @@
 
 
 
-<h1 id="auto-login-from-tty">Auto login from tty</h1>
-<p>If you want to login directly from the tty without a display manager, this is a working method for Arch Linux</p>
-<p>As root
-<pre class="highlight"><code>systemctl edit getty@tty1</code></pre>
-Add this to the top, read the comment about changes. Change simon to your username!
-<pre class="highlight"><code>[Service]
-ExecStart=
-ExecStart=/usr/bin/agetty --autologin simon --noclear %I 38400 linux
-Type=simple</code></pre>
-This will write to /etc/systemd/system/getty@tty1.service.d/override.conf</p>
-<p>https://bbs.archlinux.org/viewtopic.php?id=222762</p>
-<p>Then add 
-<pre class="highlight"><code>if [ "$(tty)" = "/dev/tty1"  ] ; then
-startxfce4
-fi</code></pre>
-to the end of  ~/.bash_profile</p>
-<p>Reboot and you will be logged in and XFCE4 started for you. </p>
-<p>The only issue so far is logout will drop you to tty1 and if you exit that, you will be logged in and XFCE4 started again.</p>
-<p>I was looking into this for an encrypted machine where the password is entered to boot.</p>
+  <h1>Map tiles screenshot rainbox fix</h1>
+
+<h3 id="troubleshooting-map-tiles-screenshot-rainbow-noise"><strong>Troubleshooting: Map Tiles &amp; Screenshot "Rainbow" Noise</strong></h3>
+<p>When using privacy-hardened browsers like <strong>LibreWolf</strong>, you may encounter two specific issues with Leaflet maps:</p>
+<ol>
+<li><strong>Error 403r:</strong> Map tiles fail to load (Referer required).</li>
+<li><strong>Rainbow/Static Noise:</strong> Screenshots of the map appear as colorful "static" instead of the actual track.</li>
+</ol>
+<h4 id="the-fixes"><strong>The Fixes</strong></h4>
+<p>=== "Fix 1: Map Tile Loading (Developer)" If you are the site owner, switch from the default OpenStreetMap tile server to a more flexible provider like <strong>CartoDB</strong>. </p>
+<p>This avoids the strict "Referer" requirement that many privacy browsers block by default. </p>
+<p><code>javascript L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap © CARTO' }).addTo(map);</code></p>
+<p>=== "Fix 2: Screenshot Noise (User/Browser)" If your "Save Image" feature produces a rainbow noise pattern, use the In the 2026 version of LibreWolf, you don't have to choose between "Total Privacy" and "Broken Website." You can keep the global shield on but lower it just for your domain.</p>
+<p>To stay "secure" while fixing your site is using the <strong>Exempted Domains</strong> list in <code>about:config</code>:</p>
+<ol>
+<li>Search for <code>privacy.resistFingerprinting.exemptedDomains</code>.</li>
+<li>Add <code>simonj.42web.io</code>.</li>
+</ol>
+<hr />
+<h4 id="the-reasoning-why-this-happens"><strong>The Reasoning (Why this happens)</strong></h4>
+<p>!!! info "Why Tiles Block (Error 403r)" OpenStreetMap (OSM) requires a <code>Referer</code> header to identify which website is requesting tiles. LibreWolf's <strong>First-Party Isolation</strong> and <strong>Referer Trimming</strong> often strip this header to prevent cross-site tracking. Since the server sees an "anonymous" request, it returns a 403 error. Switching to CartoDB works because they have less restrictive header validation.</p>
+<p>!!! warning "Why Screenshots Turn to 'Rainbow Static'" This is caused by <strong>Canvas Fingerprinting Protection</strong>. * <strong>The Trigger:</strong> When a website's JavaScript tries to "read" the pixels of a map (to save it as an image), LibreWolf sees this as a tracking attempt. * <strong>The Defense:</strong> To prevent the site from identifying your unique graphics hardware, the browser "poisons" the data with random noise. * <strong>The Bypass:</strong> Using the <strong>Toolbar</strong> or <strong>Native Screenshot Tool</strong> works because those are system-level actions. LibreWolf trusts the <em>user</em> to take a picture, but it does not trust the <em>website</em> to do so.</p>
 <hr />
 <div class="admonition note inline">
 <p class="admonition-title">Posted</p>
-<p>12:00 24-08-2021</p>
+<p>21:23 11/5/2026</p>
 </div>
 
 
