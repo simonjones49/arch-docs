@@ -2610,12 +2610,12 @@
 <h3 id="troubleshooting-map-tiles-screenshot-rainbow-noise"><strong>Troubleshooting: Map Tiles &amp; Screenshot "Rainbow" Noise</strong></h3>
 <p>When using privacy-hardened browsers like <strong>LibreWolf</strong>, you may encounter two specific issues with Leaflet maps:</p>
 <ol>
-<li><strong>Error 403r:</strong> Map tiles fail to load (Referer required).</li>
-<li><strong>Rainbow/Static Noise:</strong> Screenshots of the map appear as colorful "static" instead of the actual track.</li>
+<li><strong>Error 403r:</strong> Map tiles fail to load (Referrer required).</li>
+<li><strong>Rainbow/Static Noise:</strong> Screenshots of the map appear as colourful "static" instead of the actual track.</li>
 </ol>
 <h4 id="the-fixes"><strong>The Fixes</strong></h4>
 <p>=== "Fix 1: Map Tile Loading (Developer)" If you are the site owner, switch from the default OpenStreetMap tile server to a more flexible provider like <strong>CartoDB</strong>. </p>
-<p>This avoids the strict "Referer" requirement that many privacy browsers block by default. </p>
+<p>This avoids the strict "Referrer" requirement that many privacy browsers block by default. </p>
 <p><code>javascript L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap © CARTO' }).addTo(map);</code></p>
 <p>=== "Fix 2: Screenshot Noise (User/Browser)" If your "Save Image" feature produces a rainbow noise pattern, use the In the 2026 version of LibreWolf, you don't have to choose between "Total Privacy" and "Broken Website." You can keep the global shield on but lower it just for your domain.</p>
 <p>To stay "secure" while fixing your site is using the <strong>Exempted Domains</strong> list in <code>about:config</code>:</p>
@@ -2625,7 +2625,7 @@
 </ol>
 <hr />
 <h4 id="the-reasoning-why-this-happens"><strong>The Reasoning (Why this happens)</strong></h4>
-<p>!!! info "Why Tiles Block (Error 403r)" OpenStreetMap (OSM) requires a <code>Referer</code> header to identify which website is requesting tiles. LibreWolf's <strong>First-Party Isolation</strong> and <strong>Referer Trimming</strong> often strip this header to prevent cross-site tracking. Since the server sees an "anonymous" request, it returns a 403 error. Switching to CartoDB works because they have less restrictive header validation.</p>
+<p>!!! info "Why Tiles Block (Error 403r)" OpenStreetMap (OSM) requires a <code>Referer</code> header to identify which website is requesting tiles. LibreWolf's <strong>First-Party Isolation</strong> and <strong>Referrer Trimming</strong> often strip this header to prevent cross-site tracking. Since the server sees an "anonymous" request, it returns a 403 error. Switching to CartoDB works because they have less restrictive header validation.</p>
 <p>!!! warning "Why Screenshots Turn to 'Rainbow Static'" This is caused by <strong>Canvas Fingerprinting Protection</strong>. * <strong>The Trigger:</strong> When a website's JavaScript tries to "read" the pixels of a map (to save it as an image), LibreWolf sees this as a tracking attempt. * <strong>The Defense:</strong> To prevent the site from identifying your unique graphics hardware, the browser "poisons" the data with random noise. * <strong>The Bypass:</strong> Using the <strong>Toolbar</strong> or <strong>Native Screenshot Tool</strong> works because those are system-level actions. LibreWolf trusts the <em>user</em> to take a picture, but it does not trust the <em>website</em> to do so.</p>
 <hr />
 <div class="admonition note inline">
