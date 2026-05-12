@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../dropbear-setup/">
+        <link rel="prev" href="../manjaro-onto-chromebook/">
       
       
-        <link rel="next" href="../enable-reisub-with-endeavouros/">
+        <link rel="next" href="../naev-cheat-codes/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Edit the KDE exit timer - Simon's Wiki</title>
+        <title>Map tiles screenshot rainbox fix - Simon's Wiki</title>
       
     
     
@@ -180,7 +180,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Edit the KDE exit timer
+              Map tiles screenshot rainbox fix
             
           </span>
         </div>
@@ -715,17 +715,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../edit-the-kde-exit-timer/" class="md-nav__link">
         
   
   
@@ -741,7 +734,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1311,10 +1303,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../map-tiles-screenshot-rainbox-fix/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1330,6 +1329,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2633,15 +2633,32 @@
 
 
 
-<h1 id="edit-the-kde-exit-timer">Edit the KDE exit timer</h1>
-<p>To change the number of seconds on the KDE exit timer you need to edit 
-<pre class="highlight"><code>/usr/share/plasma/look-and-feel/org.kde.breeze.desktop/contents/logout/Logout.qml</code></pre>
-and change the 30 to whatever you want.</p>
-<p>It's that simple. Why can't we have this in the settings I don't know.</p>
+  <h1>Map tiles screenshot rainbox fix</h1>
+
+<h3 id="troubleshooting-map-tiles-screenshot-rainbow-noise"><strong>Troubleshooting: Map Tiles &amp; Screenshot "Rainbow" Noise</strong></h3>
+<p>When using privacy-hardened browsers like <strong>LibreWolf</strong>, you may encounter two specific issues with Leaflet maps:</p>
+<ol>
+<li><strong>Error 403r:</strong> Map tiles fail to load (Referrer required).</li>
+<li><strong>Rainbow/Static Noise:</strong> Screenshots of the map appear as colourful "static" instead of the actual track.</li>
+</ol>
+<h4 id="the-fixes"><strong>The Fixes</strong></h4>
+<p>=== "Fix 1: Map Tile Loading (Developer)" If you are the site owner, switch from the default OpenStreetMap tile server to a more flexible provider like <strong>CartoDB</strong>. </p>
+<p>This avoids the strict "Referrer" requirement that many privacy browsers block by default. </p>
+<p><code>javascript L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap © CARTO' }).addTo(map);</code></p>
+<p>=== "Fix 2: Screenshot Noise (User/Browser)" If your "Save Image" feature produces a rainbow noise pattern, use the In the 2026 version of LibreWolf, you don't have to choose between "Total Privacy" and "Broken Website." You can keep the global shield on but lower it just for your domain.</p>
+<p>To stay "secure" while fixing your site is using the <strong>Exempted Domains</strong> list in <code>about:config</code>:</p>
+<ol>
+<li>Search for <code>privacy.resistFingerprinting.exemptedDomains</code>.</li>
+<li>Add <code>simonj.42web.io</code>.</li>
+</ol>
+<hr />
+<h4 id="the-reasoning-why-this-happens"><strong>The Reasoning (Why this happens)</strong></h4>
+<p>!!! info "Why Tiles Block (Error 403r)" OpenStreetMap (OSM) requires a <code>Referer</code> header to identify which website is requesting tiles. LibreWolf's <strong>First-Party Isolation</strong> and <strong>Referrer Trimming</strong> often strip this header to prevent cross-site tracking. Since the server sees an "anonymous" request, it returns a 403 error. Switching to CartoDB works because they have less restrictive header validation.</p>
+<p>!!! warning "Why Screenshots Turn to 'Rainbow Static'" This is caused by <strong>Canvas Fingerprinting Protection</strong>. * <strong>The Trigger:</strong> When a website's JavaScript tries to "read" the pixels of a map (to save it as an image), LibreWolf sees this as a tracking attempt. * <strong>The Defense:</strong> To prevent the site from identifying your unique graphics hardware, the browser "poisons" the data with random noise. </p>
 <hr />
 <div class="admonition note inline">
 <p class="admonition-title">Posted</p>
-<p>01-06-2021 07:36</p>
+<p>21:23 11/5/2026</p>
 </div>
 
 
